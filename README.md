@@ -1,4 +1,4 @@
-## Desenvolvemente uma aplicação Web
+## Desenvolvendo uma aplicação Web
 Trabalho Final em grupo para a Disciplina de GCC188 - Engenharia de Software no Curso de Sistemas de Informação na Universidade Federal de Lavras (UFLA).
 
 ## 1. Identificação do projeto
