@@ -13,9 +13,9 @@ O grupo escolheu esse problema porque é uma dificuldade comum entre os próprio
 
 ## 2. Contexto
 - Quem são os usuários? Estudantes universitários.
-- Em que ambiente o problema ocorre?
-- Quais dificuldades atuais existem?
-- Que impacto a solução pode gerar?
+- Em que ambiente o problema ocorre? Ambiente universitário
+- Quais dificuldades atuais existem? Os alunos têm dificuldade porque os materiais ficam espalhados, dependem de outras pessoas pra conseguir acesso (anotacões pessoais), muitas vezes estão desorganizados e nem sempre são confiáveis ou atualizados.
+- Que impacto a solução pode gerar? A solução pode facilitar o acesso aos materiais, economizar tempo e ajudar os alunos a estudarem melhor, além de incentivar mais colaboração entre eles.
 
 ---
 
