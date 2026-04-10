@@ -2,9 +2,9 @@
 Trabalho Final em grupo para a Disciplina de GCC188 - Engenharia de Software no Curso de Sistemas de Informação na Universidade Federal de Lavras (UFLA).
 
 ## 1. Identificação do projeto
-Nome do projeto: DisciplinasUFLA
-Problema escolhido: Dificuldade em compartilhar conteúdos acadêmicos para os estudantes da UFLA.
-Solução escolhida: Desenvolver um aplicação web que permite o compartilhamento  de arquivos entre estudantes para facilitar o acesso a conteúdos acadêmicos.
+Nome do projeto: DisciplinasUFLA  
+Problema escolhido: Dificuldade em compartilhar conteúdos acadêmicos para os estudantes da UFLA.  
+Solução escolhida: Desenvolver um aplicação web que permite o compartilhamento  de arquivos entre estudantes para facilitar o acesso a conteúdos acadêmicos.  
 Turma/Semestre: 2026/01  
 Docente: Johnatan Oliveira
 
@@ -36,11 +36,11 @@ O sistema será acessado por meio de navegadores web e utilizado por estudantes 
 
 
 ## 5. Integrantes do grupo
-Thiago Vinícius Tristão Rojas — Product Owner
-Bruno Santos Vilas Boas — Scrum Master
-Christian Silva Mesquita — Dev Team 
-Guilherme dos Santos Fernandes — Dev Team 
-Matheus Levi Tavares — Dev Team 
+Thiago Vinícius Tristão Rojas — Product Owner  
+Bruno Santos Vilas Boas — Scrum Master  
+Christian Silva Mesquita — Dev Team  
+Guilherme dos Santos Fernandes — Dev Team  
+Matheus Levi Tavares — Dev Team  
 
 ## 6. Organização Inicial do Projeto em Formato Ágil
 
