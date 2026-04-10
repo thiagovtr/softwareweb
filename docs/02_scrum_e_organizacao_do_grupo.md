@@ -3,24 +3,22 @@
 ## 1. Integrantes
 | Nome | Papel no Scrum | Responsabilidades principais |
 |---|---|---|
-| [Nome] | Product Owner | [Preencher] |
-| [Nome] | Scrum Master | [Preencher] |
-| [Nome] | Dev Team | [Preencher] |
-| [Nome] | Dev Team | [Opcional] |
-| [Nome] | Dev Team | [Opcional] |
+| Thiago Vinícius Tristão Rojas | Product Owner | [Preencher] |
+| Bruno Santos Vilas Boas | Scrum Master | [Preencher] |
+| Christian Silva Mesquita | Dev Team | [Preencher] |
+| Guilherme dos Santos | Dev Team | [Opcional] |
+| Matheus Levi Tavares | Dev Team | [Opcional] |
 
 > Em contexto acadêmico, os papéis podem ser adaptados, mas devem estar explicitados.
 
 ---
 
 ## 2. Organização de trabalho
-**Duração da sprint:** `[Semanal ou quinzenal]`
+**Duração da sprint:** Quinzenal
 
 **Ferramentas adotadas:**
 - GitHub
-- [Trello/Jira/Projects]
-- [Google Meet/WhatsApp/Discord]
-- [Outras]
+- WhatsApp e Discord
 
 **Ritual de planejamento:**  
 [Como o grupo planejará cada sprint.]
