@@ -35,7 +35,7 @@ O sistema permitirá:
 O sistema será acessado por meio de navegadores web e utilizado por estudantes da universidade.
 
 
-## 5.Integrantes do grupo
+## 5. Integrantes do grupo
 Thiago Vinícius Tristão Rojas — Product Owner
 Bruno Santos Vilas Boas — Scrum Master
 Christian Silva Mesquita — Dev Team 
