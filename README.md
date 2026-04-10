@@ -15,4 +15,4 @@ Guilherme dos Santos Fernandes — Dev Team
 Matheus Levi Tavares — Dev Team 
 
 ## Sprint atual
-Sprint 1 – Definição do problema e visão do produto
+Sprint 1 – Definição do problema e visão do produto.
