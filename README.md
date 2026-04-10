@@ -20,8 +20,6 @@ A criação de uma aplicação web específica para compartilhamento de conteúd
 
 Com essa solução, será possível facilitar o acesso aos conteúdos, melhorar a organização dos arquivos e contribuir para o aprendizado coletivo. Além disso, a plataforma permitirá que os estudantes encontrem rapidamente os materiais necessários para seus estudos.
 
-
-
 ## 4. Definição Preliminar do Produto
 
 Será desenvolvido um sistema web para compartilhamento de conteúdos acadêmicos entre estudantes.
