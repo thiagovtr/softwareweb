@@ -1,72 +1,12 @@
-# 01. Problema e Visão do Produto
+# Visão Geral do Produto
 
-## 1. Problema escolhido
-**Título do problema:** Dificuldade dos estudantes em encontrar materiais acadêmicos
+## Descrição do Problema
+Os estudantes enfrentam muita dificuldade para encontrar, organizar e compartilhar materiais de estudo, como resumos de matérias, listas de exercícios e slides. O que acontece na prática é que esses arquivos ficam perdidos em vários grupos. Isso atrapalha a rotina de estudos quando um aluno quer um resumo.
 
-**Descrição resumida do problema:**  
-Muitos estudantes têm dificuldade para encontrar materiais de estudo confiáveis e organizados para as disciplinas da faculdade, como resumos, listas de exercícios, provas antigas e anotações. Normalmente esses conteúdos ficam espalhados em grupos de WhatsApp, e-mails, o que dificulta o acesso, principalmente para quem está cursando a matéria pela primeira vez. Isso acaba prejudicando o desempenho acadêmico e aumenta o tempo gasto procurando materiais.
+## Visão do Produto
+Desenvolver uma aplicação web que funcione como uma biblioteca para os estudantes. Um ambiente onde qualquer aluno possa enviar, buscar e baixar materiais de forma organizada por disciplinas, garantindo que o conteúdo fique salvo e acessível para todos.
 
-**Justificativa da escolha:**  
-O grupo escolheu esse problema porque é uma dificuldade comum entre os próprios alunos da faculdade, ou seja, é algo que a gente vivencia no dia a dia. Além disso, vimos que não existe uma plataforma centralizada e organizada para esse tipo de compartilhamento entre estudantes. Por isso, pensamos em um site onde os alunos possam compartilhar materiais entre si, facilitando o acesso, incentivando a colaboração e ajudando no aprendizado de forma mais prática.
-
----
-
-## 2. Contexto
-- Quem são os usuários? Estudantes universitários.
-- Em que ambiente o problema ocorre? Ambiente universitário
-- Quais dificuldades atuais existem? Os alunos têm dificuldade porque os materiais ficam espalhados, dependem de outras pessoas pra conseguir acesso (anotacões pessoais), muitas vezes estão desorganizados e nem sempre são confiáveis ou atualizados.
-- Que impacto a solução pode gerar? A solução pode facilitar o acesso aos materiais, economizar tempo e ajudar os alunos a estudarem melhor, além de incentivar mais colaboração entre eles.
-
----
-
-## 3. Visão do produto
-**Nome da solução:** `[Preencher]`
-
-**Proposta de valor:**  
-[Explique, em poucas linhas, qual valor a solução entrega.]
-
-**Objetivo geral da solução:**  
-[Defina o objetivo central do produto.]
-
-**Objetivos específicos:**
-- [Objetivo específico 1]
-- [Objetivo específico 2]
-- [Objetivo específico 3]
-
----
-
-## 4. Stakeholders
-| Stakeholder | Papel | Interesse no projeto |
-|---|---|---|
-| Usuário final | Estudantes | Ter acesso fácil a materiais organizados e confiáveis para estudar melhor |
-| Cliente/solicitante | [Preencher] | [Preencher] |
-| Equipe do projeto | Matheus Tavares, Bruno Santos, Guilherme, Thiago Vinicius, Cristhian| Desenvolver o sistema, aplicar conhecimentos e entregar um projeto funcional |
-                          
----
-
-## 5. Escopo inicial
-### Inclui
-- [Item 1]
-- [Item 2]
-- [Item 3]
-
-### Não inclui
-- [Item 1]
-- [Item 2]
-
----
-
-## 6. Restrições e premissas
-**Restrições:**
-- [Restrição 1]
-- [Restrição 2]
-
-**Premissas:**
-- [Premissa 1]
-- [Premissa 2]
-
----
-
-## 7. Exemplo resumido
-Problema: dificuldade dos alunos em encontrar materiais acadêmicos organizados e confiáveis.
-Solução proposta: site para compartilhamento de materiais entre estudantes, com organização por matéria e período, permitindo upload e fácil acesso aos conteúdos.
+## Objetivos do Projeto
+* Criar um sistema simples para envio e download de arquivos acadêmicos.
+* Organizar o repositório de arquivos dividindo tudo por disciplinas, o que facilita a busca do aluno em semanas de provas.
+* Garantir a segurança do sistema permitindo o cadastro e o login apenas com o e-mail institucional da universidade.
