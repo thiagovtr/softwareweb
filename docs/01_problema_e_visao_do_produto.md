@@ -4,10 +4,10 @@
 **Título do problema:** Dificuldade dos estudantes em encontrar materiais acadêmicos
 
 **Descrição resumida do problema:**  
-[Descreva o problema apresentado em sala e explique por que ele é relevante.]
+Muitos estudantes têm dificuldade para encontrar materiais de estudo confiáveis e organizados para as disciplinas da faculdade, como resumos, listas de exercícios, provas antigas e anotações. Normalmente esses conteúdos ficam espalhados em grupos de WhatsApp, e-mails, o que dificulta o acesso, principalmente para quem está cursando a matéria pela primeira vez. Isso acaba prejudicando o desempenho acadêmico e aumenta o tempo gasto procurando materiais.
 
 **Justificativa da escolha:**  
-[Explique por que o grupo escolheu esse problema.]
+O grupo escolheu esse problema porque é uma dificuldade comum entre os próprios alunos da faculdade, ou seja, é algo que a gente vivencia no dia a dia. Além disso, vimos que não existe uma plataforma centralizada e organizada para esse tipo de compartilhamento entre estudantes. Por isso, pensamos em um site onde os alunos possam compartilhar materiais entre si, facilitando o acesso, incentivando a colaboração e ajudando no aprendizado de forma mais prática.
 
 ---
 
