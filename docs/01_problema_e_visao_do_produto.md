@@ -41,10 +41,10 @@ O grupo escolheu esse problema porque é uma dificuldade comum entre os próprio
 | Usuário final | Estudantes | Ter acesso fácil a materiais organizados e confiáveis para estudar melhor |
 | Cliente/solicitante | [Preencher] | [Preencher] |
 | Equipe do projeto | Matheus Tavares| Desenvolver o sistema, aplicar conhecimentos e entregar um projeto funcional |
-                      Bruno Santos
-                      Guilherme
-                      Thiago Vínicius
-                      Cristian
+                    |  Bruno Santos   | 
+                    |  Guilherme      | 
+                    |  Thiago Vínicius| 
+                    |  Cristian       | 
 ---
 
 ## 5. Escopo inicial
