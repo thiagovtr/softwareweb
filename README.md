@@ -44,13 +44,9 @@ Matheus Levi Tavares — Dev Team
 
 ## 6. Organização Inicial do Projeto em Formato Ágil
 
-O projeto será desenvolvido utilizando a metodologia Scrum, organizada em sprints semanais.
-
-O grupo utilizará um Product Backlog para listar as tarefas do projeto e um Sprint Backlog para definir as atividades realizadas em cada sprint.
-
-O desenvolvimento será acompanhado por meio de reuniões periódicas do grupo e registro das atividades no repositório GitHub.
-
-
+- O projeto será desenvolvido utilizando a metodologia Scrum, organizada em sprints semanais.
+- O grupo utilizará um Product Backlog para listar as tarefas do projeto e um Sprint Backlog para definir as atividades realizadas em cada sprint.
+- O desenvolvimento será acompanhado por meio de reuniões periódicas do grupo e registro das atividades no repositório GitHub.
 
 ## 7. Definição do Escopo Inicial da Aplicação Web
 
