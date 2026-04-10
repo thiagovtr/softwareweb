@@ -68,5 +68,5 @@ O grupo escolheu esse problema porque é uma dificuldade comum entre os próprio
 ---
 
 ## 7. Exemplo resumido
-> Problema: dificuldade de acompanhamento de atendimentos em uma clínica-escola.  
-> Solução proposta: sistema web para cadastro, triagem, agendamento e acompanhamento de atendimentos, com perfis para recepção, supervisão e estudantes.
+Problema: dificuldade dos alunos em encontrar materiais acadêmicos organizados e confiáveis.
+Solução proposta: site para compartilhamento de materiais entre estudantes, com organização por matéria e período, permitindo upload e fácil acesso aos conteúdos.
