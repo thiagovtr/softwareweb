@@ -30,7 +30,8 @@
 ## 8. Dificuldades encontradas
 - 
 
-## 9. Revisao do incremento- O que foi concluido:
+## 9. Revisao do incremento
+- O que foi concluido:
 - O que ficou pendente:
 
 ## 10. Pendencias para a proxima sprint

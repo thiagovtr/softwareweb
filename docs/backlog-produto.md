@@ -4,17 +4,17 @@
 O Product Backlog reúne as funcionalidades, necessidades e melhorias da solução proposta.
 
 ## 2. Estratégia de priorização
-# ainda svou mexer
+A priorização focou na base essencial do sistema. Colocamos com prioridade "Alta" a criação da tela de login e a função básica de enviar arquivos. Funcionalidades como o download e os filtros para buscar resumos ficaram para as próximas etapas.
 
 ---
 
 ## 3. Backlog do produto
 | ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista |
 |---|---|---|---|---|---|---|---|
-| RT01 | Requisito técnico | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | Permitir cadastro e login apenas com e-mails da UFLA | 3 pts | Sprint 4 |
+| RT01 | Requisito técnico | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | Permitir cadastro e login apenas com e-mails da UFLA | 3 pts | Sprint 3 |
 | RT02 | Requisito técnico | Tela de Envio de Material | Interface para o aluno fazer upload | Alta | Ter um botão para selecionar o arquivo | 5 pts | Sprint 4 |
-| RT03 | Requisito técnico | Tela de Busca | Interface para procurar resumos e provas | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 5 |
-| RT04 | Requisito técnico | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 2 pts | Sprint 4 |
+| RT03 | Requisito técnico | Tela de Busca | Interface para procurar resumos, slides e exercícios | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 4 |
+| RT04 | Requisito técnico | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 4 pts | Sprint 5 |
 
 ---
 
@@ -27,7 +27,7 @@ Desenvolver a interface e o código simples para que o usuário consiga enviar o
 **Critérios de aceitação:**
 - A página deve ter um formulário pedindo o nome do material e a qual disciplina ele pertence.
 - O sistema deve aceitar apenas arquivos no formato PDF, JPG ou PNG.
-- O tamanho do arquivo não pode ultrapassar 10MB para não sobrecarregar o sistema.
+- O tamanho do arquivo não pode ultrapassar 100MB para não sobrecarregar o sistema.
 
 ---
 
