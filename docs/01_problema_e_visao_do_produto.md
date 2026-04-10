@@ -38,9 +38,9 @@ O grupo escolheu esse problema porque é uma dificuldade comum entre os próprio
 ## 4. Stakeholders
 | Stakeholder | Papel | Interesse no projeto |
 |---|---|---|
-| Usuário final | Estudante | [Preencher] |
+| Usuário final | Estudantes | Ter acesso fácil a materiais organizados e confiáveis para estudar melhor |
 | Cliente/solicitante | [Preencher] | [Preencher] |
-| Equipe do projeto | [Preencher] | [Preencher] |
+| Equipe do projeto | Matheus Tavares| Desenvolver o sistema, aplicar conhecimentos e entregar um projeto funcional |
 
 ---
 
