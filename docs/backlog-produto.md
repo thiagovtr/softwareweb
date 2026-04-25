@@ -33,21 +33,17 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ## 4. Histórias de Usuário
 
 ### US01
-**Como** estudante,  
-**eu quero** me cadastrar no sistema usando meu e-mail institucional,  
-**para que** eu possa acessar a plataforma com segurança.
+Como estudante, eu quero me cadastrar no sistema usando meu e-mail institucional, para que eu possa acessar a plataforma com segurança.
 
 **Critérios de aceitação:**
-- O sistema deve permitir cadastro apenas com e-mails *@ufla.br*;
+- O sistema deve permitir cadastro apenas com e-mails *@estudante.ufla.br*;
 - O cadastro deve ser concluído em até 3 segundos;
 - O sistema deve impedir cadastros duplicados;
 
 ---
 
 ### US02
-**Como** usuário,  
-**eu quero** fazer login no sistema,  
-**para que** eu possa acessar minhas funcionalidades.
+Como usuário, eu quero fazer login no sistema, para que eu possa acessar minhas funcionalidades.
 
 **Critérios de aceitação:**
 - O login deve aceitar apenas e-mails institucionais;
@@ -57,9 +53,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US03
-**Como** usuário,  
-**eu quero** fazer logout do sistema,  
-**para que** eu possa encerrar minha sessão com segurança.
+Como usuário, eu quero fazer logout do sistema, para que eu possa encerrar minha sessão com segurança.
 
 **Critérios de aceitação:**
 - O logout deve encerrar a sessão em até 1 segundo;
@@ -68,9 +62,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US04
-**Como** estudante,  
-**eu quero** enviar arquivos acadêmicos,  
-**para que** eu possa compartilhar materiais com outros alunos.
+Como estudante, eu quero enviar arquivos acadêmicos, para que eu possa compartilhar materiais com outros alunos.
 
 **Critérios de aceitação:**
 - Deve existir um botão para selecionar arquivo;
@@ -81,9 +73,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US05
-**Como** usuário,  
-**eu quero** visualizar os arquivos disponíveis,  
-**para que** eu possa encontrar materiais de estudo.
+Como usuário, eu quero visualizar os arquivos disponíveis, para que eu possa encontrar materiais de estudo.
 
 **Critérios de aceitação:**
 - A lista de arquivos deve carregar em até 2 segundos;
@@ -92,9 +82,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US06
-**Como** usuário,  
-**eu quero** buscar arquivos,  
-**para que** eu possa encontrar conteúdos específicos.
+Como usuário, eu quero buscar arquivos, para que eu possa encontrar conteúdos específicos.
 
 **Critérios de aceitação:**
 - Deve existir uma barra de pesquisa;
@@ -104,9 +92,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US07
-**Como** usuário,  
-**eu quero** filtrar arquivos por disciplina,  
-**para que** eu possa facilitar minha busca por conteúdo.
+Como usuário, eu quero filtrar arquivos por disciplina, para que eu possa facilitar minha busca por conteúdo.
 
 **Critérios de aceitação:**
 - Deve existir filtro por disciplina;
@@ -115,9 +101,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US08
-**Como** usuário,  
-**eu quero** baixar arquivos,  
-**para que** eu possa acessar os materiais offline.
+Como usuário, eu quero baixar arquivos, para que eu possa acessar os materiais offline.
 
 **Critérios de aceitação:**
 - O download deve iniciar em até 2 segundos;
@@ -126,9 +110,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US09
-**Como** usuário,  
-**eu quero** que cada arquivo mostre quem enviou,  
-**para que** eu possa identificar a autoria do material.
+Como usuário, eu quero** que cada arquivo mostre quem enviou, para que eu possa identificar a autoria do material.
 
 **Critérios de aceitação:**
 - 100% dos arquivos devem exibir o autor;
@@ -137,9 +119,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US10
-**Como** usuário,  
-**eu quero** excluir meus arquivos enviados,  
-**para que** eu possa gerenciar meus conteúdos.
+Como usuário, eu quero excluir meus arquivos enviados, para que eu possa gerenciar meus conteúdos.
 
 **Critérios de aceitação:**
 - Apenas o autor pode excluir o arquivo;
@@ -149,9 +129,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ### US11
-**Como** usuário,  
-**eu quero** que o sistema seja rápido e estável,  
-**para que** não atrapalhe meus estudos.
+Como usuário, eu quero que o sistema seja rápido e estável, para que não atrapalhe meus estudos.
 
 **Critérios de aceitação:**
 - O sistema deve responder em até 3 segundos em 95% das requisições;
