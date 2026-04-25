@@ -48,15 +48,16 @@ Matheus Levi Tavares — Dev Team
 - O grupo utilizará um Product Backlog para listar as tarefas do projeto e um Sprint Backlog para definir as atividades realizadas em cada sprint.
 - O desenvolvimento será acompanhado por meio de reuniões periódicas do grupo e registro das atividades no repositório GitHub.
 
-## 7. Definição do Escopo Inicial da Aplicação Web
+## 7. Definição do Escopo da Aplicação Web
 
-O escopo inicial da aplicação web inclui as seguintes funcionalidades principais:
+O escopo da aplicação web inclui as seguintes funcionalidades principais:
 
 - Cadastro de usuários
 - Login no sistema
 - Envio de arquivos acadêmicos
 - Download de arquivos
 - Visualização de arquivos disponíveis
+- Sistema de curtidas
 
 Funcionalidades adicionais poderão ser incluídas nas próximas sprints conforme a evolução do projeto.
 
@@ -65,6 +66,7 @@ Funcionalidades adicionais poderão ser incluídas nas próximas sprints conform
 ## Sprint Atual
 
 Sprint 1 – Definição do problema e visão do produto
+Sprint 2 - Levantemento e priorização de requisitos funcionais e não-funcionais
 
 
 
