@@ -44,6 +44,8 @@ Como usuário da comunidade acadêmica, eu quero entrar no sistema usando meu e-
 - O sistema deve validar o domínio do e-mail.
 
 **US04**  
+Como usuário, eu quero ter a opção de excluir um arquivo caso eu queira tirar ele do programa.
+
 **Critérios de aceitação:**
 - O botão de exclusão deve pedir uma confirmação adicional para evitar exclusões acidentais.
 - Deve existir uma área onde mostre todos os envios no perfil do usuário.
