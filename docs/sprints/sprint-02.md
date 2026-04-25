@@ -193,15 +193,7 @@ Durante a Sprint 2 serão realizadas as seguintes atividades:
 - Priorização do Product Backlog
 - Organização dos requisitos no GitHub
 
-
-
-## 7. Registro Resumido da Sprint
-
-
-## 8. Atualização do Repositório no GitHub
-
-
-## 9. Arquivo docs/sprints/sprint-02.md
+## 7. Arquivo docs/sprints/sprint-02.md
 
 O arquivo sprint-02.md foi criado dentro da pasta:
 
