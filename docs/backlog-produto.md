@@ -21,6 +21,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 | RF08 | Requisito Funcional | Visualização de Arquivos | Listagem de materiais disponíveis | Alta | Lista de arquivos deve carregar em até 2s em 95% dos acessos | 3 pts | Sprint 5 |
 | RF09 | Requisito Funcional | Associação de Arquivos | Vincular arquivo ao autor | Alta | 100% dos arquivos devem estar corretamente associados ao usuário que realizou o upload | 2 pts | Sprint 4 |
 | RF10 | Requisito Funcional | Filtro por Disciplina | Listar arquivos por disciplina | Média | Filtro deve retornar resultados corretos em até 2s em 95% dos testes | 3 pts | Sprint 6 |
+| RF11 | Requisito Funcional | Sistema de Likes | Permitir que usuários curtam arquivos | Média | Usuário autenticado deve conseguir curtir/descurtir um arquivo em até 1s e o sistema deve atualizar a contagem corretamente em 100% dos testes | 3 pts | Sprint 6 |
 | RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Sprint 4 |
 | RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Sprint 3 |
 | RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 3 cliques em 90% dos testes de uso | 5 pts | Sprint 5 |
