@@ -44,7 +44,7 @@ Objetivos específicos:
 
 | ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista |
 |---|---|---|---|---|---|---|---|
-| RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@ufla.br) e autenticar em até 2s | 3 pts | Sprint 5 |
+| RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@estudante.ufla.br) e autenticar em até 2s | 3 pts | Sprint 5 |
 | RF02 | Requisito Funcional | Tela de Envio de Material | Interface para upload de arquivos | Alta | Upload deve ser concluído com sucesso em até 5s para arquivos de até 100MB em 95% dos casos | 5 pts | Sprint 5 |
 | RF03 | Requisito Funcional | Tela de Busca | Interface para procurar materiais | Média | Busca deve retornar resultados em até 2s e filtrar corretamente em 100% dos testes | 3 pts | Sprint 5 |
 | RF04 | Requisito Funcional | Função de Download | Lógica para baixar arquivos | Média | Download deve iniciar em até 2s após clique e completar sem erro em 95% dos casos | 4 pts | Sprint 6 |
