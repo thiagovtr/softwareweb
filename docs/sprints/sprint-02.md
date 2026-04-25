@@ -4,14 +4,6 @@
 
 Projeto: DisciplinasUFLA
 
-Integrantes:
-
-- Thiago Vinícius Tristão Rojas — Product Owner
-- Bruno Santos Vilas Boas — Scrum Master
-- Christian Silva Mesquita — Dev Team 
-- Guilherme dos Santos Fernandes — Dev Team 
-- Matheus Levi Tavares — Dev Team 
-
 | Integrante | Papel no Scrum |
 |---|---|
 | Thiago Vinícius Tristão Rojas | Product Owner |
