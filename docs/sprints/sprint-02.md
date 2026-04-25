@@ -43,24 +43,7 @@ Identificar, descrever, organizar e priorizar os requisitos da plataforma de com
 | RNF06 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Sprint 5 |
 | RNF07 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Sprint 5 |
 
-## 4. Objetivos do Projeto
-
-Objetivo geral:
-
-Desenvolver uma aplicação web que permita o compartilhamento organizado de conteúdos acadêmicos entre estudantes.
-
-Objetivos específicos:
-
-- Permitir o cadastro de usuários
-- Permitir autenticação por login
-- Permitir o envio de arquivos acadêmicos
-- Permitir o download de arquivos
-- Facilitar o acesso aos conteúdos compartilhados
-- Melhorar a organização dos materiais acadêmicos
-
-
-
-## 5. Histórias de Usuário
+## 4. Histórias de Usuário
 
 ### US01
 Como estudante, eu quero me cadastrar no sistema usando meu e-mail institucional, para que eu possa acessar a plataforma com segurança.
@@ -165,6 +148,21 @@ Como usuário, eu quero que o sistema seja rápido e estável, para que não atr
 - O sistema deve responder em até 3 segundos em 95% das requisições;
 - O sistema deve suportar pelo menos 100 usuários simultâneos;
 - O sistema deve ter disponibilidade mínima de 99%;
+
+## 5. Objetivos do Projeto
+
+Objetivo geral:
+
+Desenvolver uma aplicação web que permita o compartilhamento organizado de conteúdos acadêmicos entre estudantes.
+
+Objetivos específicos:
+
+- Permitir o cadastro de usuários
+- Permitir autenticação por login
+- Permitir o envio de arquivos acadêmicos
+- Permitir o download de arquivos
+- Facilitar o acesso aos conteúdos compartilhados
+- Melhorar a organização dos materiais acadêmicos
 
 ## 6. Planejamento da Sprint 1 e da Sprint 2
 
