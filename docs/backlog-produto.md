@@ -21,26 +21,22 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ---
 
 ## 4. Histórias de Usuário
-**US01**   
-Como estudante que tem bons resumos, eu quero acessar uma tela de envio de arquivos simples e intuitiva, para que eu possa compartilhar meu material com os outros alunos.  
+**US01**  
+Como estudante que tem bons resumos, eu quero acessar uma tela de envio de arquivos simples e intuitiva, para que eu possa compartilhar meu material com os outros alunos.
 
-**Critérios de aceitação:**  
-
-    - Interface: A tela deve conter os seguintes campos obrigatórios:  
-        - Disciplina.  
-        - Tipo de material, como resumos ou lista de atividades.   
-    - Botão de Upload: Deve haver um botão para selecionar arquivo que a pessoa quer enviar.  
+**Critérios de aceitação:**
+- Deve ter filtro por disciplina;
+- Deve ter filtro por tipo de material, como resumos ou lista de atividades;
+- Deve haver um botão para selecionar arquivo que a pessoa quer enviar;
 
 **US02**  
+Como estudante, eu quero poder filtrar as atividades ou resumos antigos pelo ano ou semestre, para que eu possa focar em estudar o formato mais recente de cobrança dos professores.
 
-Como estudante, eu quero poder filtrar as atividades ou resumos antigos pelo ano ou semestre, para que eu possa focar em estudar o formato mais recente de cobrança dos professores.  
-**Critérios de aceitação:**  
-
-    - A tela de busca deve ter um filtro chamado "Ano/Semestre".
+**Critérios de aceitação:**
+- A tela de busca deve ter um filtro chamado "Ano/Semestre".
 
 **US03**  
+Como usuário da comunidade acadêmica, eu quero entrar no sistema usando meu e-mail institucional, para garantir que o ambiente seja restrito e seguro.
 
-**História:** Como usuário da comunidade acadêmica, eu quero entrar no sistema usando meu e-mail institucional, para garantir que o ambiente seja restrito e seguro.  
-**Critérios de aceitação:**  
-
-    - O sistema deve validar o domínio do e-mail.
+**Critérios de aceitação:**
+- O sistema deve validar o domínio do e-mail.
