@@ -63,7 +63,111 @@ Objetivos específicos:
 | RNF06 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Sprint 5 |
 | RNF07 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Sprint 5 |
 
+Histórias de Usuário
 
+### US01
+Como estudante, eu quero me cadastrar no sistema usando meu e-mail institucional, para que eu possa acessar a plataforma com segurança.
+
+**Critérios de aceitação:**
+- O sistema deve permitir cadastro apenas com e-mails *@estudante.ufla.br*;
+- O cadastro deve ser concluído em até 3 segundos;
+- O sistema deve impedir cadastros duplicados;
+
+---
+
+### US02
+Como usuário, eu quero fazer login no sistema, para que eu possa acessar minhas funcionalidades.
+
+**Critérios de aceitação:**
+- O login deve aceitar apenas e-mails institucionais;
+- A autenticação deve ocorrer em até 2 segundos;
+- O sistema deve exibir erro para credenciais inválidas;
+
+---
+
+### US03
+Como usuário, eu quero fazer logout do sistema, para que eu possa encerrar minha sessão com segurança.
+
+**Critérios de aceitação:**
+- O logout deve encerrar a sessão em até 1 segundo;
+- O usuário deve ser redirecionado para a tela inicial ou login;
+
+---
+
+### US04
+Como estudante, eu quero enviar arquivos acadêmicos, para que eu possa compartilhar materiais com outros alunos.
+
+**Critérios de aceitação:**
+- Deve existir um botão para selecionar arquivo;
+- O upload deve aceitar arquivos de até 100MB;
+- O envio deve ser concluído em até 5 segundos em 95% dos casos;
+- Apenas usuários autenticados podem enviar arquivos;
+
+---
+
+### US05
+Como usuário, eu quero visualizar os arquivos disponíveis, para que eu possa encontrar materiais de estudo.
+
+**Critérios de aceitação:**
+- A lista de arquivos deve carregar em até 2 segundos;
+- Os arquivos devem exibir informações básicas (nome, autor, disciplina);
+
+---
+
+### US06
+Como usuário, eu quero buscar arquivos, para que eu possa encontrar conteúdos específicos.
+
+**Critérios de aceitação:**
+- Deve existir uma barra de pesquisa;
+- A busca deve retornar resultados em até 2 segundos;
+- Os resultados devem ser corretos em 100% dos testes;
+
+---
+
+### US07
+Como usuário, eu quero filtrar arquivos por disciplina, para que eu possa facilitar minha busca por conteúdo.
+
+**Critérios de aceitação:**
+- Deve existir filtro por disciplina;
+- O filtro deve retornar resultados corretos em até 2 segundos;
+
+---
+
+### US08
+Como usuário, eu quero baixar arquivos, para que eu possa acessar os materiais offline.
+
+**Critérios de aceitação:**
+- O download deve iniciar em até 2 segundos;
+- O arquivo deve ser baixado sem corrupção em 95% dos casos;
+
+---
+
+### US09
+Como usuário, eu quero que cada arquivo mostre quem enviou, para que eu possa identificar a autoria do material.
+
+**Critérios de aceitação:**
+- 100% dos arquivos devem exibir o autor;
+- O autor deve ser o usuário que realizou o upload;
+
+---
+
+### US10
+Como usuário, eu quero excluir meus arquivos enviados, para que eu possa gerenciar meus conteúdos.
+
+**Critérios de aceitação:**
+- Apenas o autor pode excluir o arquivo;
+- Deve haver confirmação antes da exclusão;
+- A exclusão deve ser concluída em até 2 segundos;
+
+---
+
+### US11
+Como usuário, eu quero que o sistema seja rápido e estável, para que não atrapalhe meus estudos.
+
+**Critérios de aceitação:**
+- O sistema deve responder em até 3 segundos em 95% das requisições;
+- O sistema deve suportar pelo menos 100 usuários simultâneos;
+- O sistema deve ter disponibilidade mínima de 99%;
 
 ## 6. Planejamento da Sprint 1 e da Sprint 2
 
