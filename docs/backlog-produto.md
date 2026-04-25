@@ -29,6 +29,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 | RNF05 | Requisito Não Funcional | Segurança | Proteção de dados | Alta | 100% das senhas devem ser armazenadas com criptografia e acessos não autorizados devem ser bloqueados em testes | 4 pts | Sprint 4 |
 | RNF06 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Sprint 5 |
 | RNF07 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Sprint 5 |
+
 ---
 
 ## 4. Histórias de Usuário
