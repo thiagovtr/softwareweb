@@ -11,15 +11,15 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ## 3. Backlog do produto
 | ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista |
 |---|---|---|---|---|---|---|---|
-| RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | Permitir cadastro e login apenas com e-mails da UFLA | 3 pts | Sprint 5 |
-| RF02 | Requisito Funcional | Tela de Envio de Material | Interface para o aluno fazer upload | Alta | Ter um botão para selecionar o arquivo | 5 pts | Sprint 5 |
-| RF03 | Requisito Funcional | Tela de Busca | Interface para procurar resumos, slides e exercícios | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 5 |
-| RF04 | Requisito Funcional | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 4 pts | Sprint 6 |
-| RF05 | Requisito Funcional | Exclusão | Autor poder apagar seu envio | Média | Botão de excluir disponível apenas para o autor | 2 pts | Sprint 5 |
-| RNF01 | Requisito Não Funcional | Restrição de Tamanho do Arquivo | Limite máximo de armazenamento por upload | Alta | O tamanho do arquivo não pode ultrapassar 100MB | 2 pts | Sprint 4 |
-| RNF02 | Requisito Não Funcional | Plataforma Web | O sistema deve ser executado em navegadores web | Alta | O sistema deve rodar via web sem precisar de instalação local | 1 pt | Sprint 3 |
-| RNF03 | Não Funcional | Usabilidade | Facilidade na hora de usar | Alta | O sistema deve ser intuitivo, permitindo realizar um download ou upload com poucos cliques cliques | 5 pts | Sprint 5 |
-
+| RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@ufla.br) e autenticar em até 2s | 3 pts | Sprint 5 |
+| RF02 | Requisito Funcional | Tela de Envio de Material | Interface para upload de arquivos | Alta | Upload deve ser concluído com sucesso em até 5s para arquivos de até 100MB em 95% dos casos | 5 pts | Sprint 5 |
+| RF03 | Requisito Funcional | Tela de Busca | Interface para procurar materiais | Média | Busca deve retornar resultados em até 2s e filtrar corretamente em 100% dos testes | 3 pts | Sprint 5 |
+| RF04 | Requisito Funcional | Função de Download | Lógica para baixar arquivos | Média | Download deve iniciar em até 2s após clique e completar sem erro em 95% dos casos | 4 pts | Sprint 6 |
+| RF05 | Requisito Funcional | Exclusão | Autor pode apagar seu envio | Média | Apenas o autor deve conseguir excluir e a ação deve ser concluída em até 2s em 100% dos testes | 2 pts | Sprint 5 |
+| RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Sprint 4 |
+| RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Sprint 3 |
+| RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 3 cliques em 90% dos testes de uso | 5 pts | Sprint 5 |
+| RNF04 | Requisito Não Funcional | Estabilidade do Sistema | Operação contínua | Alta | Sistema deve manter disponibilidade ≥ 99% e suportar pelo menos 100 usuários simultâneos sem falhas críticas | 3 pts | Sprint 4 |
 ---
 
 ## 4. Histórias de Usuário
