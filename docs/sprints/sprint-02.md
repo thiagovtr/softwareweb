@@ -22,26 +22,6 @@ Identificar, descrever, organizar e priorizar os requisitos da plataforma de com
 
 ## 3. Itens do Sprint Backlog
 
-
-## 4. Objetivos do Projeto
-
-Objetivo geral:
-
-Desenvolver uma aplicação web que permita o compartilhamento organizado de conteúdos acadêmicos entre estudantes.
-
-Objetivos específicos:
-
-- Permitir o cadastro de usuários
-- Permitir autenticação por login
-- Permitir o envio de arquivos acadêmicos
-- Permitir o download de arquivos
-- Facilitar o acesso aos conteúdos compartilhados
-- Melhorar a organização dos materiais acadêmicos
-
-
-
-## 5. Product Backlog Inicial
-
 | ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista |
 |---|---|---|---|---|---|---|---|
 | RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@estudante.ufla.br) e autenticar em até 2s | 3 pts | Sprint 5 |
@@ -63,7 +43,24 @@ Objetivos específicos:
 | RNF06 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Sprint 5 |
 | RNF07 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Sprint 5 |
 
-Histórias de Usuário
+## 4. Objetivos do Projeto
+
+Objetivo geral:
+
+Desenvolver uma aplicação web que permita o compartilhamento organizado de conteúdos acadêmicos entre estudantes.
+
+Objetivos específicos:
+
+- Permitir o cadastro de usuários
+- Permitir autenticação por login
+- Permitir o envio de arquivos acadêmicos
+- Permitir o download de arquivos
+- Facilitar o acesso aos conteúdos compartilhados
+- Melhorar a organização dos materiais acadêmicos
+
+
+
+## 5. Histórias de Usuário
 
 ### US01
 Como estudante, eu quero me cadastrar no sistema usando meu e-mail institucional, para que eu possa acessar a plataforma com segurança.
