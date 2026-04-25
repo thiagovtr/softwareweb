@@ -15,8 +15,10 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 | RF02 | Requisito Funcional | Tela de Envio de Material | Interface para o aluno fazer upload | Alta | Ter um botão para selecionar o arquivo | 5 pts | Sprint 5 |
 | RF03 | Requisito Funcional | Tela de Busca | Interface para procurar resumos, slides e exercícios | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 5 |
 | RF04 | Requisito Funcional | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 4 pts | Sprint 6 |
+| RF05 | Requisito Funcional | Exclusão | Autor poder apagar seu envio | Média | Botão de excluir disponível apenas para o autor | 2 pts | Sprint 5 |
 | RNF01 | Requisito Não Funcional | Restrição de Tamanho do Arquivo | Limite máximo de armazenamento por upload | Alta | O tamanho do arquivo não pode ultrapassar 100MB | 2 pts | Sprint 4 |
 | RNF02 | Requisito Não Funcional | Plataforma Web | O sistema deve ser executado em navegadores web | Alta | O sistema deve rodar via web sem precisar de instalação local | 1 pt | Sprint 3 |
+| RNF03 | Não Funcional | Usabilidade | Facilidade na hora de usar | Alta | O sistema deve ser intuitivo, permitindo realizar um download ou upload com poucos cliques cliques | 5 pts | Sprint 5 |
 
 ---
 
@@ -40,3 +42,8 @@ Como usuário da comunidade acadêmica, eu quero entrar no sistema usando meu e-
 
 **Critérios de aceitação:**
 - O sistema deve validar o domínio do e-mail.
+
+**US04**  
+**Critérios de aceitação:**
+- O botão de exclusão deve pedir uma confirmação adicional para evitar exclusões acidentais.
+- Deve existir uma área onde mostre todos os envios no perfil do usuário.
