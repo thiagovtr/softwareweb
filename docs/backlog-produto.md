@@ -110,7 +110,7 @@ Como usuário, eu quero baixar arquivos, para que eu possa acessar os materiais 
 ---
 
 ### US09
-Como usuário, eu quero** que cada arquivo mostre quem enviou, para que eu possa identificar a autoria do material.
+Como usuário, eu quero que cada arquivo mostre quem enviou, para que eu possa identificar a autoria do material.
 
 **Critérios de aceitação:**
 - 100% dos arquivos devem exibir o autor;
