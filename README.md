@@ -66,7 +66,7 @@ Funcionalidades adicionais poderão ser incluídas nas próximas sprints conform
 ## Sprint Atual
 
 Sprint 1 – Definição do problema e visão do produto  
-Sprint 2 - Levantemento e priorização de requisitos funcionais e não-funcionais
+Sprint 2 - Levantemento e priorização de requisitos funcionais e não-funcionais  
 Sprint 3 – Modelagem do sistema
 
 
