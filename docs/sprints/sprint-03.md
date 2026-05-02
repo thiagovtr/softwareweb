@@ -39,7 +39,7 @@ O diagrama de classes representa a estrutura principal do sistema DisciplinasUFL
 A classe Usuario representa o estudante cadastrado na plataforma. A classe Arquivo representa os materiais acadêmicos enviados pelos usuários. A classe Disciplina organiza os arquivos de acordo com a matéria correspondente. A classe Curtida representa a interação dos usuários com os arquivos compartilhados.
 
 
-![Diagrama de Classes](DiagramaDeClasses.drawio.png)
+![Diagrama de Classes](imagens/DiagramaDeClasses.drawio.png)
 
 ### 4.2 Diagrama de Sequência
 
@@ -47,7 +47,7 @@ O diagrama de sequência representa o fluxo de envio de arquivo no sistema. O pr
 
 Caso o arquivo seja válido, o sistema salva os dados no banco de dados e retorna uma mensagem de sucesso ao usuário. Caso o arquivo ultrapasse o limite permitido, o sistema retorna uma mensagem de erro.
 
-![Diagrama de Classes](DiagramaDeSequencia.drawio.png)
+![Diagrama de Sequência](imagens/DiagramaDeSequencia.drawio.png)
 
 
 ## 5. Relação com os Requisitos da Sprint 2
@@ -66,7 +66,7 @@ Os modelos produzidos nesta sprint estão relacionados aos seguintes requisitos 
 
 ## 6. Dificuldades Encontradas
 
-A principal dificuldade encontrada foi transformar os requisitos definidos na Sprint 2 em modelos UML. Também foi necessário decidir quais classes seriam essenciais para representar a estrutura inicial do sistema sem deixar o diagrama excessivamente complexo.
+A principal dificuldade encontrada foi fazer os diagramas em UML. Também foi necessário decidir quais classes seriam essenciais para representar a estrutura inicial do sistema sem deixar o diagrama excessivamente complexo.
 
 
 ## 7. Resultados Obtidos
