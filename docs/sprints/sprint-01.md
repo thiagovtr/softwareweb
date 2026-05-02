@@ -15,7 +15,6 @@ Projeto: DisciplinasUFLA
 Data da Sprint: 04/04/2026 a 11/04/2026
 
 
-
 ## 2. Descrição do Problema Escolhido
 
 O problema escolhido pelo grupo está relacionado à dificuldade em compartilhar conteúdos acadêmicos entre estudantes da UFLA.
@@ -23,7 +22,6 @@ O problema escolhido pelo grupo está relacionado à dificuldade em compartilhar
 Atualmente, muitos alunos utilizam aplicativos de mensagens e redes sociais para compartilhar arquivos acadêmicos, como resumos, listas de exercícios e materiais de estudo. No entanto, esse processo é desorganizado, dificultando a localização de conteúdos importantes e tornando o acesso aos materiais menos eficiente.
 
 Essa situação gera dificuldades no acesso rápido aos conteúdos e pode prejudicar o aprendizado dos estudantes.
-
 
 
 ## 3. Visão do Produto
@@ -43,7 +41,6 @@ O sistema permitirá:
 O sistema será acessado por meio de navegadores web e utilizado por estudantes da universidade.
 
 
-
 ## 4. Objetivos do Projeto
 
 Objetivo geral:
@@ -60,7 +57,6 @@ Objetivos específicos:
 - Melhorar a organização dos materiais acadêmicos
 
 
-
 ## 5. Product Backlog Inicial
 
 | ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista |
@@ -69,8 +65,6 @@ Objetivos específicos:
 | RT02 | Requisito técnico | Tela de Envio de Material | Interface para o aluno fazer upload | Alta | Ter um botão para selecionar o arquivo | 5 pts | Sprint 4 |
 | RT03 | Requisito técnico | Tela de Busca | Interface para procurar resumos, slides e exercícios | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 4 |
 | RT04 | Requisito técnico | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 4 pts | Sprint 5 |
-
-
 
 
 ## 6. Planejamento da Sprint 1 e da Sprint 2
@@ -98,7 +92,6 @@ Durante a Sprint 2 serão realizadas as seguintes atividades:
 - Organização dos requisitos no GitHub
 
 
-
 ## 7. Registro Resumido da Sprint
 
 Durante a Sprint 1, o grupo realizou reuniões para discutir possíveis ideias de projeto e analisar problemas que poderiam ser resolvidos por meio de uma aplicação web.
@@ -110,7 +103,6 @@ Em seguida, foi criado o repositório no GitHub e organizada a estrutura inicial
 Também foi definido o Product Backlog inicial com as principais funcionalidades do sistema.
 
 A Sprint 1 foi realizada estabelecendo a base inicial do projeto.
-
 
 
 ## 8. Criação do Repositório no GitHub
@@ -131,7 +123,6 @@ Commits realizados:
 - Commit inicial com criação das pastas
 - Commit com adição do README.md
 - Commit com criação do sprint-01.md
-
 
 
 ## 9. Arquivo docs/sprints/sprint-01.md

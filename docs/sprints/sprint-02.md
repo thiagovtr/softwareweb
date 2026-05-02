@@ -15,7 +15,6 @@ Projeto: DisciplinasUFLA
 Data da Sprint: 11/04/2026 a 25/04/2026
 
 
-
 ## 2. Objetivo da Sprint 
 
 Identificar, descrever, organizar e priorizar os requisitos da plataforma de compartilhamento de materiais acadêmicos.
