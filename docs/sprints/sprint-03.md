@@ -64,11 +64,25 @@ Os modelos produzidos nesta sprint estão relacionados aos seguintes requisitos 
 | RNF01 - Restrição de Tamanho | Representado na validação do diagrama de sequência |
 
 
-## 6. Dificuldades Encontradas
+## 6. Registro de Revisão da Sprint
+
+### Planejamento
+Nesta sprint, o grupo definiu como objetivo principal a modelagem do sistema por meio de diagramas UML.
+
+Foram selecionadas as tarefas de criação do diagrama de classes e do diagrama de sequência, além da documentação dos modelos produzidos.
+
+
+### Execução
+As atividades foram realizadas de forma colaborativa. Inicialmente, foram identificadas as principais entidades do sistema com base nos requisitos da Sprint 2.
+
+Em seguida, foi elaborado o diagrama de classes, definindo atributos, métodos e relacionamentos. Posteriormente, foi desenvolvido o diagrama de sequência, representando o fluxo de envio de arquivos.
+
+
+## 7. Dificuldades Encontradas
 
 A principal dificuldade encontrada foi fazer os diagramas em UML. Também foi necessário decidir quais classes seriam essenciais para representar a estrutura inicial do sistema sem deixar o diagrama excessivamente complexo.
 
 
-## 7. Resultados Obtidos
+## 8. Resultados Obtidos
 
 Ao final da Sprint 3, foram produzidos dois modelos UML: o diagrama de classes e o diagrama de sequência. Esses diagramas ajudaram a representar a estrutura do sistema e o comportamento do fluxo de upload de arquivos, servindo como base para as próximas etapas do projeto.
