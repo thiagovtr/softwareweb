@@ -47,7 +47,7 @@ O diagrama de sequência representa o fluxo de envio de arquivo no sistema. O pr
 
 Caso o arquivo seja válido, o sistema salva os dados no banco de dados e retorna uma mensagem de sucesso ao usuário. Caso o arquivo ultrapasse o limite permitido, o sistema retorna uma mensagem de erro.
 
-Inserir aqui a imagem do diagrama de sequência.
+![Diagrama de Classes](DiagramaDeSequencia.drawio.png)
 
 
 ## 5. Relação com os Requisitos da Sprint 2
