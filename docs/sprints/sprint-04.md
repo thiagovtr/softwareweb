@@ -12,7 +12,7 @@ Projeto: DisciplinasUFLA
 | Guilherme dos Santos Fernandes | Dev Team |
 | Matheus Levi Tavares | Dev Team |
 
-Data da Sprint: 25/04/2026 a 02/05/2026
+Data da Sprint: 02/06/2026 a 09/05/2026
 
 
 ## 2. Objetivo da Sprint
