@@ -69,5 +69,3 @@ O grupo discutiu a responsabilidade de cada módulo. Decidimos que a validação
 ## 8. Resultados Obtidos
 
 Ao final desta sprint, o grupo possui uma visão clara de como o código será organizado. A aplicação dos princípios de projeto permitiu reduzir o acoplamento entre os módulos, o que facilitará a implementação das funcionalidades de upload e download nas próximas etapas.
-
----
