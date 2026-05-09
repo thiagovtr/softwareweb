@@ -67,12 +67,15 @@ Funcionalidades adicionais poderão ser incluídas nas próximas sprints conform
 
 Sprint 1 – Definição do problema e visão do produto  
 Sprint 2 - Levantemento e priorização de requisitos funcionais e não-funcionais  
-Sprint 3 – Modelagem do sistema
+Sprint 3 – Modelagem do sistema 
+Sprint 4 – Princípios de Projeto
 
 
 
-# Tecnologias (temporariamente)
+# Tecnologias
 
 - HTML
 - CSS
 - JavaScript
+- Docker
+- Prisma ORM
