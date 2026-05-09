@@ -22,7 +22,7 @@ Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, dec
 
 ## 3. Decomposição da Solução
 
-Para garantir a **modularidade** e a **facilidade de manutenção**, a aplicação foi decomposta nos seguintes componentes principais:
+Para garantir a modularidade e a facilidade de manutenção, a aplicação foi decomposta nos seguintes componentes principais:
 
 * **Camada de Apresentação (Frontend):** Interface Web desenvolvida para permitir a interação do estudante com o sistema.
 * **Camada de Serviços (Backend):** Concentra a lógica de negócio, como a validação de e-mails institucionais e o processamento de arquivos.
