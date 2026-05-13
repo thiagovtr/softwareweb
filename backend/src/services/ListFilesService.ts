@@ -2,9 +2,13 @@ import { prisma } from "../configs/prisma";
 
 class ListFilesService {
 
-  async execute() {
+  async execute(subjectId?: number) {
 
     const files = await prisma.file.findMany({
+
+      where: subjectId
+        ? { subjectId }
+        : undefined,
 
       include: {
 
@@ -26,7 +30,17 @@ class ListFilesService {
 
     });
 
-    return files;
+    const filesWithUrl = files.map((file) => {
+
+      return {
+        ...file,
+
+        url: `http://localhost:3333/uploads/${file.filename}`
+      };
+
+    });
+
+    return filesWithUrl;
   }
 
 }
