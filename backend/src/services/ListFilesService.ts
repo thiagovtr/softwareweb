@@ -1,4 +1,5 @@
 import { prisma } from "../configs/prisma";
+import { AppError } from "../errors/AppError";
 
 class ListFilesService {
 
@@ -11,7 +12,13 @@ class ListFilesService {
         : undefined,
 
       include: {
-
+        
+        _count: {
+          select: {
+            likes: true
+          }
+        },
+      
         user: {
           select: {
             id: true,
@@ -20,9 +27,9 @@ class ListFilesService {
           }
         },
 
-        subject: true
+  subject: true
 
-      },
+},
 
       orderBy: {
         createdAt: "desc"
@@ -34,6 +41,10 @@ class ListFilesService {
 
       return {
         ...file,
+
+        _count: undefined,
+
+        likes: file._count.likes,
 
         url: `http://localhost:3333/uploads/${file.filename}`
       };

@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
+import { AppError } from "../errors/AppError";
 
 import authConfig from "../configs/auth";
 
@@ -16,7 +17,7 @@ export function isAuthenticated(
   const authToken = request.headers.authorization;
 
   if (!authToken) {
-    throw new Error("Token não informado");
+    throw new AppError("Token não informado", 401);
   }
 
   const [, token] = authToken.split(" ");
@@ -33,6 +34,6 @@ export function isAuthenticated(
     return next();
 
   } catch {
-    throw new Error("Token inválido");
+    throw new AppError("Token inválido", 401);
   }
 }
