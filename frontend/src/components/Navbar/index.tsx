@@ -1,30 +1,21 @@
 import { useState } from "react";
 
-import {
-  Link,
-  useLocation,
-  useNavigate
-} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigate = useNavigate();
 
   const location = useLocation();
 
-  const user = JSON.parse(
-    localStorage.getItem("@user") || "{}"
-  );
+  const user = JSON.parse(localStorage.getItem("@user") || "{}");
 
   function handleLogout() {
-
     localStorage.removeItem("@token");
     localStorage.removeItem("@user");
 
     navigate("/");
-
   }
 
   function isActive(path: string) {
@@ -34,7 +25,6 @@ function Navbar() {
   return (
     <>
       <div className="bg-blue-600 text-white p-4 flex items-center shadow-md">
-
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="
@@ -49,10 +39,7 @@ function Navbar() {
           ☰
         </button>
 
-        <h1 className="text-2xl font-bold">
-          SoftwareWeb
-        </h1>
-
+        <h1 className="text-2xl font-bold">SoftwareWeb</h1>
       </div>
 
       {menuOpen && (
@@ -62,7 +49,8 @@ function Navbar() {
             onClick={() => setMenuOpen(false)}
           />
 
-          <div className="
+          <div
+            className="
             fixed
             top-0
             left-0
@@ -74,12 +62,10 @@ function Navbar() {
             flex
             flex-col
             justify-between
-          ">
-
+          "
+          >
             <div>
-
               <div className="p-6 border-b">
-
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="
@@ -93,8 +79,8 @@ function Navbar() {
                 </button>
 
                 <div className="mt-6 flex items-center gap-3">
-
-                  <div className="
+                  <div
+                    className="
                     w-12
                     h-12
                     rounded-full
@@ -105,26 +91,20 @@ function Navbar() {
                     justify-center
                     text-xl
                     font-bold
-                  ">
+                  "
+                  >
                     {user.name?.charAt(0)}
                   </div>
 
                   <div>
-                    <p className="text-sm text-gray-500">
-                      Logado como
-                    </p>
+                    <p className="text-sm text-gray-500">Logado como</p>
 
-                    <p className="font-semibold text-gray-800">
-                      {user.name}
-                    </p>
+                    <p className="font-semibold text-gray-800">{user.name}</p>
                   </div>
-
                 </div>
-
               </div>
 
               <div className="p-4 flex flex-col gap-2">
-
                 <Link
                   to="/home"
                   onClick={() => setMenuOpen(false)}
@@ -134,9 +114,10 @@ function Navbar() {
                     transition
                     font-medium
 
-                    ${isActive("/home")
-                      ? "bg-blue-100 text-blue-700"
-                      : "hover:bg-gray-100"
+                    ${
+                      isActive("/home")
+                        ? "bg-blue-100 text-blue-700"
+                        : "hover:bg-gray-100"
                     }
                   `}
                 >
@@ -152,21 +133,19 @@ function Navbar() {
                     transition
                     font-medium
 
-                    ${isActive("/upload")
-                      ? "bg-blue-100 text-blue-700"
-                      : "hover:bg-gray-100"
+                    ${
+                      isActive("/upload")
+                        ? "bg-blue-100 text-blue-700"
+                        : "hover:bg-gray-100"
                     }
                   `}
                 >
                   Upload
                 </Link>
-
               </div>
-
             </div>
 
             <div className="p-4 border-t">
-
               <button
                 onClick={handleLogout}
                 className="
@@ -182,13 +161,10 @@ function Navbar() {
               >
                 Sair
               </button>
-
             </div>
-
           </div>
         </>
       )}
-
     </>
   );
 }

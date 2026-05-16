@@ -3,9 +3,7 @@ import { Request, Response } from "express";
 import { CreateFileService } from "../services/CreateFileService";
 
 class CreateFileController {
-
   async handle(request: Request, response: Response) {
-
     const { title, description, subjectId } = request.body;
 
     const userId = Number(request.user_id);
@@ -24,12 +22,11 @@ class CreateFileController {
       filename: fileData.filename,
       size: fileData.size,
       subjectId: Number(subjectId),
-      userId
+      userId,
     });
 
     return response.json(file);
   }
-
 }
 
 export { CreateFileController };

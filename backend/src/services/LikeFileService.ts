@@ -7,44 +7,35 @@ interface LikeFileRequest {
 }
 
 class LikeFileService {
-
-  async execute({
-    fileId,
-    userId
-  }: LikeFileRequest) {
-  
+  async execute({ fileId, userId }: LikeFileRequest) {
     const likeAlreadyExists = await prisma.like.findFirst({
       where: {
         fileId,
-        userId
-      }
+        userId,
+      },
     });
-  
+
     if (likeAlreadyExists) {
-    
       await prisma.like.delete({
         where: {
-          id: likeAlreadyExists.id
-        }
+          id: likeAlreadyExists.id,
+        },
       });
-    
+
       return {
-        message: "Like removido"
+        message: "Like removido",
       };
-    
     }
-  
+
     const like = await prisma.like.create({
       data: {
         fileId,
-        userId
-      }
+        userId,
+      },
     });
-  
-    return like;
-  
-  }
 
+    return like;
+  }
 }
 
 export { LikeFileService };

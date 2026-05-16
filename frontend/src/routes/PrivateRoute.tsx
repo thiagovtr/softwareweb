@@ -5,10 +5,7 @@ interface PrivateRouteProps {
   children: React.ReactNode;
 }
 
-function PrivateRoute({
-  children
-}: PrivateRouteProps) {
-
+function PrivateRoute({ children }: PrivateRouteProps) {
   const token = localStorage.getItem("@token");
 
   if (!token) {

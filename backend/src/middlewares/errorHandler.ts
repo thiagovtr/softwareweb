@@ -6,12 +6,11 @@ export function errorHandler(
   error: Error,
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) {
-
   if (error instanceof AppError) {
     return response.status(error.statusCode).json({
-      message: error.message
+      message: error.message,
     });
   }
 
@@ -19,7 +18,6 @@ export function errorHandler(
 
   return response.status(500).json({
     status: "error",
-    message: "Internal server error"
+    message: "Internal server error",
   });
-
 }

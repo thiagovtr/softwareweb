@@ -1,68 +1,43 @@
 import { useState } from "react";
-import {
-  Link,
-  useNavigate
-} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import axios from "axios";
 
 function Login() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   async function handleLogin() {
-
     try {
-
       const response = await api.post("/login", {
         email,
-        password
+        password,
       });
 
-      localStorage.setItem(
-          "@token",
-          response.data.token
-        );
-        
-        localStorage.setItem(
-          "@user",
-          JSON.stringify(response.data.user)
-        );
+      localStorage.setItem("@token", response.data.token);
 
-    toast.success("Login realizado!");
+      localStorage.setItem("@user", JSON.stringify(response.data.user));
 
-    navigate("/home");
+      toast.success("Login realizado!");
+
+      navigate("/home");
     } catch (error) {
-
       console.log(error);
-        
-      if (axios.isAxiosError(error)) {
-      
-        toast.error(
-          error.response?.data?.message
-        );
-      
-      } else {
-      
-        toast.error("Erro no login");
-      
-      }
-    
-    }
 
+      if (axios.isAxiosError(error)) {
+        toast.error(error.response?.data?.message);
+      } else {
+        toast.error("Erro no login");
+      }
+    }
   }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          SoftwareWeb
-        </h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">SoftwareWeb</h1>
 
         <input
           type="email"
@@ -88,9 +63,7 @@ function Login() {
         </button>
 
         <p className="text-center text-gray-600 mt-6">
-          
           Não possui conta?{" "}
-          
           <Link
             to="/register"
             className="
@@ -101,11 +74,8 @@ function Login() {
           >
             Criar conta
           </Link>
-          
         </p>
-
       </div>
-
     </div>
   );
 }

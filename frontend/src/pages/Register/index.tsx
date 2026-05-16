@@ -16,12 +16,11 @@ function Register() {
       await api.post("/users", {
         name,
         email,
-        password
+        password,
       });
 
       toast.success("Conta criada com sucesso!");
       navigate("/");
-
     } catch (error) {
       console.log(error);
 
@@ -34,31 +33,35 @@ function Register() {
   }
 
   return (
-    <div className="
+    <div
+      className="
       min-h-screen
       flex
       items-center
       justify-center
       bg-gray-100
       p-4
-    ">
-
-      <div className="
+    "
+    >
+      <div
+        className="
         bg-white
         p-8
         rounded-2xl
         shadow-md
         w-full
         max-w-md
-      ">
-
-        <h1 className="
+      "
+      >
+        <h1
+          className="
           text-3xl
           font-bold
           text-center
           text-gray-800
           mb-6
-        ">
+        "
+        >
           Criar Conta
         </h1>
 
@@ -122,13 +125,14 @@ function Register() {
           Criar Conta
         </button>
 
-        <p className="
+        <p
+          className="
           text-center
           text-gray-600
           mt-6
-        ">
+        "
+        >
           Já possui conta?{" "}
-
           <Link
             to="/"
             className="
@@ -139,11 +143,8 @@ function Register() {
           >
             Entrar
           </Link>
-
         </p>
-
       </div>
-
     </div>
   );
 }

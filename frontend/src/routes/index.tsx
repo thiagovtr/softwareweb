@@ -9,9 +9,7 @@ import Register from "../pages/Register";
 function AppRoutes() {
   return (
     <BrowserRouter>
-
       <Routes>
-
         <Route path="/" element={<Login />} />
 
         <Route
@@ -33,9 +31,7 @@ function AppRoutes() {
         />
 
         <Route path="/register" element={<Register />} />
-
       </Routes>
-
     </BrowserRouter>
   );
 }

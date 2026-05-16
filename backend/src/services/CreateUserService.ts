@@ -10,11 +10,10 @@ interface CreateUserRequest {
 
 class CreateUserService {
   async execute({ name, email, password }: CreateUserRequest) {
-
     const userAlreadyExists = await prisma.user.findUnique({
       where: {
-        email
-      }
+        email,
+      },
     });
 
     if (userAlreadyExists) {
@@ -27,8 +26,8 @@ class CreateUserService {
       data: {
         name,
         email,
-        password: passwordHash
-      }
+        password: passwordHash,
+      },
     });
 
     return user;

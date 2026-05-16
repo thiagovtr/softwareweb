@@ -11,9 +11,8 @@ interface TokenPayload {
 export function isAuthenticated(
   request: Request,
   response: Response,
-  next: NextFunction
+  next: NextFunction,
 ) {
-
   const authToken = request.headers.authorization;
 
   if (!authToken) {
@@ -23,16 +22,11 @@ export function isAuthenticated(
   const [, token] = authToken.split(" ");
 
   try {
-
-    const { sub } = verify(
-      token,
-      authConfig.jwt.secret
-    ) as TokenPayload;
+    const { sub } = verify(token, authConfig.jwt.secret) as TokenPayload;
 
     request.user_id = sub;
 
     return next();
-
   } catch {
     throw new AppError("Token inválido", 401);
   }

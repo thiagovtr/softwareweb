@@ -10,16 +10,14 @@ interface CreateFileRequest {
 }
 
 class CreateFileService {
-
   async execute({
     title,
     description,
     filename,
     size,
     subjectId,
-    userId
+    userId,
   }: CreateFileRequest) {
-
     const file = await prisma.file.create({
       data: {
         title,
@@ -27,13 +25,12 @@ class CreateFileService {
         filename,
         size,
         subjectId,
-        userId
-      }
+        userId,
+      },
     });
 
     return file;
   }
-
 }
 
 export { CreateFileService };

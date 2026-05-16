@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import path from "path";
 import cors from "cors";
@@ -20,12 +21,7 @@ app.use("/subjects", subjectRoutes);
 
 app.use(errorHandler);
 
-app.use(
-  "/uploads",
-  express.static(
-    path.resolve(__dirname, "..", "uploads")
-  )
-);
+app.use("/uploads", express.static(path.resolve(__dirname, "..", "uploads")));
 
 app.listen(3333, () => {
   console.log("Servidor rodando na porta 3333");

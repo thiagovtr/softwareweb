@@ -9,17 +9,11 @@ const createUserController = new CreateUserController();
 
 userRoutes.post("/", createUserController.handle);
 
-userRoutes.get(
-  "/profile",
-  isAuthenticated,
-  (request, response) => {
-
-    return response.json({
-      message: "Usuário autenticado",
-      user_id: request.user_id
-    });
-
-  }
-);
+userRoutes.get("/profile", isAuthenticated, (request, response) => {
+  return response.json({
+    message: "Usuário autenticado",
+    user_id: request.user_id,
+  });
+});
 
 export { userRoutes };

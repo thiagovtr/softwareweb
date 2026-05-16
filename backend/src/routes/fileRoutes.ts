@@ -19,18 +19,11 @@ fileRoutes.post(
   "/upload",
   isAuthenticated,
   upload.single("file"),
-  createFileController.handle
+  createFileController.handle,
 );
 
-fileRoutes.get(
-  "/",
-  listFilesController.handle
-);
+fileRoutes.get("/", listFilesController.handle);
 
-fileRoutes.post(
-  "/:id/like",
-  isAuthenticated,
-  likeFileController.handle
-);
+fileRoutes.post("/:id/like", isAuthenticated, likeFileController.handle);
 
 export { fileRoutes };

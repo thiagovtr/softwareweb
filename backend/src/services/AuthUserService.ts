@@ -12,11 +12,10 @@ interface AuthRequest {
 
 class AuthUserService {
   async execute({ email, password }: AuthRequest) {
-
     const user = await prisma.user.findUnique({
       where: {
-        email
-      }
+        email,
+      },
     });
 
     if (!user) {
@@ -29,18 +28,14 @@ class AuthUserService {
       throw new AppError("Email ou senha inválidos");
     }
 
-    const token = sign(
-      {},
-      authConfig.jwt.secret as string,
-      {
-        subject: String(user.id),
-        expiresIn: "1d"
-      }
-    );
+    const token = sign({}, authConfig.jwt.secret as string, {
+      subject: String(user.id),
+      expiresIn: "1d",
+    });
 
     return {
       user,
-      token
+      token,
     };
   }
 }
