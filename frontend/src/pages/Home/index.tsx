@@ -124,19 +124,19 @@ function Home() {
                   <button
                     onClick={() => handleLike(file.id)}
                     className="
-                  bg-pink-500
-                  text-white
-                  px-4
-                  py-2
-                  rounded-lg
-                  cursor-pointer
-                  hover:bg-pink-600
-                  hover:scale-105
-                  hover:shadow-lg
-                  active:scale-95
-                  transition
-                  duration-200
-                  "
+                    bg-pink-500
+                    text-white
+                    px-4
+                    py-2
+                    rounded-lg
+                    cursor-pointer
+                    hover:bg-pink-600
+                    hover:scale-105
+                    hover:shadow-lg
+                    active:scale-95
+                    transition
+                    duration-200
+                    "
                   >
                     Curtir
                   </button>
