@@ -11,24 +11,24 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 ## 3. Backlog do produto
 | ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista | Status |  
 |---|---|---|---|---|---|---|---|  
-| RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@estudante.ufla.br) e autenticar em até 2s | 3 pts | Sprint 5 | Concluído  
-| RF02 | Requisito Funcional | Tela de Envio de Material | Interface para upload de arquivos | Alta | Upload deve ser concluído com sucesso em até 5s para arquivos de até 100MB em 95% dos casos | 5 pts | Sprint 5 | Concluído  
-| RF03 | Requisito Funcional | Tela de Busca | Interface para procurar materiais | Média | Busca deve retornar resultados em até 2s e filtrar corretamente em 100% dos testes | 3 pts | Sprint 5 | Pendente  
-| RF04 | Requisito Funcional | Função de Download | Lógica para baixar arquivos | Média | Download deve iniciar em até 2s após clique e completar sem erro em 95% dos casos | 4 pts | Sprint 6 | Pendente  
-| RF05 | Requisito Funcional | Exclusão | Autor pode apagar seu envio | Média | Apenas o autor deve conseguir excluir e a ação deve ser concluída em até 2s em 100% dos testes | 2 pts | Sprint 5 | Pendente  
-| RF06 | Requisito Funcional | Cadastro de Usuário | Criação de conta no sistema | Alta | Cadastro deve ser concluído em até 3s e armazenar corretamente os dados em 100% dos testes | 3 pts | Sprint 4 | Concluído  
-| RF07 | Requisito Funcional | Logout | Encerramento de sessão do usuário | Baixa | Logout deve ser realizado em até 1s em 100% dos testes | 1 pt | Sprint 4 | Concluído  
-| RF08 | Requisito Funcional | Visualização de Arquivos | Listagem de materiais disponíveis | Alta | Lista de arquivos deve carregar em até 2s em 95% dos acessos | 3 pts | Sprint 5 | Pendente  
-| RF09 | Requisito Funcional | Associação de Arquivos | Vincular arquivo ao autor | Alta | 100% dos arquivos devem estar corretamente associados ao usuário que realizou o upload | 2 pts | Sprint 4 | Pendente  
-| RF10 | Requisito Funcional | Filtro por Disciplina | Listar arquivos por disciplina | Média | Filtro deve retornar resultados corretos em até 2s em 95% dos testes | 3 pts | Sprint 6 | Pendente  
-| RF11 | Requisito Funcional | Sistema de Likes | Permitir que usuários curtam arquivos | Média | Usuário autenticado deve conseguir curtir/descurtir um arquivo em até 1s e o sistema deve atualizar a contagem corretamente em 100% dos testes | 3 pts | Sprint 6 | Concluído  
-| RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Sprint 4 | Pedente  
-| RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Sprint 3 | Concluído  
-| RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 3 cliques em 90% dos testes de uso | 5 pts | Sprint 5 | Concluído  
-| RNF04 | Requisito Não Funcional | Estabilidade do Sistema | Operação contínua | Alta | Sistema deve manter disponibilidade ≥ 99% e suportar pelo menos 100 usuários simultâneos sem falhas críticas | 3 pts | Sprint 4 | Pendente  
-| RNF05 | Requisito Não Funcional | Segurança | Proteção de dados | Alta | 100% das senhas devem ser armazenadas com criptografia e acessos não autorizados devem ser bloqueados em testes | 4 pts | Sprint 4 | Pendente  
-| RNF06 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Sprint 5 | Concluído  
-| RNF07 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Sprint 5 | Pendente  
+| RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@estudante.ufla.br) e autenticar em até 2s | 3 pts | Sprint 5 | Concluído |  
+| RF02 | Requisito Funcional | Tela de Envio de Material | Interface para upload de arquivos | Alta | Upload deve ser concluído com sucesso em até 5s para arquivos de até 100MB em 95% dos casos | 5 pts | Sprint 5 | Concluído |  
+| RF03 | Requisito Funcional | Tela de Busca | Interface para procurar materiais | Média | Busca deve retornar resultados em até 2s e filtrar corretamente em 100% dos testes | 3 pts | Sprint 5 | Pendente |  
+| RF04 | Requisito Funcional | Função de Download | Lógica para baixar arquivos | Média | Download deve iniciar em até 2s após clique e completar sem erro em 95% dos casos | 4 pts | Sprint 6 | Pendente |  
+| RF05 | Requisito Funcional | Exclusão | Autor pode apagar seu envio | Média | Apenas o autor deve conseguir excluir e a ação deve ser concluída em até 2s em 100% dos testes | 2 pts | Sprint 5 | Pendente |  
+| RF06 | Requisito Funcional | Cadastro de Usuário | Criação de conta no sistema | Alta | Cadastro deve ser concluído em até 3s e armazenar corretamente os dados em 100% dos testes | 3 pts | Sprint 4 | Concluído |  
+| RF07 | Requisito Funcional | Logout | Encerramento de sessão do usuário | Baixa | Logout deve ser realizado em até 1s em 100% dos testes | 1 pt | Sprint 4 | Concluído |  
+| RF08 | Requisito Funcional | Visualização de Arquivos | Listagem de materiais disponíveis | Alta | Lista de arquivos deve carregar em até 2s em 95% dos acessos | 3 pts | Sprint 5 | Pendente |  
+| RF09 | Requisito Funcional | Associação de Arquivos | Vincular arquivo ao autor | Alta | 100% dos arquivos devem estar corretamente associados ao usuário que realizou o upload | 2 pts | Sprint 4 | Pendente |  
+| RF10 | Requisito Funcional | Filtro por Disciplina | Listar arquivos por disciplina | Média | Filtro deve retornar resultados corretos em até 2s em 95% dos testes | 3 pts | Sprint 6 | Pendente |  
+| RF11 | Requisito Funcional | Sistema de Likes | Permitir que usuários curtam arquivos | Média | Usuário autenticado deve conseguir curtir/descurtir um arquivo em até 1s e o sistema deve atualizar a contagem corretamente em 100% dos testes | 3 pts | Sprint 6 | Concluído |  
+| RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Sprint 4 | Pedente |  
+| RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Sprint 3 | Concluído |  
+| RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 3 cliques em 90% dos testes de uso | 5 pts | Sprint 5 | Concluído |  
+| RNF04 | Requisito Não Funcional | Estabilidade do Sistema | Operação contínua | Alta | Sistema deve manter disponibilidade ≥ 99% e suportar pelo menos 100 usuários simultâneos sem falhas críticas | 3 pts | Sprint 4 | Pendente |  
+| RNF05 | Requisito Não Funcional | Segurança | Proteção de dados | Alta | 100% das senhas devem ser armazenadas com criptografia e acessos não autorizados devem ser bloqueados em testes | 4 pts | Sprint 4 | Pendente |  
+| RNF06 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Sprint 5 | Concluído |  
+| RNF07 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Sprint 5 | Pendente |  
 
 ---
 
