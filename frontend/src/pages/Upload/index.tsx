@@ -59,84 +59,127 @@ function Upload() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen bg-gray-100">
 
       <Navbar />
-      
-      <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
 
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          Upload
-        </h1>
+      <div className="
+        flex
+        items-center
+        justify-center
+        p-8
+      ">
 
-        <input
-          type="text"
-          placeholder="Título"
-          className="w-full border rounded-lg p-3 mb-4"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <div className="
+          bg-white
+          p-8
+          rounded-2xl
+          shadow-md
+          w-full
+          max-w-md
+        ">
 
-        <textarea
-          placeholder="Descrição"
-          className="w-full border rounded-lg p-3 mb-4"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-
-        <select
-          className="w-full border rounded-lg p-3 mb-4"
-          value={subjectId}
-          onChange={(e) => setSubjectId(e.target.value)}
-        >
-
-          <option value="">
-            Selecione uma matéria
-          </option>
-
-          {subjects.map((subject) => (
-            <option
-              key={subject.id}
-              value={subject.id}
-            >
-              {subject.name}
-            </option>
-          ))}
-
-        </select>
-
-        <label className="w-full flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-6 cursor-pointer hover:border-blue-500 transition mb-4">
-
-          <span className="text-gray-600 font-medium">
-            Clique para selecionar um arquivo
-          </span>
-
-          {file && (
-            <span className="mt-2 text-blue-600 text-sm">
-              {file.name}
-            </span>
-          )}
+          <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
+            Upload de Arquivo
+          </h1>
 
           <input
-            type="file"
-            className="hidden"
-            onChange={(e) => {
-            
-              if (e.target.files) {
-                setFile(e.target.files[0]);
-              }
-            
-            }}
+            type="text"
+            placeholder="Título"
+            className="w-full border rounded-lg p-3 mb-4"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
 
-        </label>
+          <textarea
+            placeholder="Descrição"
+            className="w-full border rounded-lg p-3 mb-4"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
 
-        <button
-          onClick={handleUpload}
-          className="w-full bg-blue-600 text-white p-3 rounded-lg font-bold hover:bg-blue-700"
-        >
-          Enviar
-        </button>
+          <select
+            className="w-full border rounded-lg p-3 mb-4"
+            value={subjectId}
+            onChange={(e) => setSubjectId(e.target.value)}
+          >
+
+            <option value="">
+              Selecione uma matéria
+            </option>
+
+            {subjects.map((subject) => (
+              <option
+                key={subject.id}
+                value={subject.id}
+              >
+                {subject.name}
+              </option>
+            ))}
+
+          </select>
+
+          <label className="
+            w-full
+            flex
+            flex-col
+            items-center
+            justify-center
+            border-2
+            border-dashed
+            border-gray-300
+            rounded-lg
+            p-6
+            cursor-pointer
+            hover:border-blue-500
+            transition
+            mb-6
+          ">
+
+            <span className="text-gray-600 font-medium">
+              Clique para selecionar um arquivo
+            </span>
+
+            {file && (
+              <span className="mt-2 text-blue-600 text-sm">
+                {file.name}
+              </span>
+            )}
+
+            <input
+              type="file"
+              className="hidden"
+              onChange={(e) => {
+
+                if (e.target.files) {
+                  setFile(e.target.files[0]);
+                }
+
+              }}
+            />
+
+          </label>
+
+          <button
+            onClick={handleUpload}
+            className="
+              w-full
+              bg-blue-600
+              text-white
+              p-3
+              rounded-lg
+              font-bold
+              hover:bg-blue-700
+              hover:scale-[1.02]
+              transition
+              duration-200
+              shadow-md
+            "
+          >
+            Enviar
+          </button>
+
+        </div>
 
       </div>
 

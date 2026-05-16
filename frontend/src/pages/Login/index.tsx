@@ -1,6 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  Link,
+  useNavigate
+} from "react-router-dom";
 import api from "../../services/api";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 function Login() {
 
@@ -27,14 +32,25 @@ function Login() {
           JSON.stringify(response.data.user)
         );
 
-navigate("/home");
+    toast.success("Login realizado!");
 
+    navigate("/home");
     } catch (error) {
 
       console.log(error);
-
-      alert("Erro no login");
-
+        
+      if (axios.isAxiosError(error)) {
+      
+        toast.error(
+          error.response?.data?.message
+        );
+      
+      } else {
+      
+        toast.error("Erro no login");
+      
+      }
+    
     }
 
   }
@@ -70,6 +86,23 @@ navigate("/home");
         >
           Entrar
         </button>
+
+        <p className="text-center text-gray-600 mt-6">
+          
+          Não possui conta?{" "}
+          
+          <Link
+            to="/register"
+            className="
+              text-blue-600
+              font-semibold
+              hover:underline
+            "
+          >
+            Criar conta
+          </Link>
+          
+        </p>
 
       </div>
 

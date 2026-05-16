@@ -4,6 +4,7 @@ import PrivateRoute from "./PrivateRoute";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 import Upload from "../pages/Upload";
+import Register from "../pages/Register";
 
 function AppRoutes() {
   return (
@@ -30,6 +31,8 @@ function AppRoutes() {
             </PrivateRoute>
           }
         />
+
+        <Route path="/register" element={<Register />} />
 
       </Routes>
 
