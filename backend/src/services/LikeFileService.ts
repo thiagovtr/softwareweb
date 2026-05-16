@@ -12,26 +12,37 @@ class LikeFileService {
     fileId,
     userId
   }: LikeFileRequest) {
-
+  
     const likeAlreadyExists = await prisma.like.findFirst({
       where: {
         fileId,
         userId
       }
     });
-
+  
     if (likeAlreadyExists) {
-      throw new AppError("Você já curtiu este arquivo");
+    
+      await prisma.like.delete({
+        where: {
+          id: likeAlreadyExists.id
+        }
+      });
+    
+      return {
+        message: "Like removido"
+      };
+    
     }
-
+  
     const like = await prisma.like.create({
       data: {
         fileId,
         userId
       }
     });
-
+  
     return like;
+  
   }
 
 }
