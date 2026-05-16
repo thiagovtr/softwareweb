@@ -34,6 +34,26 @@ function Home() {
 
   }, []);
 
+  async function handleLike(fileId: number) {
+
+    try {
+
+      await api.post(`/files/${fileId}/like`);
+
+      const response = await api.get("/files");
+
+      setFiles(response.data);
+
+    } catch (error) {
+
+      console.log(error);
+
+      alert("Erro ao curtir arquivo");
+
+    }
+
+  }
+
   return (
     <div className="min-h-screen bg-gray-100">
     
@@ -87,9 +107,33 @@ function Home() {
           
                 </div>
           
-                <div className="mt-5 text-pink-600 font-bold text-lg">
+                <div className="mt-5 flex items-center justify-between">
+
+                <span className="text-pink-600 font-bold text-lg">
                   ❤️ {file.likes} curtidas
-                </div>
+                </span>
+
+                <button
+                  onClick={() => handleLike(file.id)}
+                  className="
+                  bg-pink-500
+                  text-white
+                  px-4
+                  py-2
+                  rounded-lg
+                  cursor-pointer
+                  hover:bg-pink-600
+                  hover:scale-105
+                  hover:shadow-lg
+                  active:scale-95
+                  transition
+                  duration-200
+                  "
+                >
+                  Curtir
+                </button>
+
+              </div>
           
               </div>
           
