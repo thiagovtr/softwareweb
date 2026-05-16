@@ -17,10 +17,10 @@ npm-debug.log*
 Thumbs.db
 
 # VSCode
-.vscode/
-
-# Prisma
-backend/prisma/dev.db
+.vscode/*
+!.vscode/extensions.json
 
 # Uploads temporários
-uploads/
+backend/uploads/
+
+repomix-output.xml
