@@ -65,7 +65,7 @@ Os membros da equipe de desenvolvimento trabalharam em par para definir as inter
 | :--- | :--- | :--- | :--- |
 | M04 | Aplicação de Padrões de Projeto | *Concluído* | Garante viabilidade técnica para RF02, RF04 e RNF04 |
 | D02 | Configuração Prisma/Docker | *Concluído* | Infraestrutura base e banco integrados com sucesso |
-| RT01 | Tela e Lógica de Login | Em andamento | Iniciada a codificação da lógica de validação de e-mails institucionais |
+| RT01 | Tela e Lógica de Login | *Concluído* | Iniciada a codificação da lógica de validação de e-mails institucionais |
 
 ---
 
