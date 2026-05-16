@@ -66,10 +66,10 @@ Os membros da equipe de desenvolvimento trabalharam em par para definir as inter
 | M04 | Aplicação de Padrões de Projeto | *Concluído* | Garante viabilidade técnica para RF02, RF04 e RNF04 |
 | D02 | Configuração Prisma/Docker | *Concluído* | Infraestrutura base e banco integrados com sucesso |
 | RT01 | Tela e Lógica de Login | *Concluído* | Iniciada a codificação da lógica de validação de e-mails institucionais |
-| RT02 | Refatoração do Feed e Exibição de Mídias | Concluído | Corrige o bug de imagens quebradas para PDFs/ZIPs e ajusta o layout dos cards (RF05) |
-| D03 | Isolamento de Credenciais com .env | Concluído | Remove a chave JWT exposta no código, aplicando dotenv no servidor (RNF02 - Segurança) |
-| D04 | Ajuste de Rastreamento do Repositório | Concluído | Limpa a pasta de cache .vite e atualiza o .gitignore para evitar conflitos na main |
-| DOC05 | Relatório de Padrões GoF (Sprint 5) | Concluído | Consolida a documentação técnica dos padrões Singleton, Chain of Responsibility e Proxy |
+| RT02 | Refatoração do Feed e Exibição de Mídias | *Concluído* | Corrige o bug de imagens quebradas para PDFs/ZIPs e ajusta o layout dos cards (RF05) |
+| D03 | Isolamento de Credenciais com .env | *Concluído* | Remove a chave JWT exposta no código, aplicando dotenv no servidor (RNF02 - Segurança) |
+| D04 | Ajuste de Rastreamento do Repositório | *Concluído*| Limpa a pasta de cache .vite e atualiza o .gitignore para evitar conflitos na main |
+| DOC05 | Relatório de Padrões GoF (Sprint 5) | *Concluído* | Consolida a documentação técnica dos padrões Singleton, Chain of Responsibility e Proxy |
 ---
 
 ## 8. Resultados Obtidos
