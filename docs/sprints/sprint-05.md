@@ -17,8 +17,7 @@ Data da Sprint: 09/05/2026 a 16/05/2026
 
 ## 2. Objetivo da Sprint
 
-Identificar problemas recurrentes no design de código da aplicação DisciplinasUFLA e selecionar padrões de projeto (Design Patterns) pertinentes da Gang of Four (GoF), justificando tecnicamente sua adoção e descrevendo os benefícios arquiteturais esperados.
-
+Identificar problemas recorrentes no design de código da aplicação Disciplinas UFLA e selecionar padrões de projeto (Design Patterns) pertinentes, justificando tecnicamente sua adoção e descrevendo os benefícios arquiteturais esperados.
 
 ## 3. Análise de Problemas Recorrentes e Padrões Adotados
 
