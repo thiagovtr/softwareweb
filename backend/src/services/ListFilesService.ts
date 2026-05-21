@@ -1,10 +1,29 @@
 import { prisma } from "../configs/prisma";
-import { AppError } from "../errors/AppError";
 
 class ListFilesService {
-  async execute(subjectId?: number) {
+  async execute(subjectId?: number, search?: string) {
     const files = await prisma.file.findMany({
-      where: subjectId ? { subjectId } : undefined,
+      where: {
+        ...(subjectId && { subjectId }),
+
+        ...(search && {
+          OR: [
+            {
+              title: {
+                contains: search,
+                mode: "insensitive",
+              },
+            },
+
+            {
+              description: {
+                contains: search,
+                mode: "insensitive",
+              },
+            },
+          ],
+        }),
+      },
 
       include: {
         _count: {

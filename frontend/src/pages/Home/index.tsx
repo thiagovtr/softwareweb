@@ -19,26 +19,50 @@ interface FileProps {
   };
 }
 
+interface SubjectProps {
+  id: number;
+  name: string;
+}
+
 function Home() {
   const [files, setFiles] = useState<FileProps[]>([]);
+  const [search, setSearch] = useState("");
+  const [subjects, setSubjects] = useState<SubjectProps[]>([]);
+  const [subjectId, setSubjectId] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     api
-      .get("/files")
+      .get(`/files?search=${search}&subjectId=${subjectId}`)
       .then((response) => {
         setFiles(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
+  }, [search, subjectId]);
+
+  useEffect(() => {
+    async function loadSubjects() {
+      try {
+        const response = await api.get("/subjects");
+
+        setSubjects(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    loadSubjects();
   }, []);
 
   async function handleLike(fileId: number) {
     try {
       await api.post(`/files/${fileId}/like`);
 
-      const response = await api.get("/files");
+      const response = await api.get(
+        `/files?search=${search}&subjectId=${subjectId}`,
+      );
 
       setFiles(response.data);
     } catch (error) {
@@ -66,6 +90,51 @@ function Home() {
         <h1 className="text-4xl font-bold text-gray-800 mb-8">
           Últimos Uploads
         </h1>
+
+        <div className="mb-8">
+          <input
+            type="text"
+            placeholder="🔎 Buscar materiais..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="
+      w-full
+      p-4
+      rounded-xl
+      border
+      border-gray-300
+      shadow-sm
+      focus:outline-none
+      focus:ring-2
+      focus:ring-blue-500
+    "
+          />
+
+          <select
+            value={subjectId}
+            onChange={(e) => setSubjectId(e.target.value)}
+            className="
+    w-full
+    p-4
+    rounded-xl
+    border
+    border-gray-300
+    shadow-sm
+    focus:outline-none
+    focus:ring-2
+    focus:ring-blue-500
+    mt-4
+  "
+          >
+            <option value="">Todas as matérias</option>
+
+            {subjects.map((subject) => (
+              <option key={subject.id} value={subject.id}>
+                {subject.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {files.map((file) => (
@@ -137,7 +206,7 @@ function Home() {
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleLike(file.id);                  
+                      handleLike(file.id);
                     }}
                     className="
                     bg-pink-500

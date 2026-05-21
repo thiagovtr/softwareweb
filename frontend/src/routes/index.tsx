@@ -33,15 +33,14 @@ function AppRoutes() {
 
         <Route path="/register" element={<Register />} />
 
-          <Route
-            path="/files/:id"
-            element={
-              <PrivateRoute>
-                <FileDetails />
-              </PrivateRoute>
-            }
-          />
-
+        <Route
+          path="/files/:id"
+          element={
+            <PrivateRoute>
+              <FileDetails />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -34,23 +34,29 @@ fileRoutes.post(
 fileRoutes.get("/", listFilesController.handle);
 
 fileRoutes.get("/:id", async (request, response) => {
-
   const { id } = request.params;
 
   const file = await prisma.file.findUnique({
     where: {
-      id: Number(id)
+      id: Number(id),
     },
 
     include: {
       subject: true,
-      user: true
-    }
+
+      user: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+        },
+      },
+    },
   });
 
   if (!file) {
     return response.status(404).json({
-      error: "Arquivo não encontrado"
+      error: "Arquivo não encontrado",
     });
   }
 
@@ -59,19 +65,14 @@ fileRoutes.get("/:id", async (request, response) => {
 
     likes: await prisma.like.count({
       where: {
-        fileId: file.id
-      }
+        fileId: file.id,
+      },
     }),
 
-    url: `http://localhost:3333/uploads/${file.filename}`
+    url: `http://localhost:3333/uploads/${file.filename}`,
   });
-
 });
 
-fileRoutes.post(
-  "/:id/like",
-  isAuthenticated,
-  likeFileController.handle
-);
+fileRoutes.post("/:id/like", isAuthenticated, likeFileController.handle);
 
 export { fileRoutes };
