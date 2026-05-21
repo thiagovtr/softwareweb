@@ -1,27 +1,18 @@
 import { Router } from "express";
-
 import multer from "multer";
-
 import { prisma } from "../configs/prisma";
-
 import { CreateFileController } from "../controllers/CreateFileController";
-
 import { ListFilesController } from "../controllers/ListFilesController";
-
 import { LikeFileController } from "../controllers/LikeFileController";
-
 import multerConfig from "../configs/multer";
-
 import { isAuthenticated } from "../middlewares/isAuthenticated";
+import { DeleteFileController } from "../controllers/DeleteFileController";
 
 const createFileController = new CreateFileController();
-
 const listFilesController = new ListFilesController();
-
 const likeFileController = new LikeFileController();
-
+const deleteFileController = new DeleteFileController();
 const fileRoutes = Router();
-
 const upload = multer(multerConfig);
 
 fileRoutes.post(
@@ -74,5 +65,7 @@ fileRoutes.get("/:id", async (request, response) => {
 });
 
 fileRoutes.post("/:id/like", isAuthenticated, likeFileController.handle);
+
+fileRoutes.delete("/:id", isAuthenticated, deleteFileController.handle);
 
 export { fileRoutes };

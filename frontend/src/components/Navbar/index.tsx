@@ -155,8 +155,14 @@ function Navbar() {
                   rounded-lg
                   text-red-600
                   font-medium
+                  cursor-pointer
                   hover:bg-red-50
+                  hover:text-red-700
+                  hover:scale-[1.02]
+                  hover:shadow-md
+                  active:scale-95
                   transition
+                  duration-200
                 "
               >
                 Sair
