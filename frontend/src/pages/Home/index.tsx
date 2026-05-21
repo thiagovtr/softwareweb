@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import Navbar from "../../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 interface FileProps {
   id: number;
@@ -20,6 +21,7 @@ interface FileProps {
 
 function Home() {
   const [files, setFiles] = useState<FileProps[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     api
@@ -69,7 +71,18 @@ function Home() {
           {files.map((file) => (
             <div
               key={file.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+              onClick={() => navigate(`/files/${file.id}`)}
+              className="
+                bg-white
+                rounded-2xl
+                shadow-md
+                overflow-hidden
+                hover:shadow-xl
+                hover:scale-[1.01]
+                transition
+                duration-300
+                cursor-pointer
+              "
             >
               {isImage(file.url) ? (
                 <img
@@ -122,7 +135,10 @@ function Home() {
                   </span>
 
                   <button
-                    onClick={() => handleLike(file.id)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleLike(file.id);                  
+                    }}
                     className="
                     bg-pink-500
                     text-white
