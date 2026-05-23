@@ -68,7 +68,7 @@ Funcionalidades adicionais poderão ser incluídas nas próximas sprints conform
 
 **1. Criar o arquivo .env**
 
-Dentro da pasta backend, copie o arquivo .env.example e renomeie para .env.
+Dentro da pasta backend, copie o arquivo .env.example e renomeie para .env
 
 **3. Executar o projeto**
 
