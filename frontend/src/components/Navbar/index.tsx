@@ -39,7 +39,7 @@ function Navbar() {
           ☰
         </button>
 
-        <h1 className="text-2xl font-bold">SoftwareWeb</h1>
+        <h1 className="text-2xl font-bold">DisciplinasUFLA</h1>
       </div>
 
       {menuOpen && (
