@@ -88,7 +88,8 @@ Sprint 1 – Definição do problema e visão do produto
 Sprint 2 - Levantemento e priorização de requisitos funcionais e não-funcionais  
 Sprint 3 – Modelagem do sistema  
 Sprint 4 – Princípios de Projeto  
-Sprint 5 - AplicaçÃo da padronização do Projeto
+Sprint 5 - Aplicação da padronização do Projeto  
+Sprint 6 - Definição da Arquitetura de Software
 
 
 
