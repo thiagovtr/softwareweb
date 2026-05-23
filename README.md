@@ -34,7 +34,6 @@ O sistema permitirá:
 
 O sistema será acessado por meio de navegadores web e utilizado por estudantes da universidade.
 
-
 ## 5. Integrantes do grupo
 Thiago Vinícius Tristão Rojas — Product Owner  
 Bruno Santos Vilas Boas — Scrum Master  
@@ -61,7 +60,27 @@ O escopo da aplicação web inclui as seguintes funcionalidades principais:
 
 Funcionalidades adicionais poderão ser incluídas nas próximas sprints conforme a evolução do projeto.
 
+## 8 Como executar o projeto
 
+**Pré-requisitos**
+
+- Docker Desktop instalado
+
+**1. Criar o arquivo .env**
+
+Dentro da pasta backend, copie o arquivo .env.example e renomeie para .env.
+
+**3. Executar o projeto**
+
+Na raiz do projeto, execute:
+
+ docker compose up --build
+
+**4. Acessar a aplicação**
+
+Frontend: 
+
+http://localhost:5173
 
 ## Sprint Atual
 
@@ -73,10 +92,26 @@ Sprint 5 - AplicaçÃo da padronização do Projeto
 
 
 
-# Tecnologias
+## Tecnologias Utilizadas
 
-- HTML
-- CSS
-- JavaScript
-- Docker
+**Frontend**
+
+- React
+- TypeScript
+- Tailwind CSS
+- Axios
+- React Router DOM
+- Vite
+
+**Backend**
+
+- Node.js
+- Express
+- TypeScript
 - Prisma ORM
+- JWT Authentication
+- Multer
+
+**Banco de Dados**
+
+- PostgreSQL

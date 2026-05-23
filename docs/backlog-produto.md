@@ -22,6 +22,8 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 | RF09 | Requisito Funcional | Associação de Arquivos | Vincular arquivo ao autor | Alta | 100% dos arquivos devem estar corretamente associados ao usuário que realizou o upload | 2 pts | Pendente |  
 | RF10 | Requisito Funcional | Filtro por Disciplina | Listar arquivos por disciplina | Média | Filtro deve retornar resultados corretos em até 2s em 95% dos testes | 3 pts | Pendente |  
 | RF11 | Requisito Funcional | Sistema de Likes | Permitir que usuários curtam arquivos | Média | Usuário autenticado deve conseguir curtir/descurtir um arquivo em até 1s e o sistema deve atualizar a contagem corretamente em 100% dos testes | 3 pts | Concluído |  
+| RF12 | Requisito Funcional | Sistema de Comentários | Permitir comentários em arquivos | Média | Usuários autenticados devem conseguir comentar arquivos e visualizar comentários em até 2s | 3 pts | Pendente |  
+| RF13 | Requisito Funcional | Usuário Administrador | Permitir gerenciamento do sistema | Média | Administradores devem conseguir remover conteúdos inadequados e gerenciar usuários | 4 pts | Pendente |  
 | RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Pedente |  
 | RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Concluído |  
 | RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 3 cliques em 90% dos testes de uso | 5 pts | Concluído |  
@@ -137,3 +139,27 @@ Como usuário, eu quero que o sistema seja rápido e estável, para que não atr
 - O sistema deve responder em até 3 segundos em 95% das requisições;
 - O sistema deve suportar pelo menos 100 usuários simultâneos;
 - O sistema deve ter disponibilidade mínima de 99%;
+
+---
+
+### US12
+
+Como usuário, eu quero comentar em materiais compartilhados, para que eu possa interagir com outros estudantes.
+
+**Critérios de aceitação:**
+
+* Apenas usuários autenticados podem comentar;
+* Os comentários devem aparecer abaixo do arquivo;
+* O comentário deve mostrar autor e data;
+* O sistema deve atualizar os comentários em até 2 segundos;
+
+### US13
+
+Como administrador, eu quero gerenciar conteúdos e usuários do sistema, para manter a plataforma organizada.
+
+**Critérios de aceitação:**
+
+* O administrador deve possuir permissões especiais;
+* O administrador pode excluir qualquer arquivo;
+* O sistema deve impedir acesso administrativo para usuários comuns;
+* A autenticação administrativa deve ocorrer com segurança;
