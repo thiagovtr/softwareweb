@@ -16,6 +16,16 @@ class CreateUserService {
     password,
   }: CreateUserRequest) {
 
+    if (
+      !email.endsWith(
+        "@estudante.ufla.br",
+      )
+    ) {
+      throw new AppError(
+        "Use um e-mail institucional da UFLA",
+      );
+    }
+
     const userAlreadyExists =
       await prisma.user.findUnique({
         where: {

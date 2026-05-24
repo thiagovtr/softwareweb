@@ -92,10 +92,9 @@ function Home() {
       return;
     }
 
-    toast.success("Arquivo removido com sucesso!");
-
     try {
       await api.delete(`/files/${fileId}`);
+      toast.success("Arquivo removido com sucesso!");
 
       const response = await api.get(
         `/files?search=${search}&subjectId=${subjectId}`,
@@ -287,7 +286,8 @@ function Home() {
                         Curtir
                       </button>
 
-                      {user.id === file.user.id && (
+                      {(user.id === file.user.id ||
+                        user.isAdmin) && (
                         <button
                           onClick={(e) => {
                             e.stopPropagation();

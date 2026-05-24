@@ -21,7 +21,16 @@ class DeleteFileService {
       throw new AppError("Arquivo não encontrado");
     }
 
-    if (file.userId !== userId) {
+    const user = await prisma.user.findUnique({
+      where: {
+        id: userId,
+      },
+    });
+    
+    if (
+      file.userId !== userId &&
+      !user?.isAdmin
+    ) {
       throw new AppError("Sem permissão");
     }
 

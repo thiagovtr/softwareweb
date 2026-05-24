@@ -12,23 +12,27 @@ function Register() {
   const [password, setPassword] = useState("");
 
   async function handleRegister() {
+    if (
+      !email.endsWith(
+        "@estudante.ufla.br",
+      )
+    ) {
+      toast.error(
+        "Use um e-mail institucional da UFLA",
+      );
+      return;
+    }
     try {
       const response = await api.post("/users", {
         name,
         email,
         password,
       });
-      
-      localStorage.setItem(
-        "@token",
-        response.data.token
-      );
-      
-      localStorage.setItem(
-        "@user",
-        JSON.stringify(response.data.user)
-      );
-      
+
+      localStorage.setItem("@token", response.data.token);
+
+      localStorage.setItem("@user", JSON.stringify(response.data.user));
+
       navigate("/home");
     } catch (error) {
       console.log(error);
