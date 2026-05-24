@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import Navbar from "../../components/Navbar";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 interface FileProps {
   id: number;
@@ -70,16 +72,27 @@ function Home() {
     } catch (error) {
       console.log(error);
 
-      alert("Erro ao curtir arquivo");
+      toast.error("Erro ao curtir arquivo");
     }
   }
 
   async function handleDelete(fileId: number) {
-    const confirmDelete = confirm("Deseja realmente excluir este arquivo?");
+    const result = await Swal.fire({
+      title: "Você realmente deseja excluir o arquivo?",
+      text: "Essa ação não poderá ser desfeita.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#ef4444",
+      cancelButtonColor: "#6b7280",
+      confirmButtonText: "Excluir",
+      cancelButtonText: "Cancelar",
+    });
 
-    if (!confirmDelete) {
+    if (!result.isConfirmed) {
       return;
     }
+
+    toast.success("Arquivo removido com sucesso!");
 
     try {
       await api.delete(`/files/${fileId}`);
@@ -92,7 +105,7 @@ function Home() {
     } catch (error) {
       console.log(error);
 
-      alert("Erro ao excluir arquivo");
+      toast.error("Erro ao excluir arquivo");
     }
   }
 

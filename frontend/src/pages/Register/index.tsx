@@ -13,14 +13,23 @@ function Register() {
 
   async function handleRegister() {
     try {
-      await api.post("/users", {
+      const response = await api.post("/users", {
         name,
         email,
         password,
       });
-
-      toast.success("Conta criada com sucesso!");
-      navigate("/");
+      
+      localStorage.setItem(
+        "@token",
+        response.data.token
+      );
+      
+      localStorage.setItem(
+        "@user",
+        JSON.stringify(response.data.user)
+      );
+      
+      navigate("/home");
     } catch (error) {
       console.log(error);
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,8 +11,24 @@ function Navbar() {
 
   const user = JSON.parse(localStorage.getItem("@user") || "{}");
 
-  function handleLogout() {
+  async function handleLogout() {
+    const result = await Swal.fire({
+      title: "Você realmente quer sair da conta?",
+      text: "Você precisará fazer login novamente.",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#ef4444",
+      cancelButtonColor: "#6b7280",
+      confirmButtonText: "Sair",
+      cancelButtonText: "Cancelar",
+    });
+
+    if (!result.isConfirmed) {
+      return;
+    }
+
     localStorage.removeItem("@token");
+
     localStorage.removeItem("@user");
 
     navigate("/");

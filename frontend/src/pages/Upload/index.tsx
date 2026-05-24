@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import Navbar from "../../components/Navbar";
+import { toast } from "react-toastify";
 
 interface SubjectProps {
   id: number;
@@ -40,11 +41,11 @@ function Upload() {
       setSubjectId("");
       setFile(null);
 
-      alert("Arquivo enviado!");
+      toast.success("Arquivo enviado com sucesso!");
     } catch (error) {
       console.log(error);
 
-      alert("Erro ao enviar arquivo");
+      toast.error("Erro ao enviar arquivo");
     }
   }
 
