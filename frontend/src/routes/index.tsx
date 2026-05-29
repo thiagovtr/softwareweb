@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import PrivateRoute from "./PrivateRoute";
 
 import Login from "../pages/Login";
@@ -6,12 +11,21 @@ import Home from "../pages/Home";
 import Upload from "../pages/Upload";
 import Register from "../pages/Register";
 import FileDetails from "../pages/FileDetails";
+import EditFile from "../pages/EditFile";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route
+          path="/"
+          element={<Login />}
+        />
+
+        <Route
+          path="/register"
+          element={<Register />}
+        />
 
         <Route
           path="/home"
@@ -31,13 +45,20 @@ function AppRoutes() {
           }
         />
 
-        <Route path="/register" element={<Register />} />
-
         <Route
           path="/files/:id"
           element={
             <PrivateRoute>
               <FileDetails />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/edit-file/:id"
+          element={
+            <PrivateRoute>
+              <EditFile />
             </PrivateRoute>
           }
         />

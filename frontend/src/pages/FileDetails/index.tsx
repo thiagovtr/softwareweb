@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import api from "../../services/api";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 interface FileProps {
   id: number;
@@ -224,6 +225,26 @@ function FileDetails() {
                 >
                   Curtir
                 </button>
+
+                <Link
+                  to={`/edit-file/${file.id}`}
+                  className="
+                    bg-yellow-500
+                    text-white
+                    px-6
+                    py-3
+                    rounded-lg
+                    font-bold
+                    hover:bg-yellow-600
+                    hover:scale-105
+                    hover:shadow-lg
+                    active:scale-95
+                    transition
+                    duration-200
+                  "
+                >
+                  Editar
+                </Link>
 
                 <button
                   onClick={handleDownload}
