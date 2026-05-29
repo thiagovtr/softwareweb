@@ -70,3 +70,16 @@ Abaixo encontra-se a estratégia formal de testes desenhada pela equipe:
 | **CT06** | Curtir Material em Tempo Real | Usuário autenticado | 1. Clicar no botão "Curtir" de um material. | O contador aumenta em +1 imediatamente sem recarregar a página. |
 | **CT07** | Busca e Filtro de Disciplinas | Existência de arquivos no banco | 1. Digitar termo no input de busca.<br>2. Selecionar uma disciplina no Select. | A grade (grid) se atualiza mostrando apenas os arquivos que coincidem com os critérios. |
 
+### C. Matriz de Rastreabilidade (Requisitos x Testes)
+
+Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anteriores possuem um caso de teste correspondente para verificação.
+
+| ID Requisito | Descrição do Requisito | Caso de Teste Vinculado | Status do Teste (Previsto) |
+| :--- | :--- | :--- | :--- |
+| **RF01/RF06** | Autenticação / Cadastro Institucional | CT01, CT02 | A executar na Sprint 8 |
+| **RF02 / RNF01** | Upload de Arquivos e Limite (100MB) | CT03, CT04 | A executar na Sprint 8 |
+| **RF04 / RNF07** | Download de Arquivos e Integridade | CT05 | A executar na Sprint 8 |
+| **RF11** | Sistema de Likes | CT06 | A executar na Sprint 8 |
+| **RF03 / RF10** | Filtro de Busca e Disciplinas | CT07 | A executar na Sprint 8 |
+
+
