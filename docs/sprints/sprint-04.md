@@ -38,12 +38,16 @@ Esta sprint está diretamente relacionada ao conteúdo de *Princípios de Projet
 
 ---
 
+## 5. Artefatos Produzidos
 
-## 5. Análise de Alternativas
+- Documento de decisões de projeto com descrição de cada módulo e sua responsabilidade
+- Tabela de decisões técnicas com justificativas baseadas em princípios de projeto
+- Análise de alternativas de implementação (armazenamento de arquivos e autenticação)
+- Atualização do Product Backlog com novos itens de infraestrutura
+- Arquivo docs/projeto/decisoes-de-projeto.md
+- Arquivo docs/sprints/sprint-04.md
 
-* **Armazenamento de Arquivos:** Avaliamos salvar os arquivos diretamente no banco de dados (BLOB), mas optamos por salvar no sistema de arquivos do servidor e registrar apenas o caminho no banco. Isso melhora a performance e escalabilidade do sistema.
-* **Autenticação:** Escolhemos o uso de e-mail institucional obrigatório para garantir que a plataforma permaneça exclusiva para a comunidade acadêmica da UFLA.
-
+---
 
 ## 6. Registro de Acompanhamento da Sprint
 
