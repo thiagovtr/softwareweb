@@ -34,3 +34,16 @@ Durante esta sprint, a equipe produziu a documentação completa de Qualidade de
 3. Matriz de Rastreabilidade.
 
 ---
+## 6. Evidências no GitHub
+
+*Arquivos criados/atualizados:*
+* docs/sprints/sprint-07.md
+* Atualização do Kanban (GitHub Projects) para a fase de testes.
+
+*Commits relevantes:*
+* docs: criação do plano de testes e casos de teste funcionais (sprint 7)
+* docs: elaboração da matriz de rastreabilidade
+
+*Tag da sprint:* sprint-07
+
+---
