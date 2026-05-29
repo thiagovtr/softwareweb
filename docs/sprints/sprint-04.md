@@ -63,16 +63,77 @@ Esta sprint está diretamente relacionada ao conteúdo de *Princípios de Projet
 - *Tag da sprint:* sprint-04
 
 ---
+---
 
-## 7. Atualização do Backlog
+## 7. Evolução da Aplicação Web
 
-| ID | Item | Status | Relacionamento |
-| :--- | :--- | :--- | :--- |
-| D01 | Definição da Arquitetura | Concluído | Alinhado com RNF02 e RNF04 |
-| D02 | Configuração Prisma/Docker | Em andamento | Suporte para RF09 e RNF07 |
-| RT01 | Tela e Lógica de Login | Em Planejamento | Iniciando Sprint 5 |
+Nesta sprint, foram iniciadas as configurações de infraestrutura da aplicação. A configuração do Prisma ORM e do Docker Compose está em andamento (item D02), preparando o ambiente de desenvolvimento para o início da codificação das funcionalidades nas próximas sprints. A decomposição em camadas bem definidas (apresentação, serviços, persistência) orienta diretamente a organização do código-fonte que será produzido.
 
+---
 
-## 8. Resultados Obtidos
+## 8. Dificuldades Encontradas
 
-Ao final desta sprint, o grupo possui uma visão clara de como o código será organizado. A aplicação dos princípios de projeto permitiu reduzir o acoplamento entre os módulos, o que facilitará a implementação das funcionalidades de upload e download nas próximas etapas.
+- A escolha entre salvar arquivos como BLOB no banco de dados versus armazenar no sistema de arquivos exigiu análise cuidadosa de trade-offs de desempenho e escalabilidade.
+- A definição dos limites de responsabilidade entre a camada de serviços e a camada de controle (controllers) gerou discussão sobre onde aplicar as validações de regra de negócio.
+
+---
+
+## 9. Revisão do Incremento
+
+- *O que foi concluído:* A arquitetura em camadas foi definida e documentada. As decisões de projeto foram registradas com justificativas técnicas claras. A análise de alternativas foi concluída.
+- *O que ficou pendente:* A configuração completa do Prisma e do Docker (item D02) ficou em andamento, a ser finalizada no início da Sprint 5.
+
+---
+
+## 10. Pendências para a Próxima Sprint
+
+- Finalizar a configuração do Prisma ORM e Docker Compose
+- Identificar problemas recorrentes de design de código na arquitetura definida
+- Selecionar e aplicar padrões de projeto (GoF) pertinentes à solução
+- Documentar os padrões com justificativas técnicas e impacto nos modelos
+
+---
+
+## 11. Decomposição da Solução
+
+O sistema DisciplinasUFLA foi decomposto nas seguintes camadas:
+
+| Camada | Descrição | Tecnologia |
+|---|---|---|
+| Apresentação (Frontend) | Interface web para interação do estudante com o sistema | React + TypeScript + Tailwind CSS |
+| Controle (Controllers) | Recebe requisições HTTP e direciona para os serviços correspondentes | Node.js + Express |
+| Serviços (Business Logic) | Concentra as regras de negócio e validações críticas | Node.js |
+| Persistência (ORM) | Gerencia o esquema e as operações no banco de dados | Prisma ORM + PostgreSQL |
+| Infraestrutura | Ambiente conteinerizado para execução padronizada | Docker + Docker Compose |
+
+---
+
+## 12. Decisões de Projeto e Justificativas
+
+| Decisão | Justificativa Técnica | Princípio de Projeto |
+|---|---|---|
+| Uso do Prisma ORM | Abstrai o acesso ao banco de dados, facilitando manutenção e migrações | Abstração |
+| Arquitetura em Camadas | Isola a lógica de negócio da interface e do banco, permitindo substituição de componentes sem impacto geral | Baixo Acoplamento |
+| Validação no Backend | Garante que regras críticas (ex.: e-mail @estudante.ufla.br) sejam aplicadas independentemente do cliente | Alta Coesão |
+| Ambiente em Docker | Padroniza o ambiente de execução, eliminando inconsistências entre máquinas de desenvolvimento | Modularidade |
+
+---
+
+## 13. Análise de Alternativas
+
+*Armazenamento de Arquivos:*
+Avaliamos salvar os arquivos diretamente no banco de dados (BLOB). Optamos por salvar no sistema de arquivos do servidor e registrar apenas o caminho no banco. Essa abordagem melhora o desempenho das consultas ao banco e a escalabilidade do sistema, uma vez que arquivos binários grandes não sobrecarregam o banco de dados.
+
+*Autenticação:*
+Avaliamos o uso de OAuth externo (ex.: login com Google). Optamos pelo e-mail institucional obrigatório (@estudante.ufla.br) para garantir que a plataforma permaneça restrita à comunidade acadêmica da UFLA, mantendo o controle sobre quem tem acesso ao sistema.
+
+---
+
+## 14. Quadro Kanban (Sprint 4)
+
+| A Fazer | Em Andamento | Concluído |
+|---|---|---|
+| — | Configuração Prisma/Docker | Definição da Arquitetura em Camadas |
+| — | — | Justificativas técnicas das decisões |
+| — | — | Análise de alternativas |
+| — | — | sprint-04.md |
