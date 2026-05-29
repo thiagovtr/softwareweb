@@ -127,4 +127,4 @@ Garantir a integridade, usabilidade e segurança dos fluxos principais da plataf
 ---
 
 ## 13. Quadro Kanban (Sprint 7)
-<img width="1919" height="834" alt="image" src="https://github.com/user-attachments/assets/2e26b848-290c-43f1-99cf-311143ae9754" />
+<img width="1919" height="834" alt="image" src="print-kanban/Kanban-sprint-7.png" />
