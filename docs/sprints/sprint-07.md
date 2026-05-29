@@ -9,7 +9,7 @@
 
 ## 2. Objetivo da Sprint
 
-O principal objetivo desta sprint foi planejar e estruturar a estratégia de testes para a aplicação web Disciplinas UFLA. O foco esteve na documentação dos critérios de validação dos principais incrementos do projeto (Autenticação, Upload/Download e Filtros), garantindo que os Requisitos Funcionais e Não Funcionais sejam verificados sistematicamente antes da entrega final.
+O principal objetivo desta sprint foi planejar e estruturar a estratégia de testes para a aplicação web DisciplinasUFLA. O foco esteve na documentação dos critérios de validação dos principais incrementos do projeto (Autenticação, Upload/Download e Filtros), garantindo que os Requisitos Funcionais e Não Funcionais sejam verificados sistematicamente antes da entrega final.
 
 ---
 ## 3. Itens do Sprint Backlog
