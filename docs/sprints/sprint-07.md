@@ -47,3 +47,13 @@ Durante esta sprint, a equipe produziu a documentação completa de Qualidade de
 *Tag da sprint:* sprint-07
 
 ---
+## 7. Evolução da Aplicação Web (Documentação de Testes)
+
+Abaixo encontra-se a estratégia formal de testes desenhada pela equipe:
+
+### A. Objetivos do Teste e Tipos Aplicáveis
+* *Objetivo:* Garantir a integridade, usabilidade e segurança dos fluxos principais da plataforma de compartilhamento de materiais acadêmicos.
+* *Tipos de Testes Adotados:*
+  1. *Testes Funcionais (Caixa Preta):* Validação das regras de negócio através da interface de usuário, focando em entradas e saídas esperadas sem visualizar o código fonte interno.
+  2. *Testes de Usabilidade:* Verificação de feedback visual (Toasts, alertas SweetAlert2) e limites de cliques.
+  3. *Testes de Integração:* Validação da comunicação entre o Frontend (React) e a API (Node.js/Express) nas requisições HTTP (criação de arquivos e curtidas).
