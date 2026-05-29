@@ -43,23 +43,40 @@ Identificar problemas recorrentes no design de código da aplicação Disciplina
 Esta sprint está diretamente relacionada ao conteúdo de *Padrões de Projeto (Design Patterns). A identificação de problemas recorrentes de acoplamento e gerenciamento de recursos, seguida da seleção e aplicação dos padrões **Singleton* (criacional) e *Strategy* (comportamental), demonstra a capacidade de reconhecer situações-problema clássicas no design de software e aplicar soluções reutilizáveis e bem fundamentadas do catálogo GoF. A justificativa técnica de cada padrão e seu impacto nos modelos anteriores evidenciam a compreensão integrada dos conteúdos de requisitos, modelagem, princípios e padrões.
 
 ---
+## 5. Artefatos Produzidos
 
-## 5. Representação da Aplicação na Solução e Impacto nos Modelos
-
-A aplicação dos padrões altera dinamicamente o comportamento esperado da estrutura definida no diagrama de classes inicial:
-
-* *Adaptação no Diagrama de Classes:* A classe Arquivo deixa de interagir diretamente com o sistema de arquivos ou com instâncias puras de banco. Ela passa a delegar o salvamento físico para a interface injetada do padrão Strategy, diminuindo o acoplamento sistêmico.
-* *Refinamento no Diagrama de Sequência:* No fluxo de upload, o componente do sistema invoca a estratégia configurada em tempo de execução para persistir o arquivo. Após o sucesso da escrita assíncrona, a instância Singleton do Prisma é chamada para registrar o caminho absoluto no banco de dados.
+- Documento de análise dos problemas recorrentes de design identificados
+- Descrição e justificativa técnica dos padrões Singleton e Strategy aplicados à solução
+- Representação do impacto dos padrões nos diagramas de classes e de sequência da Sprint 3
+- Relatório de Padrões GoF consolidado
+- Infraestrutura do projeto (Prisma + Docker) finalizada
+- Lógica de autenticação com validação de e-mail institucional implementada
+- Credenciais isoladas em variáveis de ambiente (.env)
+- Arquivo docs/padroes/padroes-de-projeto.md
+- Arquivo docs/sprints/sprint-05.md
 
 ---
+## 6. Evidências no GitHub
 
-## 6. Registro de Acompanhamento da Sprint
+- *Arquivos criados/atualizados:*
+  - docs/sprints/sprint-05.md
+  - docs/padroes/padroes-de-projeto.md
+  - src/lib/prisma.ts (implementação do Singleton)
+  - src/services/storage/StorageStrategy.ts (interface Strategy)
+  - src/services/storage/LocalStorageStrategy.ts (implementação concreta)
+  - .env.example
+  - .gitignore (atualizado)
 
-### Planejamento
-O foco central desta sprint foi mergulhar nas minúcias do design de código. A equipe reuniu-se para garantir que as decisões de arquitetura em camadas tomadas na Sprint 4 fossem blindadas contra problemas comuns de acoplamento e gargalos de infraestrutura no ecossistema Node.js/Prisma.
+- *Commits relevantes:*
+  - feat: implementação do Singleton para instância do PrismaClient
+  - feat: criação da interface StorageStrategy e implementação local
+  - feat: lógica de validação de e-mail institucional no login
+  - fix: correção de exibição de mídias no feed de arquivos
+  - security: isolamento de credenciais JWT com dotenv
+  - chore: limpeza do cache .vite e atualização do .gitignore
+  - docs: relatório de padrões GoF (Singleton e Strategy) — sprint 5
 
-### Execução
-Os membros da equipe de desenvolvimento trabalharam em par para definir as interfaces e contratos de código. Christian e Guilherme focaram no encapsulamento da estratégia de armazenamento (relacionada ao *RF02* e *RF04), enquanto Matheus isolou o cliente do banco de dados utilizando a estrutura de classe única (*Singleton). Thiago (PO) validou que os benefícios esperados estão estritamente alinhados com as restrições de desempenho (*RNF06*).
+- *Tag da sprint:* sprint-05
 
 ---
 
