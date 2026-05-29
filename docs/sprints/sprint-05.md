@@ -38,12 +38,9 @@ Identificar problemas recorrentes no design de código da aplicação Disciplina
 
 ---
 
-## 4. Descrição e Justificativa Técnico dos Padrões
+## 4. Relação com o Conteúdo da Disciplina
 
-| Padrão de Projeto | Tipo | Descrição da Aplicação no Projeto | Justificativa Técnica & Benefícios |
-| :--- | :--- | :--- | :--- |
-| *Singleton* | Criacional | Utilizado para centralizar e instanciar uma única interface global de acesso ao *Prisma Client* em toda a aplicação. | Garante que o pool de conexões do Prisma seja reutilizado de forma otimizada. Isso atende diretamente ao requisito de estabilidade *RNF04* (suportar 100 usuários simultâneos) e evita o vazamento de recursos. |
-| *Strategy* | Comportamental | Criação de uma interface genérica de armazenamento (StorageStrategy) com implementações concretas intercambiáveis (ex: LocalStorageStrategy e S3StorageStrategy). | Garante o princípio Open/Closed do SOLID. Isola a lógica do requisito *RF02* (Envio de Material) do meio físico onde o arquivo é salvo, facilitando a portabilidade do sistema e a criação de testes automatizados com mocks. |
+Esta sprint está diretamente relacionada ao conteúdo de *Padrões de Projeto (Design Patterns). A identificação de problemas recorrentes de acoplamento e gerenciamento de recursos, seguida da seleção e aplicação dos padrões **Singleton* (criacional) e *Strategy* (comportamental), demonstra a capacidade de reconhecer situações-problema clássicas no design de software e aplicar soluções reutilizáveis e bem fundamentadas do catálogo GoF. A justificativa técnica de cada padrão e seu impacto nos modelos anteriores evidenciam a compreensão integrada dos conteúdos de requisitos, modelagem, princípios e padrões.
 
 ---
 
