@@ -1,8 +1,10 @@
-# Sprint 04 
+# Sprint 04
 
-## 1. Identificação do Grupo
+## 1. Identificação
 
-Projeto: DisciplinasUFLA
+- **Número da sprint:** 4
+- **Período:** 02/05/2026 a 09/05/2026
+- **Data da entrega:** 09/05/2026
 
 | Integrante | Papel no Scrum |
 |---|---|
@@ -12,13 +14,13 @@ Projeto: DisciplinasUFLA
 | Guilherme dos Santos Fernandes | Dev Team |
 | Matheus Levi Tavares | Dev Team |
 
-Data da Sprint: 02/05/2026 a 09/05/2026
-
+---
 
 ## 2. Objetivo da Sprint
 
-Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, decompondo o sistema em módulos e aplicando princípios de engenharia de software como coesão, baixo acoplamento e responsabilidade única.
+Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, decompondo o sistema em módulos e aplicando princípios de engenharia de software como alta coesão, baixo acoplamento e responsabilidade única.
 
+---
 
 ## 3. Itens do Sprint Backlog
 
@@ -34,7 +36,7 @@ Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, dec
 
 ## 4. Relação com o Conteúdo da Disciplina
 
-Esta sprint está diretamente relacionada ao conteúdo de *Princípios de Projeto de Software. As decisões tomadas refletem a aplicação prática de conceitos fundamentais como **alta coesão* (cada módulo tem uma única responsabilidade bem definida), *baixo acoplamento* (as camadas se comunicam por interfaces, sem dependência direta entre si), *abstração* (uso de ORM para abstrair o banco de dados) e *modularidade* (uso de Docker para isolar o ambiente de execução). A análise de alternativas de implementação evidencia a capacidade de avaliar trade-offs técnicos, competência central dos princípios de projeto.
+Esta sprint está diretamente relacionada ao conteúdo de **Princípios de Projeto de Software**. As decisões tomadas refletem a aplicação prática de conceitos fundamentais como **alta coesão** (cada módulo tem uma única responsabilidade bem definida), **baixo acoplamento** (as camadas se comunicam por interfaces, sem dependência direta entre si), **abstração** (uso de ORM para abstrair o banco de dados) e **modularidade** (uso de Docker para isolar o ambiente de execução). A análise de alternativas de implementação evidencia a capacidade de avaliar trade-offs técnicos, competência central dos princípios de projeto.
 
 ---
 
@@ -44,48 +46,32 @@ Esta sprint está diretamente relacionada ao conteúdo de *Princípios de Projet
 - Tabela de decisões técnicas com justificativas baseadas em princípios de projeto
 - Análise de alternativas de implementação (armazenamento de arquivos e autenticação)
 - Atualização do Product Backlog com novos itens de infraestrutura
-- Arquivo docs/projeto/decisoes-de-projeto.md
-- Arquivo docs/sprints/sprint-04.md
+- Arquivo `docs/projeto/decisoes-de-projeto.md`
+- Arquivo `docs/sprints/sprint-04.md`
 
 ---
-## 6. Evidências no GitHub
 
-- *Arquivos criados/atualizados:*
-  - docs/sprints/sprint-04.md
-  - docs/projeto/decisoes-de-projeto.md
-
-- *Commits relevantes:*
-  - docs: definição da arquitetura em camadas e decisões de projeto (sprint 4)
-  - docs: análise de alternativas — armazenamento de arquivos e autenticação
-  - chore: configuração inicial do Prisma ORM e Docker Compose
-  - docs: criação do arquivo sprint-04.md
-
-- *Tag da sprint:* sprint-04
-
----
----
-
-## 7. Evolução da Aplicação Web
+## 6. Evolução da Aplicação Web
 
 Nesta sprint, foram iniciadas as configurações de infraestrutura da aplicação. A configuração do Prisma ORM e do Docker Compose está em andamento (item D02), preparando o ambiente de desenvolvimento para o início da codificação das funcionalidades nas próximas sprints. A decomposição em camadas bem definidas (apresentação, serviços, persistência) orienta diretamente a organização do código-fonte que será produzido.
 
 ---
 
-## 8. Dificuldades Encontradas
+## 7. Dificuldades Encontradas
 
 - A escolha entre salvar arquivos como BLOB no banco de dados versus armazenar no sistema de arquivos exigiu análise cuidadosa de trade-offs de desempenho e escalabilidade.
 - A definição dos limites de responsabilidade entre a camada de serviços e a camada de controle (controllers) gerou discussão sobre onde aplicar as validações de regra de negócio.
 
 ---
 
-## 9. Revisão do Incremento
+## 8. Revisão do Incremento
 
-- *O que foi concluído:* A arquitetura em camadas foi definida e documentada. As decisões de projeto foram registradas com justificativas técnicas claras. A análise de alternativas foi concluída.
-- *O que ficou pendente:* A configuração completa do Prisma e do Docker (item D02) ficou em andamento, a ser finalizada no início da Sprint 5.
+- **O que foi concluído:** A arquitetura em camadas foi definida e documentada. As decisões de projeto foram registradas com justificativas técnicas claras. A análise de alternativas foi concluída.
+- **O que ficou pendente:** A configuração completa do Prisma e do Docker (item D02) ficou em andamento, a ser finalizada no início da Sprint 5.
 
 ---
 
-## 10. Pendências para a Próxima Sprint
+## 9. Pendências para a Próxima Sprint
 
 - Finalizar a configuração do Prisma ORM e Docker Compose
 - Identificar problemas recorrentes de design de código na arquitetura definida
@@ -94,7 +80,7 @@ Nesta sprint, foram iniciadas as configurações de infraestrutura da aplicaçã
 
 ---
 
-## 11. Decomposição da Solução
+## 10. Decomposição da Solução
 
 O sistema DisciplinasUFLA foi decomposto nas seguintes camadas:
 
@@ -108,7 +94,7 @@ O sistema DisciplinasUFLA foi decomposto nas seguintes camadas:
 
 ---
 
-## 12. Decisões de Projeto e Justificativas
+## 11. Decisões de Projeto e Justificativas
 
 | Decisão | Justificativa Técnica | Princípio de Projeto |
 |---|---|---|
@@ -119,17 +105,17 @@ O sistema DisciplinasUFLA foi decomposto nas seguintes camadas:
 
 ---
 
-## 13. Análise de Alternativas
+## 12. Análise de Alternativas
 
-*Armazenamento de Arquivos:*
+**Armazenamento de Arquivos:**
 Avaliamos salvar os arquivos diretamente no banco de dados (BLOB). Optamos por salvar no sistema de arquivos do servidor e registrar apenas o caminho no banco. Essa abordagem melhora o desempenho das consultas ao banco e a escalabilidade do sistema, uma vez que arquivos binários grandes não sobrecarregam o banco de dados.
 
-*Autenticação:*
+**Autenticação:**
 Avaliamos o uso de OAuth externo (ex.: login com Google). Optamos pelo e-mail institucional obrigatório (@estudante.ufla.br) para garantir que a plataforma permaneça restrita à comunidade acadêmica da UFLA, mantendo o controle sobre quem tem acesso ao sistema.
 
 ---
 
-## 14. Quadro Kanban (Sprint 4)
+## 13. Quadro Kanban (Sprint 4)
 
 | A Fazer | Em Andamento | Concluído |
 |---|---|---|
