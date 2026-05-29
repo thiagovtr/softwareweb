@@ -57,3 +57,16 @@ Abaixo encontra-se a estratégia formal de testes desenhada pela equipe:
   1. *Testes Funcionais (Caixa Preta):* Validação das regras de negócio através da interface de usuário, focando em entradas e saídas esperadas sem visualizar o código fonte interno.
   2. *Testes de Usabilidade:* Verificação de feedback visual (Toasts, alertas SweetAlert2) e limites de cliques.
   3. *Testes de Integração:* Validação da comunicação entre o Frontend (React) e a API (Node.js/Express) nas requisições HTTP (criação de arquivos e curtidas).
+ 
+  ### B. Casos e Cenários de Teste (Checklist)
+
+| ID do Teste | Cenário de Teste | Pré-condição | Passos para Execução | Resultado Esperado |
+| :--- | :--- | :--- | :--- | :--- |
+| **CT01** | Validação de Login com E-mail Institucional | Usuário não autenticado | 1. Acessar tela de login.<br>2. Inserir e-mail `@estudante.ufla.br` e senha correta.<br>3. Clicar em Entrar. | Login bem-sucedido. Token JWT gerado e redirecionamento para a Home. |
+| **CT02** | Bloqueio de E-mail Não Institucional | Usuário na tela de Cadastro | 1. Inserir dados.<br>2. Usar e-mail genérico (ex: `@gmail.com`).<br>3. Submeter formulário. | Sistema bloqueia o cadastro e exibe um Toast de erro de validação. |
+| **CT03** | Upload de Material Válido | Usuário autenticado | 1. Clicar em Enviar Material.<br>2. Anexar PDF de 5MB.<br>3. Preencher dados e enviar. | Arquivo salvo com sucesso. Sistema exibe Toast verde e o arquivo aparece no feed. |
+| **CT04** | Bloqueio de Arquivo Gigante (RNF01) | Usuário autenticado | 1. Selecionar arquivo maior que 100MB.<br>2. Tentar enviar. | O middleware (Multer) rejeita o upload e exibe mensagem de limite excedido. |
+| **CT05** | Funcionalidade de Download (Blob) | Usuário na Home/Detalhes | 1. Clicar no botão "Baixar" de um arquivo do feed. | O arquivo inicia o download local com o nome original sem abrir novas abas. |
+| **CT06** | Curtir Material em Tempo Real | Usuário autenticado | 1. Clicar no botão "Curtir" de um material. | O contador aumenta em +1 imediatamente sem recarregar a página. |
+| **CT07** | Busca e Filtro de Disciplinas | Existência de arquivos no banco | 1. Digitar termo no input de busca.<br>2. Selecionar uma disciplina no Select. | A grade (grid) se atualiza mostrando apenas os arquivos que coincidem com os critérios. |
+
