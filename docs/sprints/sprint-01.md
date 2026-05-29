@@ -97,5 +97,5 @@ Nesta sprint, o foco foi a organização inicial do projeto e a definição do p
 ---
 
 ## 11. Quadro Kanban (Sprint 1)
-<img width="1448" height="847" alt="image" src="https://github.com/user-attachments/assets/79406d42-5d14-4a54-84be-f2dd243d0acb" />
+<img width="1448" height="847" alt="image" src="print-kanban/Kanban-sprint-1.png" />
 

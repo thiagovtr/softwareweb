@@ -148,5 +148,5 @@ A decisão de salvar arquivos no sistema local do servidor (Sprint 4) trouxe um 
 ---
 
 ## 14. Quadro Kanban (Sprint 5)
-<img width="1250" height="686" alt="image" src="https://github.com/user-attachments/assets/a0b5f7c2-3b24-495d-a4dd-856377459027" />
+<img width="1250" height="686" alt="image" src="print-kanban/Kanban-sprint-5.png" />
 

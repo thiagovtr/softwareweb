@@ -113,5 +113,5 @@ O diagrama de sequência representa o fluxo de envio de arquivo no sistema. O pr
 ---
  
 ## 12. Quadro Kanban (Sprint 3)
-<img width="1443" height="839" alt="image" src="https://github.com/user-attachments/assets/e73c455b-cd70-4e1d-ae6a-4d98d5d9a890" />
+<img width="1443" height="839" alt="image" src="print-kanban/Kanban-sprint-3.png" />
 

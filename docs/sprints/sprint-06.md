@@ -197,4 +197,3 @@ O **Docker** foi adotado para eliminar inconsistências entre ambientes de desen
 
 ## 14. Quadro Kanban (Sprint 6)
 <img width="1451" height="835" alt="image" src="https://github.com/user-attachments/assets/af502166-4107-4fa0-878a-4a3dfd012e5b" />
-

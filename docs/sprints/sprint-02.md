@@ -217,5 +217,5 @@ Como usuário, eu quero que o sistema seja rápido e estável, para que não atr
 ---
 
 ## 12. Quadro Kanban (Sprint 2)
-<img width="1449" height="838" alt="image" src="https://github.com/user-attachments/assets/bf76daac-414c-4a9c-a245-d8161db8c83d" />
+<img width="1449" height="838" alt="image" src="print-kanban/Kanban-sprint-2.png" />
 
