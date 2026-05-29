@@ -116,10 +116,5 @@ Avaliamos o uso de OAuth externo (ex.: login com Google). Optamos pelo e-mail in
 ---
 
 ## 13. Quadro Kanban (Sprint 4)
+<img width="1443" height="842" alt="image" src="https://github.com/user-attachments/assets/8d9a7e3a-27e7-403d-9333-868d9cb4652c" />
 
-| A Fazer | Em Andamento | Concluído |
-|---|---|---|
-| — | Configuração Prisma/Docker | Definição da Arquitetura em Camadas |
-| — | — | Justificativas técnicas das decisões |
-| — | — | Análise de alternativas |
-| — | — | sprint-04.md |
