@@ -90,3 +90,9 @@ Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anter
 2. **Definição de Escopo de Testes:** O grupo precisou avaliar se aplicaria bibliotecas de automação complexas ou testes manuais de interface. Optou-se pelos testes funcionais estruturados (Caixa Preta) devido ao tempo hábil, focando na garantia da entrega das regras de negócio visuais de forma sólida.
 
 ---
+## 9. Revisão do Incremento
+
+* *O que foi concluído:* O plano estratégico de validação do software está totalmente finalizado. Os cenários mapeados cobrem os fluxos primários (autenticação, manipulação de arquivos e busca). A matriz de rastreabilidade interligou de forma clara as demandas do Backlog aos Casos de Teste elaborados.
+* *O que ficou pendente:* A execução prática destes testes previstos no documento e o registro em log de seus resultados (sucesso ou falha) para assegurar que a plataforma está completamente polida para a demonstração final.
+
+---
