@@ -28,7 +28,7 @@ Definir o problema a ser tratado, estabelecer a visão inicial do produto, organ
 |---|---|---|---|
 | S1-01 | Formação do grupo e definição de papéis Scrum | Todos | Concluído |
 | S1-02 | Escolha e descrição do problema | Todos | Concluído |
-| S1-03 | Criação do repositório no GitHub | Bruno | Concluído |
+| S1-03 | Criação do repositório no GitHub | Thiago | Concluído |
 | S1-04 | Criação da estrutura inicial de pastas | Bruno | Concluído |
 | S1-05 | Criação do README.md com informações iniciais | Todos | Concluído |
 | S1-06 | Definição do Product Backlog inicial | Thiago | Concluído |
