@@ -48,15 +48,21 @@ Esta sprint está diretamente relacionada ao conteúdo de *Princípios de Projet
 - Arquivo docs/sprints/sprint-04.md
 
 ---
+## 6. Evidências no GitHub
 
-## 6. Registro de Acompanhamento da Sprint
+- *Arquivos criados/atualizados:*
+  - docs/sprints/sprint-04.md
+  - docs/projeto/decisoes-de-projeto.md
 
-### Planejamento
-O foco foi transformar os diagramas UML da Sprint 3 em uma estrutura técnica sólida. Definimos as tecnologias (Prisma, Docker) e como elas atenderiam aos requisitos funcionais (RF) e não funcionais (RNF).
+- *Commits relevantes:*
+  - docs: definição da arquitetura em camadas e decisões de projeto (sprint 4)
+  - docs: análise de alternativas — armazenamento de arquivos e autenticação
+  - chore: configuração inicial do Prisma ORM e Docker Compose
+  - docs: criação do arquivo sprint-04.md
 
-### Execução
-O grupo discutiu a responsabilidade de cada módulo. Decidimos que a validação de tamanho de arquivo (RNF01) será feita tanto no frontend (para feedback rápido) quanto no backend (por segurança).
+- *Tag da sprint:* sprint-04
 
+---
 
 ## 7. Atualização do Backlog
 
