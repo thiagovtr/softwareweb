@@ -26,3 +26,11 @@ O principal objetivo desta sprint foi planejar e estruturar a estratégia de tes
 Esta etapa aplica diretamente os conceitos da primeira parte do módulo de *Testes de Software*. O trabalho prático enfatizou o planejamento, a organização em cenários de teste e a documentação rigorosa da qualidade, validando se o produto construído atende às especificações iniciais através de técnicas de validação Funcional (Caixa Preta).
 
 ---
+## 5. Artefatos Produzidos
+
+Durante esta sprint, a equipe produziu a documentação completa de Qualidade de Software (QA), detalhada na seção de Evidências abaixo. Os artefatos incluem:
+1. Plano de Testes e Estratégia.
+2. Casos de Teste Estruturados (CTs).
+3. Matriz de Rastreabilidade.
+
+---
