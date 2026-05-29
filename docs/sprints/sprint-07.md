@@ -106,3 +106,4 @@ Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anter
 
 ---
 ## 11. Quadro Kanban
+<img width="1919" height="834" alt="image" src="https://github.com/user-attachments/assets/1cb6b03c-11f3-4b6d-a7c5-ea0b92f8f05d" />
