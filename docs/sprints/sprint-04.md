@@ -17,18 +17,20 @@ Data da Sprint: 02/05/2026 a 09/05/2026
 
 ## 2. Objetivo da Sprint
 
-Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, decompondo o sistema em módulos e aplicando princípios de engenharia de software como coesão, baixo acoplamento e responsabilidade.
+Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, decompondo o sistema em módulos e aplicando princípios de engenharia de software como coesão, baixo acoplamento e responsabilidade única.
 
 
-## 3. Decomposição da Solução
+## 3. Itens do Sprint Backlog
 
-Para garantir a modularidade e a facilidade de manutenção, a aplicação foi decomposta nos seguintes componentes principais:
+| ID | Tipo | Item do Backlog | Descrição | Prioridade | Status |
+|---|---|---|---|---|---|
+| D01 | Decisão de Projeto | Definição da Arquitetura em Camadas | Decompor o sistema em camadas de apresentação, serviços e persistência | Alta | Concluído |
+| D02 | Decisão de Projeto | Configuração Prisma/Docker | Definir Prisma ORM como camada de persistência e Docker como ambiente de execução | Alta | Em andamento |
+| D03 | Documentação | Justificativas técnicas das decisões | Documentar cada decisão com base em princípios de projeto | Alta | Concluído |
+| D04 | Documentação | Análise de alternativas | Avaliar e registrar alternativas consideradas e descartadas | Média | Concluído |
+| D05 | Documentação | Criação do sprint-04.md | Documentar esta sprint no repositório | Baixa | Concluído |
 
-* **Camada de Apresentação (Frontend):** Interface Web desenvolvida para permitir a interação do estudante com o sistema.
-* **Camada de Serviços (Backend):** Concentra a lógica de negócio, como a validação de e-mails institucionais e o processamento de arquivos.
-* **Camada de Persistência (Banco de Dados):** Utiliza o **Prisma ORM** para gerenciar o esquema e garantir a integridade dos dados.
-* **Infraestrutura (Docker):** Ambiente conteinerizado para garantir que o sistema funcione de forma idêntica em diferentes máquinas.
-
+---
 
 ## 4. Decisões de Projeto e Justificativas
 
