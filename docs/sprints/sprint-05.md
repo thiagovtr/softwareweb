@@ -91,11 +91,72 @@ Esta sprint marcou o início concreto do desenvolvimento da aplicação. Foram i
 
 ---
 
-## 8. Resultados Obtidos
+## 8. Dificuldades Encontradas
 
-Ao término da Sprint 5, o grupo estabeleceu uma fundação técnica robusta e escalável para o sistema DisciplinasUFLA. A adoção do Singleton mitigou riscos críticos de sobrecarga de banco de dados, enquanto o Strategy conferiu a modularidade necessária para que novas formas de armazenamento sejam agregadas sem fricção de código. 
+- A compreensão do comportamento do pool de conexões do Prisma ORM em ambientes Node.js exigiu pesquisa adicional para justificar corretamente o uso do Singleton.
+- A definição das interfaces do padrão Strategy demandou decisão cuidadosa sobre quais operações seriam abstraídas, evitando uma interface genérica demais ou específica demais.
 
-Toda a documentação técnica foi consolidada, revisada pelos pares e publicada com sucesso no GitHub na pasta correspondente.
+---
 
-*Arquivo de documentação gerado:* docs/sprints/sprint-05.md
+## 9. Revisão do Incremento
 
+- *O que foi concluído:* Todos os itens do Sprint Backlog foram concluídos. Os padrões Singleton e Strategy foram aplicados e documentados. A infraestrutura do projeto está operacional. A autenticação com validação de e-mail institucional está funcionando.
+- *O que ficou pendente:* Nenhum item ficou pendente nesta sprint.
+
+---
+
+## 10. Pendências para a Próxima Sprint
+
+- Documentar formalmente a arquitetura de software da aplicação (visão arquitetural, camadas, componentes e responsabilidades)
+- Justificar tecnicamente as escolhas arquiteturais em relação aos requisitos funcionais e não funcionais
+- Atualizar o Product Backlog com base no estado atual da aplicação
+
+---
+
+## 11. Análise de Problemas e Padrões Adotados
+
+### Problema 1 — Conexão com o Banco de Dados
+
+O Prisma ORM gerencia internamente um pool de conexões. Se novas instâncias do PrismaClient forem criadas a cada requisição ou em múltiplos módulos independentes, ocorrerá esgotamento rápido das conexões do banco de dados, quebrando o sistema sob carga moderada.
+
+*Padrão adotado:* Singleton — uma única instância global do PrismaClient é criada e reutilizada em toda a aplicação.
+
+---
+
+### Problema 2 — Acoplamento no Armazenamento de Arquivos
+
+A decisão de salvar arquivos no sistema local do servidor (Sprint 4) trouxe um risco de acoplamento: se os controllers de upload chamassem diretamente funções nativas de escrita em disco, qualquer migração para armazenamento em nuvem (ex.: AWS S3) exigiria refatoração em massa do código.
+
+*Padrão adotado:* Strategy — uma interface genérica StorageStrategy define o contrato de armazenamento, e implementações concretas (ex.: LocalStorageStrategy, S3StorageStrategy) são intercambiáveis sem alterar os controllers.
+
+---
+
+## 12. Descrição e Justificativa Técnica dos Padrões
+
+| Padrão de Projeto | Tipo | Descrição da Aplicação no Projeto | Justificativa Técnica e Benefícios |
+|---|---|---|---|
+| *Singleton* | Criacional | Centraliza e instancia uma única interface global de acesso ao Prisma Client em toda a aplicação | Garante reutilização otimizada do pool de conexões do Prisma. Atende diretamente ao RNF04 (suportar 100 usuários simultâneos) e evita vazamento de recursos |
+| *Strategy* | Comportamental | Cria uma interface genérica de armazenamento (StorageStrategy) com implementações concretas intercambiáveis (LocalStorageStrategy, S3StorageStrategy) | Garante o princípio Open/Closed do SOLID. Isola a lógica do RF02 (Envio de Material) do meio físico de armazenamento, facilitando portabilidade e criação de testes automatizados com mocks |
+
+---
+
+## 13. Impacto nos Modelos
+
+- *Diagrama de Classes (Sprint 3):* A classe Arquivo deixa de interagir diretamente com o sistema de arquivos. Passa a delegar o salvamento físico para a interface injetada pelo padrão Strategy, reduzindo o acoplamento sistêmico.
+- *Diagrama de Sequência (Sprint 3):* No fluxo de upload, o sistema invoca a estratégia configurada em tempo de execução para persistir o arquivo. Após confirmação da escrita assíncrona, a instância Singleton do Prisma registra o caminho no banco de dados.
+
+---
+
+## 14. Quadro Kanban (Sprint 5)
+
+| A Fazer | Em Andamento | Concluído |
+|---|---|---|
+| — | — | Identificação de problemas de design |
+| — | — | Aplicação do padrão Singleton |
+| — | — | Aplicação do padrão Strategy |
+| — | — | Justificativas técnicas dos padrões |
+| — | — | Configuração Prisma/Docker |
+| — | — | Tela e Lógica de Login |
+| — | — | Refatoração do Feed |
+| — | — | Isolamento de credenciais (.env) |
+| — | — | Ajuste do .gitignore |
