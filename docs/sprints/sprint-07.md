@@ -96,3 +96,13 @@ Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anter
 * *O que ficou pendente:* A execução prática destes testes previstos no documento e o registro em log de seus resultados (sucesso ou falha) para assegurar que a plataforma está completamente polida para a demonstração final.
 
 ---
+---
+
+## 10. Pendências para a Próxima Sprint (Sprint 8)
+
+1. Executar todos os Casos de Teste listados no plano (CT01 a CT07).
+2. Corrigir eventuais bugs ou comportamentos inesperados que forem descobertos durante a execução.
+3. Consolidar as evidências dos testes realizados e preparar a documentação final da aplicação.
+4. Refinar os últimos detalhes visuais em preparação para o pitch do projeto.
+
+---
