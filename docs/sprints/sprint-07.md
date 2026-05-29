@@ -96,7 +96,6 @@ Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anter
 * *O que ficou pendente:* A execução prática destes testes previstos no documento e o registro em log de seus resultados (sucesso ou falha) para assegurar que a plataforma está completamente polida para a demonstração final.
 
 ---
----
 
 ## 10. Pendências para a Próxima Sprint (Sprint 8)
 
@@ -106,3 +105,4 @@ Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anter
 4. Refinar os últimos detalhes visuais em preparação para o pitch do projeto.
 
 ---
+## 11. Quadro Kanban
