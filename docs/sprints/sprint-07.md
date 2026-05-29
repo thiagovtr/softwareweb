@@ -12,3 +12,12 @@
 O principal objetivo desta sprint foi planejar e estruturar a estratégia de testes para a aplicação web Disciplinas UFLA. O foco esteve na documentação dos critérios de validação dos principais incrementos do projeto (Autenticação, Upload/Download e Filtros), garantindo que os Requisitos Funcionais e Não Funcionais sejam verificados sistematicamente antes da entrega final.
 
 ---
+## 3. Itens do Sprint Backlog
+
+* [QA] Elaboração do Plano e Objetivos de Testes (P1)
+* [QA] Definição dos Casos de Teste Manuais (Caixa Preta)
+* [QA] Criação da Matriz de Rastreabilidade (Requisitos x Testes)
+* [DOC] Revisão dos Critérios de Aceitação
+* [DOC] Atualização do Relatório da Sprint 7
+
+---
