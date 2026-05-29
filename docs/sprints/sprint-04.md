@@ -32,16 +32,11 @@ Definir e justificar as decisões de projeto da aplicação DisciplinasUFLA, dec
 
 ---
 
-## 4. Decisões de Projeto e Justificativas
+## 4. Relação com o Conteúdo da Disciplina
 
-Abaixo estão as principais decisões tomadas, fundamentadas em princípios de qualidade de software:
+Esta sprint está diretamente relacionada ao conteúdo de *Princípios de Projeto de Software. As decisões tomadas refletem a aplicação prática de conceitos fundamentais como **alta coesão* (cada módulo tem uma única responsabilidade bem definida), *baixo acoplamento* (as camadas se comunicam por interfaces, sem dependência direta entre si), *abstração* (uso de ORM para abstrair o banco de dados) e *modularidade* (uso de Docker para isolar o ambiente de execução). A análise de alternativas de implementação evidencia a capacidade de avaliar trade-offs técnicos, competência central dos princípios de projeto.
 
-| Decisão | Justificativa Técnica | Princípio de Projeto |
-| :--- | :--- | :--- |
-| **Uso de Prisma ORM** | Garante a integridade dos dados e facilita o mapeamento entre o modelo relacional e o código. | **Abstração** |
-| **Arquitetura em Camadas** | Isola a lógica de banco de dados da interface, permitindo trocas de tecnologias sem afetar o usuário final. | **Baixo Acoplamento** |
-| **Validação no Backend** | Garante que regras críticas (como e-mail @estudante.ufla.br) sejam aplicadas independente do cliente. | **Alta Coesão** |
-| **Ambiente em Docker** | Facilita a configuração do ambiente de desenvolvimento e produção, evitando erros de "na minha máquina funciona". | **Modularidade** |
+---
 
 
 ## 5. Análise de Alternativas
