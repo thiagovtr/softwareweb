@@ -14,20 +14,27 @@ Projeto: DisciplinasUFLA
 
 Data da Sprint: 09/05/2026 a 16/05/2026
 
+---
 
 ## 2. Objetivo da Sprint
 
-Identificar problemas recorrentes no design de código da aplicação DisciplinasUFLA e selecionar padrões de projeto (Design Patterns) pertinentes, justificando tecnicamente sua adoção e descrevendo os benefícios arquiteturais esperados.
+Identificar problemas recorrentes no design de código da aplicação DisciplinasUFLA, selecionar padrões de projeto (Design Patterns) pertinentes e justificar tecnicamente sua adoção, descrevendo os benefícios arquiteturais esperados e o impacto nos modelos produzidos anteriormente.
 
+---
 
-## 3. Análise de Problemas Recorrentes e Padrões Adotados
+## 3. Itens do Sprint Backlog
 
-Durante o refinamento da arquitetura definida na sprint anterior, a equipe de desenvolvimento mapeou dois problemas críticos que poderiam comprometer a qualidade do código, a performance e a manutenção do sistema:
-
-* *Problema de Conexão com Banco de Dados:* O *Prisma ORM* gerencia internamente um pool de conexões. Se novas instâncias do PrismaClient forem criadas a cada requisição ou em múltiplos módulos independentes, ocorrerá um esgotamento rápido das conexões do banco de dados, quebrando o sistema sob carga moderada.
-* *Problema de Acoplamento no Armazenamento:* A decisão de salvar arquivos no sistema local do servidor foi tomada por desempenho. No entanto, acoplar diretamente os controladores de upload (RF02) a funções nativas de escrita em disco impedirá o sistema de migrar para um serviço de nuvem (como AWS S3) no futuro sem exigir uma refatoração em massa.
-
-Para solucionar essas dores, foram selecionados e aplicados os seguintes padrões de projeto:
+| ID | Tipo | Item do Backlog | Descrição | Prioridade | Status |
+|---|---|---|---|---|---|
+| M04 | Padrões de Projeto | Identificação de problemas de design | Mapear problemas recorrentes na arquitetura definida na Sprint 4 | Alta | Concluído |
+| M05 | Padrões de Projeto | Aplicação do padrão Singleton | Centralizar instância do Prisma Client | Alta | Concluído |
+| M06 | Padrões de Projeto | Aplicação do padrão Strategy | Criar interface genérica de armazenamento intercambiável | Alta | Concluído |
+| M07 | Documentação | Justificativas técnicas dos padrões | Documentar benefícios esperados e impacto nos modelos | Alta | Concluído |
+| D02 | Infraestrutura | Configuração Prisma/Docker | Finalizar configuração do ambiente com Docker Compose e Prisma | Alta | Concluído |
+| RT01 | Funcionalidade | Tela e Lógica de Login | Implementar lógica de validação de e-mails institucionais | Alta | Concluído |
+| RT02 | Funcionalidade | Refatoração do Feed | Corrigir exibição de mídias e layout dos cards | Média | Concluído |
+| D03 | Segurança | Isolamento de credenciais com .env | Remover chave JWT exposta no código; aplicar dotenv | Alta | Concluído |
+| D04 | Infraestrutura | Ajuste de rastreamento do repositório | Limpar cache .vite e atualizar .gitignore | Baixa | Concluído |
 
 ---
 
