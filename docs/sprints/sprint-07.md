@@ -2,108 +2,136 @@
 
 ## 1. Identificação
 
-* **Número da sprint:** 7
-* **Período:** [Preencher com a data de início] a 23/05/2026
+- **Número da sprint:** 7
+- **Período:** 23/05/2026 a 30/05/2026
+- **Data da entrega:** 30/05/2026
 
-* ---
+| Integrante | Papel no Scrum |
+|---|---|
+| Thiago Vinícius Tristão Rojas | Product Owner |
+| Bruno Santos Vilas Boas | Scrum Master |
+| Christian Silva Mesquita | Dev Team |
+| Guilherme dos Santos Fernandes | Dev Team |
+| Matheus Levi Tavares | Dev Team |
+
+---
 
 ## 2. Objetivo da Sprint
 
-O principal objetivo desta sprint foi planejar e estruturar a estratégia de testes para a aplicação web DisciplinasUFLA. O foco esteve na documentação dos critérios de validação dos principais incrementos do projeto (Autenticação, Upload/Download e Filtros), garantindo que os Requisitos Funcionais e Não Funcionais sejam verificados sistematicamente antes da entrega final.
+Planejar e documentar a estratégia de testes da aplicação DisciplinasUFLA, definindo os objetivos de teste, os tipos aplicáveis, os casos de teste para os principais incrementos (Autenticação, Upload/Download e Filtros), e a matriz de rastreabilidade entre requisitos e testes.
 
 ---
+
 ## 3. Itens do Sprint Backlog
 
-* [QA] Elaboração do Plano e Objetivos de Testes (P1)
-* [QA] Definição dos Casos de Teste Manuais (Caixa Preta)
-* [QA] Criação da Matriz de Rastreabilidade (Requisitos x Testes)
-* [DOC] Revisão dos Critérios de Aceitação
-* [DOC] Atualização do Relatório da Sprint 7
+| ID | Tipo | Item do Backlog | Descrição | Prioridade | Status |
+|---|---|---|---|---|---|
+| QA01 | Qualidade | Plano de Testes e Objetivos | Elaborar o plano estratégico de testes da aplicação | Alta | Concluído |
+| QA02 | Qualidade | Casos de Teste Manuais (Caixa Preta) | Definir cenários de teste funcionais com pré-condições, passos e resultados esperados | Alta | Concluído |
+| QA03 | Qualidade | Matriz de Rastreabilidade | Vincular cada requisito a pelo menos um caso de teste | Alta | Concluído |
+| DOC01 | Documentação | Revisão dos Critérios de Aceitação | Revisar e confirmar critérios de aceitação definidos na Sprint 2 | Média | Concluído |
+| DOC02 | Documentação | Criação do sprint-07.md | Documentar esta sprint no repositório | Baixa | Concluído |
 
 ---
+
 ## 4. Relação com o Conteúdo da Disciplina
 
-Esta etapa aplica diretamente os conceitos da primeira parte do módulo de *Testes de Software*. O trabalho prático enfatizou o planejamento, a organização em cenários de teste e a documentação rigorosa da qualidade, validando se o produto construído atende às especificações iniciais através de técnicas de validação Funcional (Caixa Preta).
+Esta sprint está diretamente relacionada à primeira parte do conteúdo de **Testes de Software**. As atividades realizadas — elaboração do plano de testes, definição de casos de teste por técnica de caixa preta, e criação da matriz de rastreabilidade — correspondem às etapas fundamentais do planejamento e documentação de testes estudadas na disciplina. A técnica de **Caixa Preta** (testes funcionais baseados em entradas e saídas esperadas, sem visibilidade do código interno) é aplicada diretamente nos cenários mapeados. Os testes de integração planejados validam a comunicação entre frontend e backend, reforçando a coerência com a arquitetura definida na Sprint 6.
 
 ---
+
 ## 5. Artefatos Produzidos
 
-Durante esta sprint, a equipe produziu a documentação completa de Qualidade de Software (QA), detalhada na seção de Evidências abaixo. Os artefatos incluem:
-1. Plano de Testes e Estratégia.
-2. Casos de Teste Estruturados (CTs).
-3. Matriz de Rastreabilidade.
-
----
-## 6. Evidências no GitHub
-
-*Arquivos criados/atualizados:*
-* docs/sprints/sprint-07.md
-* Atualização do Kanban (GitHub Projects) para a fase de testes.
-
-*Commits relevantes:*
-* docs: criação do plano de testes e casos de teste funcionais (sprint 7)
-* docs: elaboração da matriz de rastreabilidade
-
-*Tag da sprint:* sprint-07
-
----
-## 7. Evolução da Aplicação Web (Documentação de Testes)
-
-Abaixo encontra-se a estratégia formal de testes desenhada pela equipe:
-
-### A. Objetivos do Teste e Tipos Aplicáveis
-* *Objetivo:* Garantir a integridade, usabilidade e segurança dos fluxos principais da plataforma de compartilhamento de materiais acadêmicos.
-* *Tipos de Testes Adotados:*
-  1. *Testes Funcionais (Caixa Preta):* Validação das regras de negócio através da interface de usuário, focando em entradas e saídas esperadas sem visualizar o código fonte interno.
-  2. *Testes de Usabilidade:* Verificação de feedback visual (Toasts, alertas SweetAlert2) e limites de cliques.
-  3. *Testes de Integração:* Validação da comunicação entre o Frontend (React) e a API (Node.js/Express) nas requisições HTTP (criação de arquivos e curtidas).
- 
-  ### B. Casos e Cenários de Teste (Checklist)
-
-| ID do Teste | Cenário de Teste | Pré-condição | Passos para Execução | Resultado Esperado |
-| :--- | :--- | :--- | :--- | :--- |
-| **CT01** | Validação de Login com E-mail Institucional | Usuário não autenticado | 1. Acessar tela de login.<br>2. Inserir e-mail `@estudante.ufla.br` e senha correta.<br>3. Clicar em Entrar. | Login bem-sucedido. Token JWT gerado e redirecionamento para a Home. |
-| **CT02** | Bloqueio de E-mail Não Institucional | Usuário na tela de Cadastro | 1. Inserir dados.<br>2. Usar e-mail genérico (ex: `@gmail.com`).<br>3. Submeter formulário. | Sistema bloqueia o cadastro e exibe um Toast de erro de validação. |
-| **CT03** | Upload de Material Válido | Usuário autenticado | 1. Clicar em Enviar Material.<br>2. Anexar PDF de 5MB.<br>3. Preencher dados e enviar. | Arquivo salvo com sucesso. Sistema exibe Toast verde e o arquivo aparece no feed. |
-| **CT04** | Bloqueio de Arquivo Gigante (RNF01) | Usuário autenticado | 1. Selecionar arquivo maior que 100MB.<br>2. Tentar enviar. | O middleware (Multer) rejeita o upload e exibe mensagem de limite excedido. |
-| **CT05** | Funcionalidade de Download (Blob) | Usuário na Home/Detalhes | 1. Clicar no botão "Baixar" de um arquivo do feed. | O arquivo inicia o download local com o nome original sem abrir novas abas. |
-| **CT06** | Curtir Material em Tempo Real | Usuário autenticado | 1. Clicar no botão "Curtir" de um material. | O contador aumenta em +1 imediatamente sem recarregar a página. |
-| **CT07** | Busca e Filtro de Disciplinas | Existência de arquivos no banco | 1. Digitar termo no input de busca.<br>2. Selecionar uma disciplina no Select. | A grade (grid) se atualiza mostrando apenas os arquivos que coincidem com os critérios. |
-
-### C. Matriz de Rastreabilidade (Requisitos x Testes)
-
-Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anteriores possuem um caso de teste correspondente para verificação.
-
-| ID Requisito | Descrição do Requisito | Caso de Teste Vinculado | Status do Teste (Previsto) |
-| :--- | :--- | :--- | :--- |
-| **RF01/RF06** | Autenticação / Cadastro Institucional | CT01, CT02 | A executar na Sprint 8 |
-| **RF02 / RNF01** | Upload de Arquivos e Limite (100MB) | CT03, CT04 | A executar na Sprint 8 |
-| **RF04 / RNF07** | Download de Arquivos e Integridade | CT05 | A executar na Sprint 8 |
-| **RF11** | Sistema de Likes | CT06 | A executar na Sprint 8 |
-| **RF03 / RF10** | Filtro de Busca e Disciplinas | CT07 | A executar na Sprint 8 |
+- Plano de Testes com objetivos, escopo e tipos de teste aplicáveis
+- 7 Casos de Teste estruturados (CT01 a CT07) com pré-condições, passos de execução e resultados esperados
+- Matriz de Rastreabilidade vinculando os principais requisitos funcionais e não funcionais aos casos de teste correspondentes
+- Revisão dos critérios de aceitação definidos na Sprint 2
+- Arquivo `docs/testes/plano-de-testes.md`
+- Arquivo `docs/sprints/sprint-07.md`
 
 ---
 
-## 8. Dificuldades Encontradas
+## 6. Evolução da Aplicação Web
 
-1. **Mapeamento de Casos Limites (Edge Cases):** Houve uma leve dificuldade inicial em definir como testaríamos a restrição de uploads acima de 100MB, uma vez que requeria gerar um arquivo falso pesado apenas para validação do middleware e do retorno visual na interface sem derrubar o servidor.
-2. **Definição de Escopo de Testes:** O grupo precisou avaliar se aplicaria bibliotecas de automação complexas ou testes manuais de interface. Optou-se pelos testes funcionais estruturados (Caixa Preta) devido ao tempo hábil, focando na garantia da entrega das regras de negócio visuais de forma sólida.
-
----
-## 9. Revisão do Incremento
-
-* *O que foi concluído:* O plano estratégico de validação do software está totalmente finalizado. Os cenários mapeados cobrem os fluxos primários (autenticação, manipulação de arquivos e busca). A matriz de rastreabilidade interligou de forma clara as demandas do Backlog aos Casos de Teste elaborados.
-* *O que ficou pendente:* A execução prática destes testes previstos no documento e o registro em log de seus resultados (sucesso ou falha) para assegurar que a plataforma está completamente polida para a demonstração final.
+Nesta sprint, o foco foi o planejamento e a documentação de testes. Não houve desenvolvimento de novas funcionalidades. A aplicação está funcional nos seus fluxos principais (autenticação, upload, listagem, download, curtidas, filtros), e os casos de teste elaborados serão executados na Sprint 8 para validar esses fluxos de forma sistemática antes da apresentação final.
 
 ---
 
-## 10. Pendências para a Próxima Sprint (Sprint 8)
+## 7. Dificuldades Encontradas
 
-1. Executar todos os Casos de Teste listados no plano (CT01 a CT07).
-2. Corrigir eventuais bugs ou comportamentos inesperados que forem descobertos durante a execução.
-3. Consolidar as evidências dos testes realizados e preparar a documentação final da aplicação.
-4. Refinar os últimos detalhes visuais em preparação para o pitch do projeto.
+- **Mapeamento de casos limites (edge cases):** Houve dificuldade inicial em definir como testar a restrição de uploads acima de 100MB, pois seria necessário gerar um arquivo artificialmente grande apenas para validar o comportamento do middleware Multer e o retorno visual na interface.
+- **Definição do escopo de testes:** O grupo precisou avaliar entre implementar testes automatizados com bibliotecas específicas (Jest, Cypress) ou optar por testes manuais estruturados. Optou-se pelos testes funcionais manuais (Caixa Preta) dado o tempo disponível, priorizando a cobertura dos fluxos principais de negócio.
 
 ---
-## 11. Quadro Kanban
-<img width="1919" height="834" alt="image" src="https://github.com/user-attachments/assets/1cb6b03c-11f3-4b6d-a7c5-ea0b92f8f05d" />
+
+## 8. Revisão do Incremento
+
+- **O que foi concluído:** O plano estratégico de testes está finalizado. Os 7 casos de teste cobrem os fluxos principais da aplicação. A matriz de rastreabilidade interliga os requisitos do backlog aos casos de teste elaborados. Os critérios de aceitação foram revisados e confirmados.
+- **O que ficou pendente:** A execução prática dos casos de teste e o registro dos resultados (sucesso ou falha) ficaram reservados para a Sprint 8.
+
+---
+
+## 9. Pendências para a Próxima Sprint
+
+- Executar os casos de teste CT01 a CT07 e registrar os resultados
+- Documentar as evidências de teste (capturas de tela, logs de resultado)
+- Registrar eventuais bugs encontrados e suas correções
+- Consolidar a documentação final do projeto
+- Preparar o histórico resumido das sprints para a apresentação final
+- Atualizar o Product Backlog final
+
+---
+
+## 10. Plano de Testes
+
+### A. Objetivos do Teste
+
+Garantir a integridade, usabilidade e segurança dos fluxos principais da plataforma de compartilhamento de materiais acadêmicos, verificando que os requisitos funcionais e não funcionais definidos nas sprints anteriores são satisfeitos pelo sistema implementado.
+
+### B. Tipos de Testes Adotados
+
+| Tipo | Descrição |
+|---|---|
+| **Testes Funcionais (Caixa Preta)** | Validação das regras de negócio pela interface do usuário, focando em entradas e saídas esperadas sem visualizar o código interno |
+| **Testes de Usabilidade** | Verificação de feedback visual (Toasts, alertas SweetAlert2) e conformidade com o limite de cliques definido no RNF03 |
+| **Testes de Integração** | Validação da comunicação entre o Frontend (React) e a API (Node.js/Express) nas requisições HTTP de criação de arquivos e curtidas |
+
+---
+
+## 11. Casos de Teste
+
+| ID | Cenário de Teste | Pré-condição | Passos para Execução | Resultado Esperado |
+|---|---|---|---|---|
+| **CT01** | Validação de Login com E-mail Institucional | Usuário não autenticado, cadastrado com e-mail @estudante.ufla.br | 1. Acessar a tela de login. 2. Inserir e-mail @estudante.ufla.br e senha correta. 3. Clicar em "Entrar". | Login bem-sucedido. Token JWT gerado e redirecionamento para a Home. |
+| **CT02** | Bloqueio de E-mail Não Institucional no Cadastro | Usuário na tela de Cadastro | 1. Preencher os campos de cadastro. 2. Inserir e-mail genérico (ex.: @gmail.com). 3. Submeter o formulário. | Sistema bloqueia o cadastro e exibe Toast de erro de validação. |
+| **CT03** | Upload de Material Válido | Usuário autenticado | 1. Clicar em "Enviar Material". 2. Selecionar arquivo PDF de até 100MB. 3. Preencher os dados obrigatórios. 4. Clicar em "Enviar". | Arquivo salvo com sucesso. Toast verde de confirmação exibido. Arquivo aparece no feed. |
+| **CT04** | Bloqueio de Arquivo Acima do Limite (RNF01) | Usuário autenticado | 1. Tentar selecionar arquivo maior que 100MB. 2. Clicar em "Enviar". | O middleware (Multer) rejeita o upload e exibe mensagem de limite excedido ao usuário. |
+| **CT05** | Download de Arquivo (Blob) | Usuário autenticado, arquivo disponível no feed | 1. Localizar um arquivo no feed. 2. Clicar no botão "Baixar". | Download do arquivo iniciado localmente com o nome original, sem abrir novas abas no navegador. |
+| **CT06** | Curtir Material em Tempo Real | Usuário autenticado, arquivo disponível no feed | 1. Localizar um arquivo no feed. 2. Clicar no botão "Curtir". | Contador de curtidas aumenta em +1 imediatamente, sem recarregar a página. |
+| **CT07** | Busca e Filtro por Disciplina | Existência de arquivos cadastrados no banco | 1. Digitar um termo na barra de busca. 2. Selecionar uma disciplina no filtro. | A grade de arquivos atualiza exibindo apenas os itens que coincidem com os critérios de busca e filtro. |
+
+---
+
+## 12. Matriz de Rastreabilidade (Requisitos × Testes)
+
+| ID Requisito | Descrição do Requisito | Caso de Teste Vinculado | Status |
+|---|---|---|---|
+| RF01 / RF06 | Autenticação e Cadastro Institucional | CT01, CT02 | A executar na Sprint 8 |
+| RF02 / RNF01 | Upload de Arquivos e Limite de 100MB | CT03, CT04 | A executar na Sprint 8 |
+| RF04 / RNF07 | Download de Arquivos e Integridade | CT05 | A executar na Sprint 8 |
+| RF11 | Sistema de Likes | CT06 | A executar na Sprint 8 |
+| RF03 / RF10 | Busca e Filtro por Disciplina | CT07 | A executar na Sprint 8 |
+| RNF03 | Usabilidade — máximo 3 cliques | CT03, CT05 (contagem de cliques) | A executar na Sprint 8 |
+| RNF05 | Segurança — bloqueio de acessos não autorizados | CT01, CT02 | A executar na Sprint 8 |
+
+---
+
+## 13. Quadro Kanban (Sprint 7)
+
+| A Fazer | Em Andamento | Concluído |
+|---|---|---|
+| Executar CT01–CT07 (Sprint 8) | — | Plano de Testes |
+| Registrar evidências (Sprint 8) | — | Casos de Teste (CT01–CT07) |
+| — | — | Matriz de Rastreabilidade |
+| — | — | Revisão dos Critérios de Aceitação |
+| — | — | sprint-07.md |
