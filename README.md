@@ -92,7 +92,6 @@ Sprint 5 - Aplicação da padronização do Projeto
 Sprint 6 - Definição da Arquitetura de Software
 
 
-
 ## Tecnologias Utilizadas
 
 **Frontend**

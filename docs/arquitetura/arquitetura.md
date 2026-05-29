@@ -1,8 +1,6 @@
-# Arquitetura de Software - DisciplinasUFLA
-
 ## 1. Visão Geral da Arquitetura
 
-O sistema DisciplinasUFLA foi projetado combinando estilos arquiteturais para garantir escalabilidade e manutenção. Em um escopo macro, o sistema adota a arquitetura **Cliente-Servidor (Client-Server)**. Internamente, para o gerenciamento de persistência e regras de negócio, o backend utiliza a **Arquitetura de Repositório (Repository Pattern / Data-Centered)** em conjunto com uma estrutura em camadas.
+O sistema DisciplinasUFLA foi projetado combinando estilos arquiteturais para garantir escalabilidade e manutenção. Em um escopo macro, o sistema adota a arquitetura Cliente-Servidor (Client-Server). Internamente, para o gerenciamento de persistência e regras de negócio, o backend utiliza a Arquitetura de Repositório em conjunto com uma estrutura em camadas.
 
 Toda a infraestrutura da aplicação é conteinerizada via Docker, garantindo isolamento entre os ambientes.
 
