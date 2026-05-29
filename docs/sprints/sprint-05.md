@@ -148,15 +148,5 @@ A decisão de salvar arquivos no sistema local do servidor (Sprint 4) trouxe um 
 ---
 
 ## 14. Quadro Kanban (Sprint 5)
+<img width="1250" height="686" alt="image" src="https://github.com/user-attachments/assets/a0b5f7c2-3b24-495d-a4dd-856377459027" />
 
-| A Fazer | Em Andamento | Concluído |
-|---|---|---|
-| — | — | Identificação de problemas de design |
-| — | — | Aplicação do padrão Singleton |
-| — | — | Aplicação do padrão Strategy |
-| — | — | Justificativas técnicas dos padrões |
-| — | — | Configuração Prisma/Docker |
-| — | — | Tela e Lógica de Login |
-| — | — | Refatoração do Feed |
-| — | — | Isolamento de credenciais (.env) |
-| — | — | Ajuste do .gitignore |
