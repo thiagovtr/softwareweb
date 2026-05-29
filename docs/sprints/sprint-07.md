@@ -82,4 +82,11 @@ Esta matriz comprova que todos os requisitos cruciais mapeados nas Sprints anter
 | **RF11** | Sistema de Likes | CT06 | A executar na Sprint 8 |
 | **RF03 / RF10** | Filtro de Busca e Disciplinas | CT07 | A executar na Sprint 8 |
 
+---
 
+## 8. Dificuldades Encontradas
+
+1. **Mapeamento de Casos Limites (Edge Cases):** Houve uma leve dificuldade inicial em definir como testaríamos a restrição de uploads acima de 100MB, uma vez que requeria gerar um arquivo falso pesado apenas para validação do middleware e do retorno visual na interface sem derrubar o servidor.
+2. **Definição de Escopo de Testes:** O grupo precisou avaliar se aplicaria bibliotecas de automação complexas ou testes manuais de interface. Optou-se pelos testes funcionais estruturados (Caixa Preta) devido ao tempo hábil, focando na garantia da entrega das regras de negócio visuais de forma sólida.
+
+---
