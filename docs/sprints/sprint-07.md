@@ -21,3 +21,8 @@ O principal objetivo desta sprint foi planejar e estruturar a estratégia de tes
 * [DOC] Atualização do Relatório da Sprint 7
 
 ---
+## 4. Relação com o Conteúdo da Disciplina
+
+Esta etapa aplica diretamente os conceitos da primeira parte do módulo de *Testes de Software*. O trabalho prático enfatizou o planejamento, a organização em cenários de teste e a documentação rigorosa da qualidade, validando se o produto construído atende às especificações iniciais através de técnicas de validação Funcional (Caixa Preta).
+
+---
