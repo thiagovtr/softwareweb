@@ -79,18 +79,16 @@ Esta sprint está diretamente relacionada ao conteúdo de *Padrões de Projeto (
 - *Tag da sprint:* sprint-05
 
 ---
+## 7. Evolução da Aplicação Web
 
-## 7. Atualização do Backlog
+Esta sprint marcou o início concreto do desenvolvimento da aplicação. Foram implementadas:
 
-| ID | Item | Status | Relacionamento |
-| :--- | :--- | :--- | :--- |
-| M04 | Aplicação de Padrões de Projeto | *Concluído* | Garante viabilidade técnica para RF02, RF04 e RNF04 |
-| D02 | Configuração Prisma/Docker | *Concluído* | Infraestrutura base e banco integrados com sucesso |
-| RT01 | Tela e Lógica de Login | *Concluído* | Iniciada a codificação da lógica de validação de e-mails institucionais |
-| RT02 | Refatoração do Feed e Exibição de Mídias | Concluído | Corrige o bug de imagens quebradas para PDFs/ZIPs e ajusta o layout dos cards (RF05) |
-| D03 | Isolamento de Credenciais com .env | Concluído | Remove a chave JWT exposta no código, aplicando dotenv no servidor (RNF02 - Segurança) |
-| D04 | Ajuste de Rastreamento do Repositório | Concluído | Limpa a pasta de cache .vite e atualiza o .gitignore para evitar conflitos na main |
-| DOC05 | Relatório de Padrões GoF (Sprint 5) | Concluído | Consolida a documentação técnica dos padrões Singleton, Chain of Responsibility e Proxy |
+- *Autenticação:* lógica de validação de e-mails institucionais (@estudante.ufla.br) no backend
+- *Infraestrutura completa:* Docker Compose configurado, banco de dados PostgreSQL integrado via Prisma ORM com migrations e seed funcionais
+- *Padrões de projeto em código:* implementação do Singleton (Prisma Client centralizado) e da interface Strategy (armazenamento desacoplado)
+- *Segurança:* credenciais removidas do código e isoladas em variáveis de ambiente
+- *Correções no feed:* exibição correta de tipos de arquivo (PDF, ZIP) e layout dos cards ajustado
+
 ---
 
 ## 8. Resultados Obtidos
