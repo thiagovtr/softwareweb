@@ -127,11 +127,4 @@ Garantir a integridade, usabilidade e segurança dos fluxos principais da plataf
 ---
 
 ## 13. Quadro Kanban (Sprint 7)
-
-| A Fazer | Em Andamento | Concluído |
-|---|---|---|
-| Executar CT01–CT07 (Sprint 8) | — | Plano de Testes |
-| Registrar evidências (Sprint 8) | — | Casos de Teste (CT01–CT07) |
-| — | — | Matriz de Rastreabilidade |
-| — | — | Revisão dos Critérios de Aceitação |
-| — | — | sprint-07.md |
+<img width="1919" height="834" alt="image" src="https://github.com/user-attachments/assets/2e26b848-290c-43f1-99cf-311143ae9754" />
