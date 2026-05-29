@@ -27,6 +27,10 @@ function FileDetails() {
 
   const [file, setFile] = useState<FileProps | null>(null);
 
+  const user = JSON.parse(
+    localStorage.getItem("@user") || "{}",
+  );
+
   useEffect(() => {
     async function loadFile() {
       try {
@@ -57,6 +61,12 @@ function FileDetails() {
       lowerCaseFilename.endsWith(".webp")
     );
   }
+
+  function isPdf(filename: string) {
+  return filename
+    .toLowerCase()
+    .endsWith(".pdf");
+}
 
   async function handleDownload() {
     if (!file) return;
@@ -137,6 +147,16 @@ function FileDetails() {
                 "
               />
             </div>
+          ) : isPdf(file.filename) ? (
+            <iframe
+              src={file.url}
+              title={file.title}
+              className="
+                w-full
+                h-[700px]
+                border-0
+              "
+            />
           ) : (
             <div
               className="
@@ -226,25 +246,28 @@ function FileDetails() {
                   Curtir
                 </button>
 
-                <Link
-                  to={`/edit-file/${file.id}`}
-                  className="
-                    bg-yellow-500
-                    text-white
-                    px-6
-                    py-3
-                    rounded-lg
-                    font-bold
-                    hover:bg-yellow-600
-                    hover:scale-105
-                    hover:shadow-lg
-                    active:scale-95
-                    transition
-                    duration-200
-                  "
-                >
-                  Editar
-                </Link>
+                {(user.name === file.user.name ||
+                  user.isAdmin) && (
+                  <Link
+                    to={`/edit-file/${file.id}`}
+                    className="
+                      bg-yellow-500
+                      text-white
+                      px-6
+                      py-3
+                      rounded-lg
+                      font-bold
+                      hover:bg-yellow-600
+                      hover:scale-105
+                      hover:shadow-lg
+                      active:scale-95
+                      transition
+                      duration-200
+                    "
+                  >
+                    Editar
+                  </Link>
+                )}
 
                 <button
                   onClick={handleDownload}
