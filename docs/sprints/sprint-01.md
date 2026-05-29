@@ -1,8 +1,10 @@
 # Sprint 01
 
-## 1. Identificação do Grupo
+## 1. Identificação
 
-Projeto: DisciplinasUFLA
+- **Número da sprint:** 1
+- **Período:** 04/04/2026 a 11/04/2026
+- **Data da entrega:** 11/04/2026
 
 | Integrante | Papel no Scrum |
 |---|---|
@@ -12,123 +14,96 @@ Projeto: DisciplinasUFLA
 | Guilherme dos Santos Fernandes | Dev Team |
 | Matheus Levi Tavares | Dev Team |
 
-Data da Sprint: 04/04/2026 a 11/04/2026
+---
 
+## 2. Objetivo da Sprint
 
-## 2. Descrição do Problema Escolhido
+Definir o problema a ser tratado, estabelecer a visão inicial do produto, organizar o projeto com base no Scrum e iniciar formalmente o repositório no GitHub.
 
-O problema escolhido pelo grupo está relacionado à dificuldade em compartilhar conteúdos acadêmicos entre estudantes da UFLA.
+---
 
-Atualmente, muitos alunos utilizam aplicativos de mensagens e redes sociais para compartilhar arquivos acadêmicos, como resumos, listas de exercícios e materiais de estudo. No entanto, esse processo é desorganizado, dificultando a localização de conteúdos importantes e tornando o acesso aos materiais menos eficiente.
+## 3. Itens do Sprint Backlog
 
-Essa situação gera dificuldades no acesso rápido aos conteúdos e pode prejudicar o aprendizado dos estudantes.
+| ID | Atividade | Responsável | Status |
+|---|---|---|---|
+| S1-01 | Formação do grupo e definição de papéis Scrum | Todos | Concluído |
+| S1-02 | Escolha e descrição do problema | Todos | Concluído |
+| S1-03 | Criação do repositório no GitHub | Bruno | Concluído |
+| S1-04 | Criação da estrutura inicial de pastas | Bruno | Concluído |
+| S1-05 | Criação do README.md com informações iniciais | Todos | Concluído |
+| S1-06 | Definição do Product Backlog inicial | Thiago | Concluído |
+| S1-07 | Criação do arquivo sprint-01.md | Bruno | Concluído |
 
+---
 
-## 3. Visão do Produto
+## 4. Relação com o Conteúdo da Disciplina
 
-O produto a ser desenvolvido será uma aplicação web chamada DisciplinasUFLA.
+Esta sprint está diretamente relacionada aos conteúdos introdutórios de **Engenharia de Software** e **Processos de Software**. A formação do grupo, a escolha do problema e a adoção do Scrum como metodologia ágil de desenvolvimento são práticas que ilustram concretamente os conceitos de processo de software incremental e iterativo. A criação do repositório no GitHub reforça o uso de ferramentas de versionamento e controle de configuração, conteúdo fundamental da disciplina.
 
-Essa aplicação permitirá que estudantes compartilhem conteúdos acadêmicos de forma organizada e acessível.
+---
 
-O sistema permitirá:
+## 5. Artefatos Produzidos
 
-- Cadastro de usuários
-- Login no sistema
-- Envio de arquivos acadêmicos
-- Download de arquivos
-- Visualização de conteúdos disponíveis
+- Identificação do grupo e definição dos papéis no Scrum
+- Descrição do problema escolhido (compartilhamento de conteúdos acadêmicos)
+- Visão do produto — plataforma web DisciplinasUFLA
+- Objetivos geral e específicos do projeto
+- Product Backlog inicial com 4 itens priorizados
+- Planejamento da Sprint 1 e planejamento preliminar da Sprint 2
+- Repositório GitHub criado com estrutura de pastas (`docs/`, `docs/sprints/`, `src/`, `tests/`)
+- Arquivo `README.md` com informações iniciais do projeto
+- Arquivo `docs/sprints/sprint-01.md`
 
-O sistema será acessado por meio de navegadores web e utilizado por estudantes da universidade.
+---
 
+## 6. Evolução da Aplicação Web
 
-## 4. Objetivos do Projeto
+Nesta sprint, o foco foi a organização inicial do projeto e a definição do problema. Ainda não houve desenvolvimento de código da aplicação. Foram estruturadas as pastas `src/` (onde ficará o código-fonte) e `tests/` (onde ficarão os testes automatizados), preparando o ambiente para as próximas sprints.
 
-Objetivo geral:
+---
 
-Desenvolver uma aplicação web que permita o compartilhamento organizado de conteúdos acadêmicos entre estudantes.
+## 7. Dificuldades Encontradas
 
-Objetivos específicos:
+- O grupo precisou discutir e convergir em torno de um único problema dentre as diversas ideias levantadas inicialmente, o que demandou algumas reuniões de alinhamento.
+- A definição do Product Backlog inicial exigiu discussão sobre o escopo mínimo viável do produto, equilibrando ambição e viabilidade de entrega dentro do semestre.
 
-- Permitir o cadastro de usuários
-- Permitir autenticação por login
-- Permitir o envio de arquivos acadêmicos
-- Permitir o download de arquivos
-- Facilitar o acesso aos conteúdos compartilhados
-- Melhorar a organização dos materiais acadêmicos
+---
 
+## 8. Revisão do Incremento
 
-## 5. Product Backlog Inicial
+- **O que foi concluído:** Todos os artefatos planejados foram entregues — repositório criado, estrutura de pastas organizada, README.md publicado, Product Backlog inicial definido e sprint-01.md documentado.
+- **O que ficou pendente:** Nenhum item da Sprint 1 ficou pendente. O início do levantamento de requisitos ficou reservado para a Sprint 2.
 
-| ID | Tipo | Item do backlog | Descrição | Prioridade | Critérios de aceitação | Estimativa | Sprint prevista |
+---
+
+## 9. Pendências para a Próxima Sprint
+
+- Levantamento detalhado dos requisitos funcionais e não funcionais
+- Criação das histórias de usuário
+- Priorização e refinamento do Product Backlog
+- Organização dos requisitos como Issues no GitHub
+
+---
+
+## 10. Product Backlog Inicial
+
+| ID | Tipo | Item do Backlog | Descrição | Prioridade | Critérios de Aceitação | Estimativa | Sprint Prevista |
 |---|---|---|---|---|---|---|---|
-| RT01 | Requisito técnico | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | Permitir cadastro e login apenas com e-mails da UFLA | 3 pts | Sprint 3 |
-| RT02 | Requisito técnico | Tela de Envio de Material | Interface para o aluno fazer upload | Alta | Ter um botão para selecionar o arquivo | 5 pts | Sprint 4 |
-| RT03 | Requisito técnico | Tela de Busca | Interface para procurar resumos, slides e exercícios | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 4 |
-| RT04 | Requisito técnico | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 4 pts | Sprint 5 |
+| RT01 | Requisito Técnico | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | Permitir cadastro e login apenas com e-mails da UFLA | 3 pts | Sprint 3 |
+| RT02 | Requisito Técnico | Tela de Envio de Material | Interface para o aluno fazer upload | Alta | Ter um botão para selecionar o arquivo | 5 pts | Sprint 4 |
+| RT03 | Requisito Técnico | Tela de Busca | Interface para procurar resumos, slides e exercícios | Média | Ter uma barra de pesquisa e filtrar materiais pelo nome da disciplina | 3 pts | Sprint 4 |
+| RT04 | Requisito Técnico | Função de Download | Lógica para baixar o arquivo salvo | Média | Fazer o download do material correspondente ao clicar no botão | 4 pts | Sprint 5 |
 
+---
 
-## 6. Planejamento da Sprint 1 e da Sprint 2
+## 11. Quadro Kanban (Sprint 1)
 
-Sprint 1:
-
-Durante a Sprint 1 foram realizadas as seguintes atividades:
-
-- Formação do grupo
-- Escolha do problema a ser desenvolvido
-- Criação do repositório no GitHub
-- Criação da estrutura inicial do projeto
-- Criação do README.md
-- Definição do Product Backlog inicial
-- Criação do arquivo sprint-01.md
-
-Sprint 2:
-
-Durante a Sprint 2 serão realizadas as seguintes atividades:
-
-- Levantamento dos requisitos funcionais
-- Levantamento dos requisitos não funcionais
-- Criação de histórias de usuário
-- Priorização do Product Backlog
-- Organização dos requisitos no GitHub
-
-
-## 7. Registro Resumido da Sprint
-
-Durante a Sprint 1, o grupo realizou reuniões para discutir possíveis ideias de projeto e analisar problemas que poderiam ser resolvidos por meio de uma aplicação web.
-
-Após análise das possibilidades, foi escolhido o problema relacionado ao compartilhamento de conteúdos acadêmicos entre estudantes.
-
-Em seguida, foi criado o repositório no GitHub e organizada a estrutura inicial do projeto, incluindo as pastas necessárias e o arquivo README.md.
-
-Também foi definido o Product Backlog inicial com as principais funcionalidades do sistema.
-
-A Sprint 1 foi realizada estabelecendo a base inicial do projeto.
-
-
-## 8. Criação do Repositório no GitHub
-
-O repositório do projeto foi criado no GitHub.
-
-Foram criadas as seguintes pastas iniciais:
-
-- docs
-- docs/sprints
-- src
-- tests
-
-Também foi criado o arquivo README.md contendo as informações iniciais do projeto.
-
-Commits realizados:
-
-- Commit inicial com criação das pastas
-- Commit com adição do README.md
-- Commit com criação do sprint-01.md
-
-
-## 9. Arquivo docs/sprints/sprint-01.md
-
-O arquivo sprint-01.md foi criado dentro da pasta:
-
-docs/sprints/
-
-Esse arquivo contém a documentação da Sprint 1 e será atualizado conforme a evolução do projeto.
+| A Fazer | Em Andamento | Concluído |
+|---|---|---|
+| — | — | Formação do grupo |
+| — | — | Escolha do problema |
+| — | — | Criação do repositório |
+| — | — | Estrutura de pastas |
+| — | — | README.md |
+| — | — | Product Backlog inicial |
+| — | — | sprint-01.md |
