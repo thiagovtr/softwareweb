@@ -8,12 +8,16 @@ import { DeleteFileController } from "../controllers/DeleteFileController";
 import { UpdateFileController } from "../controllers/UpdateFileController";
 import multerConfig from "../configs/multer";
 import { isAuthenticated } from "../middlewares/isAuthenticated";
+import { CreateCommentController } from "../controllers/CreateCommentController";
+import { ListCommentsController } from "../controllers/ListCommentsController";
 
 const createFileController = new CreateFileController();
 const listFilesController = new ListFilesController();
 const likeFileController = new LikeFileController();
 const deleteFileController = new DeleteFileController();
 const updateFileController = new UpdateFileController();
+const createCommentController = new CreateCommentController();
+const listCommentsController = new ListCommentsController();
 const fileRoutes = Router();
 const upload = multer(multerConfig);
 
@@ -24,10 +28,7 @@ fileRoutes.post(
   createFileController.handle,
 );
 
-fileRoutes.get(
-  "/",
-  listFilesController.handle,
-);
+fileRoutes.get("/", listFilesController.handle);
 
 fileRoutes.get("/:id", async (request, response) => {
   const { id } = request.params;
@@ -69,22 +70,18 @@ fileRoutes.get("/:id", async (request, response) => {
   });
 });
 
+fileRoutes.post("/:id/like", isAuthenticated, likeFileController.handle);
+
+fileRoutes.put("/:id", isAuthenticated, updateFileController.handle);
+
+fileRoutes.delete("/:id", isAuthenticated, deleteFileController.handle);
+
 fileRoutes.post(
-  "/:id/like",
+  "/:id/comments",
   isAuthenticated,
-  likeFileController.handle,
+  createCommentController.handle,
 );
 
-fileRoutes.put(
-  "/:id",
-  isAuthenticated,
-  updateFileController.handle,
-);
-
-fileRoutes.delete(
-  "/:id",
-  isAuthenticated,
-  deleteFileController.handle,
-);
+fileRoutes.get("/:id/comments", listCommentsController.handle);
 
 export { fileRoutes };

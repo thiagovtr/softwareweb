@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  useNavigate,
-  useParams,
-} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import api from "../../services/api";
 
@@ -20,51 +17,34 @@ function EditFile() {
 
   const navigate = useNavigate();
 
-  const [title, setTitle] =
-    useState("");
+  const [title, setTitle] = useState("");
 
-  const [description, setDescription] =
-    useState("");
+  const [description, setDescription] = useState("");
 
-  const [subjectId, setSubjectId] =
-    useState("");
+  const [subjectId, setSubjectId] = useState("");
 
-  const [subjects, setSubjects] =
-    useState<SubjectProps[]>([]);
+  const [subjects, setSubjects] = useState<SubjectProps[]>([]);
 
   useEffect(() => {
     async function loadData() {
       try {
-        const subjectsResponse =
-          await api.get("/subjects");
+        const subjectsResponse = await api.get("/subjects");
 
-        setSubjects(
-          subjectsResponse.data,
-        );
+        setSubjects(subjectsResponse.data);
 
-        const fileResponse =
-          await api.get(
-            `/files/${id}`,
-          );
+        const fileResponse = await api.get(`/files/${id}`);
 
-        const file =
-          fileResponse.data;
+        const file = fileResponse.data;
 
         setTitle(file.title);
 
-        setDescription(
-          file.description || "",
-        );
+        setDescription(file.description || "");
 
-        setSubjectId(
-          String(file.subjectId),
-        );
+        setSubjectId(String(file.subjectId));
       } catch (error) {
         console.log(error);
 
-        toast.error(
-          "Erro ao carregar arquivo",
-        );
+        toast.error("Erro ao carregar arquivo");
       }
     }
 
@@ -73,26 +53,19 @@ function EditFile() {
 
   async function handleUpdate() {
     try {
-      await api.put(
-        `/files/${id}`,
-        {
-          title,
-          description,
-          subjectId,
-        },
-      );
+      await api.put(`/files/${id}`, {
+        title,
+        description,
+        subjectId,
+      });
 
-      toast.success(
-        "Arquivo atualizado!",
-      );
+      toast.success("Arquivo atualizado!");
 
       navigate(`/files/${id}`);
     } catch (error) {
       console.log(error);
 
-      toast.error(
-        "Erro ao atualizar arquivo",
-      );
+      toast.error("Erro ao atualizar arquivo");
     }
   }
 
@@ -141,9 +114,7 @@ function EditFile() {
               mb-4
             "
             value={title}
-            onChange={(e) =>
-              setTitle(e.target.value)
-            }
+            onChange={(e) => setTitle(e.target.value)}
           />
 
           <textarea
@@ -156,11 +127,7 @@ function EditFile() {
               mb-4
             "
             value={description}
-            onChange={(e) =>
-              setDescription(
-                e.target.value,
-              )
-            }
+            onChange={(e) => setDescription(e.target.value)}
           />
 
           <select
@@ -172,26 +139,15 @@ function EditFile() {
               mb-6
             "
             value={subjectId}
-            onChange={(e) =>
-              setSubjectId(
-                e.target.value,
-              )
-            }
+            onChange={(e) => setSubjectId(e.target.value)}
           >
-            <option value="">
-              Selecione uma matéria
-            </option>
+            <option value="">Selecione uma matéria</option>
 
-            {subjects.map(
-              (subject) => (
-                <option
-                  key={subject.id}
-                  value={subject.id}
-                >
-                  {subject.name}
-                </option>
-              ),
-            )}
+            {subjects.map((subject) => (
+              <option key={subject.id} value={subject.id}>
+                {subject.name}
+              </option>
+            ))}
           </select>
 
           <button

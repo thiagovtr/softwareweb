@@ -26,11 +26,8 @@ class DeleteFileService {
         id: userId,
       },
     });
-    
-    if (
-      file.userId !== userId &&
-      !user?.isAdmin
-    ) {
+
+    if (file.userId !== userId && !user?.isAdmin) {
       throw new AppError("Sem permissão");
     }
 

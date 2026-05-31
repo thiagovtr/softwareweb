@@ -286,8 +286,7 @@ function Home() {
                         Curtir
                       </button>
 
-                      {(user.id === file.user.id ||
-                        user.isAdmin) && (
+                      {(user.id === file.user.id || user.isAdmin) && (
                         <button
                           onClick={(e) => {
                             e.stopPropagation();

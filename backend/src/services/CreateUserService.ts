@@ -10,46 +10,30 @@ interface CreateUserRequest {
 }
 
 class CreateUserService {
-  async execute({
-    name,
-    email,
-    password,
-  }: CreateUserRequest) {
-
-    if (
-      !email.endsWith(
-        "@estudante.ufla.br",
-      )
-    ) {
-      throw new AppError(
-        "Use um e-mail institucional da UFLA",
-      );
+  async execute({ name, email, password }: CreateUserRequest) {
+    if (!email.endsWith("@estudante.ufla.br")) {
+      throw new AppError("Use um e-mail institucional da UFLA");
     }
 
-    const userAlreadyExists =
-      await prisma.user.findUnique({
-        where: {
-          email,
-        },
-      });
+    const userAlreadyExists = await prisma.user.findUnique({
+      where: {
+        email,
+      },
+    });
 
     if (userAlreadyExists) {
-      throw new AppError(
-        "Usuário já existe",
-      );
+      throw new AppError("Usuário já existe");
     }
 
-    const passwordHash =
-      await hash(password, 8);
+    const passwordHash = await hash(password, 8);
 
-    const user =
-      await prisma.user.create({
-        data: {
-          name,
-          email,
-          password: passwordHash,
-        },
-      });
+    const user = await prisma.user.create({
+      data: {
+        name,
+        email,
+        password: passwordHash,
+      },
+    });
 
     const token = jwt.sign(
       {

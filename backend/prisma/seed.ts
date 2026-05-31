@@ -109,7 +109,7 @@ async function main() {
     "Ação Coletiva",
     "Marketing Público",
     "Introdução à Filosofia",
-    "Sociologia"
+    "Sociologia",
   ];
 
   for (const subject of subjects) {
@@ -126,29 +126,22 @@ async function main() {
 
   console.log("Matérias cadastradas com sucesso!");
 
-  const passwordHash = await hash(
-    "admin123",
-    8,
-  );
+  const passwordHash = await hash("admin123", 8);
 
   await prisma.user.upsert({
     where: {
-      email:
-        "admin@estudante.ufla.br",
+      email: "admin@estudante.ufla.br",
     },
     update: {},
     create: {
       name: "Administrador",
-      email:
-        "admin@estudante.ufla.br",
+      email: "admin@estudante.ufla.br",
       password: passwordHash,
       isAdmin: true,
     },
   });
 
-  console.log(
-    "Seed executada com sucesso!",
-  );
+  console.log("Seed executada com sucesso!");
 }
 
 main()

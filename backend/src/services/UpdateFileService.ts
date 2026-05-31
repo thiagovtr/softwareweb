@@ -17,7 +17,6 @@ class UpdateFileService {
     subjectId,
     userId,
   }: UpdateFileRequest) {
-
     const file = await prisma.file.findUnique({
       where: {
         id: fileId,
@@ -34,10 +33,7 @@ class UpdateFileService {
       },
     });
 
-    if (
-      file.userId !== userId &&
-      !user?.isAdmin
-    ) {
+    if (file.userId !== userId && !user?.isAdmin) {
       throw new AppError("Sem permissão");
     }
 
