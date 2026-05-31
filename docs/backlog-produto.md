@@ -22,17 +22,17 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 | RF09 | Requisito Funcional | Associação de Arquivos | Vincular arquivo ao autor | Alta | 100% dos arquivos devem estar corretamente associados ao usuário que realizou o upload | 2 pts | Concluído |  
 | RF10 | Requisito Funcional | Filtro por Disciplina | Listar arquivos por disciplina | Média | Filtro deve retornar resultados corretos em até 2s em 95% dos testes | 3 pts | Concluído |  
 | RF11 | Requisito Funcional | Sistema de Likes | Permitir que usuários curtam arquivos | Média | Usuário autenticado deve conseguir curtir/descurtir um arquivo em até 1s e o sistema deve atualizar a contagem corretamente em 100% dos testes | 3 pts | Concluído |  
-| RF12 | Requisito Funcional | Sistema de Comentários | Permitir comentários em arquivos | Média | Usuários autenticados devem conseguir comentar arquivos e visualizar comentários em até 2s | 3 pts | Pendente |  
-| RF13 | Requisito Funcional | Usuário Administrador | Permitir gerenciamento do sistema | Média | Administradores devem conseguir remover conteúdos inadequados e gerenciar usuários | 4 pts | Pendente |  
-| RF14 | Requisito Funcional | Edição de Arquivos | Permitir a edição de arquivos | Baixa | Os autores podem editar arquivos ja enviados | 1 pts | Pendente |  
-| RF15 | Requisito Funcional | Preview de PDFs | Visualizar PDFs | Baixa | Os alunos poderão visualizar PDFs antes de fazer o download | 1 pts | Pendente |  
-| RF15 | Requisito Funcional | Perfil de Usuário | Cada usuário ter seu perfil | Média | Os alunos podem acessar o perfil deles ou de outras pessoas | 2 pts | Pendente |  
+| RF12 | Requisito Funcional | Sistema de Comentários | Permitir comentários em arquivos | Média | Usuários autenticados devem conseguir comentar arquivos e visualizar comentários em até 2s | 3 pts | Concluído |  
+| RF13 | Requisito Funcional | Usuário Administrador | Permitir gerenciamento do sistema | Média | Administradores devem conseguir remover conteúdos inadequados e gerenciar usuários | 4 pts | Concluído |  
+| RF14 | Requisito Funcional | Edição de Arquivos | Permitir a edição de arquivos | Baixa | Os autores podem editar arquivos ja enviados | 1 pts | Concluído |  
+| RF15 | Requisito Funcional | Preview de PDFs | Visualizar PDFs | Baixa | Os alunos poderão visualizar PDFs antes de fazer o download | 1 pts | Concluído |  
+| RF16 | Requisito Funcional | Perfil de Usuário | Cada usuário ter seu perfil | Média | Os alunos podem acessar o perfil deles ou de outras pessoas | 2 pts | Pendente |  
 | RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Pedente |  
 | RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Concluído |  
 | RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 3 cliques em 90% dos testes de uso | 5 pts | Concluído |  
 | RNF04 | Requisito Não Funcional | Segurança | Proteção de dados | Alta | 100% das senhas devem ser armazenadas com criptografia e acessos não autorizados devem ser bloqueados em testes | 4 pts | Concluído |  
 | RNF05 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Concluído |  
-| RNF06 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Pendente |  
+| RNF06 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Concluído |  
 
 ---
 
