@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import Loading from "../../components/Loading";
+import Swal from "sweetalert2";
 
 interface FileProps {
   id: number;
@@ -19,6 +20,7 @@ interface FileProps {
   };
 
   user: {
+    id: number;
     name: string;
   };
 }
@@ -36,6 +38,7 @@ interface CommentProps {
 
 function FileDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [file, setFile] = useState<FileProps | null>(null);
   const [comments, setComments] = useState<CommentProps[]>([]);
@@ -144,6 +147,37 @@ function FileDetails() {
     }
   }
 
+  async function handleDelete() {
+    if (!file) return;
+
+    const result = await Swal.fire({
+      title: "Você realmente deseja excluir o arquivo?",
+      text: "Essa ação não poderá ser desfeita.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#ef4444",
+      cancelButtonColor: "#6b7280",
+      confirmButtonText: "Excluir",
+      cancelButtonText: "Cancelar",
+      customClass: {
+        popup: "rounded-3xl",
+      },
+    });
+
+    if (!result.isConfirmed) {
+      return;
+    }
+
+    try {
+      await api.delete(`/files/${file.id}`);
+      toast.success("Arquivo removido com sucesso!");
+      navigate("/home");
+    } catch (error) {
+      console.log(error);
+      toast.error("Erro ao excluir arquivo");
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 relative overflow-hidden flex flex-col">
       <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob pointer-events-none"></div>
@@ -210,17 +244,21 @@ function FileDetails() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                   ></path>
                 </svg>
                 {file.subject.name}
               </div>
-              <div className="flex items-center gap-2 text-gray-600 bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">
+              <Link
+                to={`/profile/${file.user.id}`}
+                className="flex items-center gap-2 text-gray-600 bg-gray-100 hover:bg-blue-100 hover:text-blue-700 px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
+                title="Ver perfil do autor"
+              >
                 <div className="w-5 h-5 rounded-full bg-gray-300 flex items-center justify-center text-[10px] overflow-hidden">
                   👤
                 </div>
                 {file.user.name}
-              </div>
+              </Link>
             </div>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-10">
@@ -276,26 +314,49 @@ function FileDetails() {
                   {file.hasLiked ? "Descurtir" : "Curtir"}
                 </button>
 
-                {(user.name === file.user.name || user.isAdmin) && (
-                  <Link
-                    to={`/edit-file/${file.id}`}
-                    className="bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-yellow-100 hover:text-yellow-700 active:scale-95 transition-all duration-200 flex items-center gap-2"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                {(user.id === file.user.id || user.isAdmin) && (
+                  <>
+                    <Link
+                      to={`/edit-file/${file.id}`}
+                      className="bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-bold hover:bg-yellow-100 hover:text-yellow-700 active:scale-95 transition-all duration-200 flex items-center gap-2"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                      ></path>
-                    </svg>
-                    Editar
-                  </Link>
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        ></path>
+                      </svg>
+                      Editar
+                    </Link>
+
+                    <button
+                      onClick={handleDelete}
+                      className="bg-red-50 text-red-600 px-6 py-3 rounded-xl font-bold cursor-pointer hover:bg-red-100 hover:text-red-700 active:scale-95 transition-all duration-200 flex items-center gap-2"
+                      title="Excluir material"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                        ></path>
+                      </svg>
+                      Excluir
+                    </button>
+                  </>
                 )}
 
                 <button
@@ -421,14 +482,18 @@ function FileDetails() {
                       className="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
                     >
                       <div className="flex justify-between items-center mb-3">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
+                        <Link
+                          to={`/profile/${comment.user.id}`}
+                          className="flex items-center gap-3 group/commenter cursor-pointer"
+                          title="Ver perfil"
+                        >
+                          <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 group-hover/commenter:bg-blue-600 group-hover/commenter:text-white transition-colors flex items-center justify-center font-bold text-sm">
                             {comment.user.name.charAt(0).toUpperCase()}
                           </div>
-                          <strong className="text-gray-800">
+                          <strong className="text-gray-800 group-hover/commenter:text-blue-600 transition-colors">
                             {comment.user.name}
                           </strong>
-                        </div>
+                        </Link>
 
                         <span className="text-xs font-medium text-gray-500 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-100">
                           {new Date(comment.createdAt).toLocaleDateString()}

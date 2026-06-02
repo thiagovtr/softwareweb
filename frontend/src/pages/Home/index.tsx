@@ -345,8 +345,15 @@ function Home() {
                     </p>
 
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                      <div className="flex items-center gap-2 text-gray-500 text-sm font-medium">
-                        <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs overflow-hidden">
+                      <div 
+                        onClick={(e) => {
+                          e.stopPropagation(); 
+                          navigate(`/profile/${file.user.id}`);
+                        }}
+                        className="flex items-center gap-2 text-gray-500 text-sm font-medium hover:text-blue-600 cursor-pointer transition-colors group/user"
+                        title={`Ver perfil de ${file.user.name}`}
+                      >
+                        <div className="w-6 h-6 rounded-full bg-gray-200 group-hover/user:bg-blue-100 flex items-center justify-center text-xs overflow-hidden transition-colors">
                           👤
                         </div>
                         <span className="truncate max-w-[100px]">

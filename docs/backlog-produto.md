@@ -26,7 +26,7 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 | RF13 | Requisito Funcional | Usuário Administrador | Permitir gerenciamento do sistema | Média | Administradores devem conseguir remover conteúdos inadequados e gerenciar usuários | 4 pts | Concluído |  
 | RF14 | Requisito Funcional | Edição de Arquivos | Permitir a edição de arquivos | Baixa | Os autores podem editar arquivos ja enviados | 1 pts | Concluído |  
 | RF15 | Requisito Funcional | Preview de PDFs | Visualizar PDFs | Baixa | Os alunos poderão visualizar PDFs antes de fazer o download | 1 pts | Concluído |  
-| RF16 | Requisito Funcional | Perfil de Usuário | Cada usuário ter seu perfil | Média | Os alunos podem acessar o perfil deles ou de outras pessoas | 2 pts | Pendente |  
+| RF16 | Requisito Funcional | Perfil de Usuário | Cada usuário ter seu perfil | Média | Os alunos podem acessar o perfil deles ou de outras pessoas | 2 pts | Concluído |  
 | RF17 | Requisito Funcional | Sistema de Favoritos | Permitir favoritar materiais | Média | O usuário deve conseguir favoritar e desfavoritar ficheiros, persistindo os dados corretamente na base de dados em 100% dos testes | 2 pts | Concluído | 
 | RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Concluído |  
 | RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Concluído |  
