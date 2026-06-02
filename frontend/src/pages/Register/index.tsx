@@ -18,6 +18,11 @@ function Register() {
       return;
     }
 
+    if (password.length < 6) {
+      toast.error("A senha deve conter no mínimo 6 caracteres");
+      return;
+    }
+
     try {
       if (password !== confirmPassword) {
         toast.error("As senhas não coincidem");
@@ -157,6 +162,7 @@ function Register() {
           <input
             type="password"
             placeholder="Crie uma senha"
+            minLength={6} 
             className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -182,6 +188,7 @@ function Register() {
           <input
             type="password"
             placeholder="Confirme sua senha"
+            minLength={6} 
             className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}

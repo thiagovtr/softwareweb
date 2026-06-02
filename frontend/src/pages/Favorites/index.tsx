@@ -77,7 +77,7 @@ function Favorites() {
             </h2>
 
             <p className="text-gray-500">
-              Curta materiais para encontrá-los aqui.
+              Favorite materiais para encontrá-los aqui.
             </p>
           </div>
         ) : (

@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import FileDetails from "../pages/FileDetails";
 import EditFile from "../pages/EditFile";
 import Favorites from "../pages/Favorites";
+import Profile from "../pages/Profile"; 
 
 function AppRoutes() {
   return (
@@ -60,6 +61,16 @@ function AppRoutes() {
             </PrivateRoute>
           }
         />
+
+        <Route
+          path="/profile/:id"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
+        
       </Routes>
     </BrowserRouter>
   );
