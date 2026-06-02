@@ -250,7 +250,16 @@ function Upload() {
               className="hidden"
               onChange={(e) => {
                 if (e.target.files) {
-                  setFile(e.target.files[0]);
+                  const selectedFile = e.target.files[0];
+                
+                  const maxSize = 100 * 1024 * 1024;
+                
+                  if (selectedFile.size > maxSize) {
+                    toast.error("O arquivo deve ter no máximo 100MB");
+                    return;
+                  }
+                
+                  setFile(selectedFile);
                 }
               }}
             />

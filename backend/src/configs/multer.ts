@@ -27,4 +27,9 @@ export default {
       callback(null, filename);
     },
   }),
+
+  limits: {
+    fileSize: 100 * 1024 * 1024,
+  },
 };
+
