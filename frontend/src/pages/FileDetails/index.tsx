@@ -254,7 +254,7 @@ function FileDetails() {
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={handleLike}
-                  className={`px-6 py-3 rounded-xl font-bold flex items-center gap-2 transition-all duration-200 active:scale-95 ${
+                  className={`px-6 py-3 rounded-xl cursor-pointer font-bold flex items-center gap-2 transition-all duration-200 active:scale-95 ${
                     file.hasLiked
                       ? "bg-pink-100 text-pink-600 shadow-inner"
                       : "bg-gray-100 text-gray-600 hover:bg-pink-100 hover:text-pink-600"
@@ -351,7 +351,7 @@ function FileDetails() {
                   <button
                     onClick={handleComment}
                     disabled={!comment.trim() || isCommenting}
-                    className={`px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition-all duration-200 ${
+                    className={`px-8 py-3 rounded-xl cursor-pointer font-bold flex items-center gap-2 transition-all duration-200 ${
                       !comment.trim() || isCommenting
                         ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                         : "bg-blue-600 text-white hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg active:scale-95"

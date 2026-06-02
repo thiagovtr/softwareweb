@@ -17,6 +17,7 @@ model User {
 
   files File[]
   likes Like[]
+  favorites Favorite[]
 
   comments Comment[]
 }
@@ -43,11 +44,23 @@ model File {
   subject Subject @relation(fields: [subjectId], references: [id])
 
   likes Like[]
-
   comments Comment[]
+  favorites Favorite[]
 }
 
 model Like {
+  id Int @id @default(autoincrement())
+
+  userId Int
+  fileId Int
+
+  user User @relation(fields: [userId], references: [id])
+  file File @relation(fields: [fileId], references: [id])
+
+  @@unique([userId, fileId])
+}
+
+model Favorite {
   id Int @id @default(autoincrement())
 
   userId Int

@@ -18,6 +18,13 @@ class ListFilesService {
           select: { likes: true },
         },
         likes: userId ? { where: { userId }, select: { userId: true } } : false,
+
+        favorites: userId
+          ? {
+              where: { userId },
+              select: { userId: true },
+            }
+          : false,
         user: {
           select: { id: true, name: true, email: true },
         },
@@ -29,11 +36,15 @@ class ListFilesService {
     const filesWithUrl = files.map((file) => {
       const isLiked = userId && file.likes ? file.likes.length > 0 : false;
 
+      const isFavorite =
+        userId && file.favorites ? file.favorites.length > 0 : false;
+
       return {
         ...file,
         _count: undefined,
         likes: file._count.likes,
         hasLiked: isLiked,
+        isFavorite,
         url: `http://localhost:3333/uploads/${file.filename}`,
       };
     });

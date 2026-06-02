@@ -10,6 +10,8 @@ import multerConfig from "../configs/multer";
 import { isAuthenticated } from "../middlewares/isAuthenticated";
 import { CreateCommentController } from "../controllers/CreateCommentController";
 import { ListCommentsController } from "../controllers/ListCommentsController";
+import { ListFavoritesController } from "../controllers/ListFavoritesController";
+import { FavoriteFileController } from "../controllers/FavoriteFileController";
 
 const createFileController = new CreateFileController();
 const listFilesController = new ListFilesController();
@@ -20,6 +22,8 @@ const createCommentController = new CreateCommentController();
 const listCommentsController = new ListCommentsController();
 const fileRoutes = Router();
 const upload = multer(multerConfig);
+const listFavoritesController = new ListFavoritesController();
+const favoriteFileController = new FavoriteFileController();
 
 fileRoutes.post(
   "/upload",
@@ -28,25 +32,37 @@ fileRoutes.post(
   createFileController.handle,
 );
 
-fileRoutes.get("/", listFilesController.handle);
+fileRoutes.get("/", isAuthenticated, listFilesController.handle);
 
-fileRoutes.get("/:id", async (request, response) => {
+fileRoutes.get(
+  "/favorites/me",
+  isAuthenticated,
+  listFavoritesController.handle,
+);
+
+fileRoutes.get("/:id", isAuthenticated, async (request, response) => {
   const { id } = request.params;
+
+  const userId = Number(request.user_id);
 
   const file = await prisma.file.findUnique({
     where: {
       id: Number(id),
     },
-
     include: {
       subject: true,
-
       user: {
         select: {
           id: true,
           name: true,
           email: true,
         },
+      },
+      likes: {
+        where: { userId },
+      },
+      favorites: {
+        where: { userId },
       },
     },
   });
@@ -57,15 +73,18 @@ fileRoutes.get("/:id", async (request, response) => {
     });
   }
 
+  const hasLiked = file.likes.length > 0;
+  const isFavorite = file.favorites.length > 0;
+
   return response.json({
     ...file,
-
     likes: await prisma.like.count({
       where: {
         fileId: file.id,
       },
     }),
-
+    hasLiked,
+    isFavorite,
     url: `http://localhost:3333/uploads/${file.filename}`,
   });
 });
@@ -83,5 +102,11 @@ fileRoutes.post(
 );
 
 fileRoutes.get("/:id/comments", listCommentsController.handle);
+
+fileRoutes.post(
+  "/:id/favorite",
+  isAuthenticated,
+  favoriteFileController.handle,
+);
 
 export { fileRoutes };

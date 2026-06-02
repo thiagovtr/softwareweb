@@ -11,7 +11,9 @@ interface FileProps {
   description: string;
   url: string;
   likes: number;
+
   hasLiked?: boolean;
+  isFavorite?: boolean;
 
   subject: {
     name: string;
@@ -84,6 +86,22 @@ function Home() {
       console.log(error);
 
       toast.error("Erro ao curtir arquivo");
+    }
+  }
+
+  async function handleFavorite(fileId: number) {
+    try {
+      await api.post(`/files/${fileId}/favorite`);
+
+      const response = await api.get(
+        `/files?search=${search}&subjectId=${subjectId}`,
+      );
+
+      setFiles(response.data);
+    } catch (error) {
+      console.log(error);
+
+      toast.error("Erro ao favoritar arquivo");
     }
   }
 
@@ -342,7 +360,7 @@ function Home() {
                             e.stopPropagation();
                             handleLike(file.id);
                           }}
-                          className={`p-2.5 rounded-xl transition-all duration-200 ${
+                          className={`p-2.5 rounded-xl cursor-pointer transition-all duration-200 ${
                             file.hasLiked
                               ? "bg-pink-100 text-pink-600 shadow-inner"
                               : "bg-gray-100 text-gray-600 hover:bg-pink-100 hover:text-pink-600"
@@ -350,7 +368,7 @@ function Home() {
                           title={file.hasLiked ? "Descurtir" : "Curtir"}
                         >
                           <svg
-                            className="w-5 h-5"
+                            className="w-5 h-5 transition-all"
                             fill={file.hasLiked ? "currentColor" : "none"}
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -360,7 +378,36 @@ function Home() {
                               strokeLinejoin="round"
                               strokeWidth="2"
                               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                            ></path>
+                            />
+                          </svg>
+                        </button>
+
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleFavorite(file.id);
+                          }}
+                          className={`p-2.5 rounded-xl cursor-pointer transition-all duration-200 ${
+                            file.isFavorite
+                              ? "bg-yellow-100 text-yellow-600 shadow-inner"
+                              : "bg-gray-100 text-gray-600 hover:bg-yellow-100 hover:text-yellow-600"
+                          }`}
+                          title={
+                            file.isFavorite ? "Remover favorito" : "Favoritar"
+                          }
+                        >
+                          <svg
+                            className="w-5 h-5 transition-all"
+                            fill={file.isFavorite ? "currentColor" : "none"}
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-4-7 4V5z"
+                            />
                           </svg>
                         </button>
 
@@ -370,7 +417,7 @@ function Home() {
                               e.stopPropagation();
                               handleDelete(file.id);
                             }}
-                            className="bg-gray-100 text-gray-600 hover:bg-red-100 hover:text-red-600 p-2.5 rounded-xl transition-all duration-200"
+                            className="bg-gray-100 text-gray-600 cursor-pointer hover:bg-red-100 hover:text-red-600 p-2.5 rounded-xl transition-all duration-200"
                             title="Excluir"
                           >
                             <svg

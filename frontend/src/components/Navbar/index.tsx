@@ -45,7 +45,7 @@ function Navbar() {
             <div className="flex items-center gap-4 sm:gap-6">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="p-2 rounded-xl text-gray-600 bg-gray-50 hover:bg-blue-50 hover:text-blue-600 active:scale-95 transition-all duration-200"
+                className="p-2 rounded-xl text-gray-600 bg-gray-50 hover:bg-blue-50 hover:text-blue-600 active:scale-95 transition-all duration-200 cursor-pointer"
                 aria-label="Abrir menu"
               >
                 <svg
@@ -178,6 +178,31 @@ function Navbar() {
                 ></path>
               </svg>
               Página Inicial
+            </Link>
+
+            <Link
+              to="/favorites"
+              onClick={() => setMenuOpen(false)}
+              className={`flex items-center gap-3 p-4 rounded-xl font-bold transition-all duration-200 ${
+                isActive("/favorites")
+                  ? "bg-blue-50 text-blue-700"
+                  : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
+              }`}
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+              Favoritos
             </Link>
 
             <Link

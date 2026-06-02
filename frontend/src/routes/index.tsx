@@ -1,13 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import PrivateRoute from "./PrivateRoute";
-
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 import Upload from "../pages/Upload";
 import Register from "../pages/Register";
 import FileDetails from "../pages/FileDetails";
 import EditFile from "../pages/EditFile";
+import Favorites from "../pages/Favorites";
 
 function AppRoutes() {
   return (
@@ -22,6 +21,15 @@ function AppRoutes() {
           element={
             <PrivateRoute>
               <Home />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/favorites"
+          element={
+            <PrivateRoute>
+              <Favorites />
             </PrivateRoute>
           }
         />
