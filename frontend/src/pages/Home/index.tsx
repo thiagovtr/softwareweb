@@ -115,6 +115,9 @@ function Home() {
       cancelButtonColor: "#6b7280",
       confirmButtonText: "Excluir",
       cancelButtonText: "Cancelar",
+      customClass: {
+        popup: "rounded-3xl dark:bg-gray-800 dark:text-white",
+      }
     });
 
     if (!result.isConfirmed) {
@@ -148,21 +151,21 @@ function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
-      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 z-0 pointer-events-none"></div>
-      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-indigo-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-60 z-0 pointer-events-none"></div>
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] relative overflow-hidden transition-colors duration-300">
+      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-blue-100 dark:bg-blue-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] opacity-60 z-0 pointer-events-none transition-colors duration-300"></div>
+      <div className="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-indigo-100 dark:bg-indigo-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] opacity-60 z-0 pointer-events-none transition-colors duration-300"></div>
 
       <div className="relative z-10">
         <Navbar />
 
         <div className="max-w-7xl mx-auto p-6 sm:p-10">
           <div className="mb-12 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight mb-3">
-              Descubra novos <span className="text-blue-600">materiais</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-gray-100 tracking-tight mb-3 transition-colors duration-300">
+              Descubra novos <span className="text-blue-600 dark:text-blue-400">materiais</span>
             </h1>
           </div>
 
-          <div className="mb-12 bg-white p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 flex flex-col md:flex-row gap-4">
+          <div className="mb-12 bg-white dark:bg-[#1E1E1E] p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.5)] border border-gray-100 dark:border-gray-800 flex flex-col md:flex-row gap-4 transition-colors duration-300">
             <div className="relative flex-1">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <svg
@@ -184,7 +187,7 @@ function Home() {
                 placeholder="Busque por resumos, exercícios, slides..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-gray-700 font-medium placeholder-gray-400"
+                className="w-full pl-12 pr-4 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border-transparent focus:bg-white dark:focus:bg-gray-800 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900/50 transition-all text-gray-700 dark:text-gray-200 font-medium placeholder-gray-400 dark:placeholder-gray-500"
               />
             </div>
 
@@ -207,7 +210,7 @@ function Home() {
               <select
                 value={subjectId}
                 onChange={(e) => setSubjectId(e.target.value)}
-                className="w-full pl-12 pr-10 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-gray-700 font-medium appearance-none cursor-pointer"
+                className="w-full pl-12 pr-10 py-4 rounded-2xl bg-gray-50 dark:bg-gray-800/50 border-transparent focus:bg-white dark:focus:bg-gray-800 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900/50 transition-all text-gray-700 dark:text-gray-200 font-medium appearance-none cursor-pointer"
               >
                 <option value="">Todas as matérias</option>
                 {subjects.map((subject) => (
@@ -239,27 +242,27 @@ function Home() {
               {[...Array(8)].map((_, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 overflow-hidden animate-pulse"
+                  className="bg-white dark:bg-[#1E1E1E] rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-none border border-gray-100 dark:border-gray-800 overflow-hidden animate-pulse transition-colors"
                 >
-                  <div className="w-full h-52 bg-gray-200" />
+                  <div className="w-full h-52 bg-gray-200 dark:bg-gray-800" />
                   <div className="p-6">
-                    <div className="h-6 bg-gray-200 rounded-full w-3/4 mb-4" />
-                    <div className="h-4 bg-gray-100 rounded-full w-full mb-2" />
-                    <div className="h-4 bg-gray-100 rounded-full w-5/6 mb-6" />
-                    <div className="h-6 bg-blue-50 rounded-full w-1/3 mb-4" />
+                    <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded-full w-3/4 mb-4" />
+                    <div className="h-4 bg-gray-100 dark:bg-gray-800 rounded-full w-full mb-2" />
+                    <div className="h-4 bg-gray-100 dark:bg-gray-800 rounded-full w-5/6 mb-6" />
+                    <div className="h-6 bg-blue-50 dark:bg-blue-900/30 rounded-full w-1/3 mb-4" />
                     <div className="flex justify-between items-center mt-6">
-                      <div className="h-5 bg-gray-200 rounded-full w-20" />
-                      <div className="h-10 bg-gray-200 rounded-xl w-24" />
+                      <div className="h-5 bg-gray-200 dark:bg-gray-700 rounded-full w-20" />
+                      <div className="h-10 bg-gray-200 dark:bg-gray-800 rounded-xl w-24" />
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           ) : files.length === 0 ? (
-            <div className="flex flex-col items-center justify-center text-center py-32 bg-white rounded-3xl border border-dashed border-gray-300">
-              <div className="w-24 h-24 bg-gray-50 rounded-full flex items-center justify-center mb-6">
+            <div className="flex flex-col items-center justify-center text-center py-32 bg-white dark:bg-[#1E1E1E] rounded-3xl border border-dashed border-gray-300 dark:border-gray-700 transition-colors">
+              <div className="w-24 h-24 bg-gray-50 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6">
                 <svg
-                  className="w-12 h-12 text-gray-400"
+                  className="w-12 h-12 text-gray-400 dark:text-gray-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -272,10 +275,10 @@ function Home() {
                   ></path>
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-3">
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-3">
                 Ops! Nenhum material encontrado.
               </h2>
-              <p className="text-gray-500 max-w-md">
+              <p className="text-gray-500 dark:text-gray-400 max-w-md">
                 Não conseguimos achar nada com a sua busca atual. Tente usar
                 outros termos ou mudar o filtro da disciplina.
               </p>
@@ -286,7 +289,7 @@ function Home() {
                 <div
                   key={file.id}
                   onClick={() => navigate(`/files/${file.id}`)}
-                  className="group bg-white rounded-3xl shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-gray-100 overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col"
+                  className="group bg-white dark:bg-[#1E1E1E] rounded-3xl shadow-sm dark:shadow-none hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-gray-100 dark:border-gray-800 overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col"
                 >
                   <div className="relative overflow-hidden">
                     {isImage(file.url) ? (
@@ -296,10 +299,10 @@ function Home() {
                         className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     ) : (
-                      <div className="w-full h-52 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center justify-center group-hover:from-blue-50 group-hover:to-blue-100 transition-colors duration-300">
-                        <div className="bg-white p-4 rounded-2xl shadow-sm mb-3">
+                      <div className="w-full h-52 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 flex flex-col items-center justify-center group-hover:from-blue-50 group-hover:to-blue-100 dark:group-hover:from-blue-900/20 dark:group-hover:to-blue-800/20 transition-colors duration-300">
+                        <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm mb-3">
                           <svg
-                            className="w-10 h-10 text-blue-500"
+                            className="w-10 h-10 text-blue-500 dark:text-blue-400"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -310,12 +313,12 @@ function Home() {
                             ></path>
                           </svg>
                         </div>
-                        <span className="text-gray-500 font-semibold uppercase tracking-wider text-sm">
+                        <span className="text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider text-sm">
                           Documento
                         </span>
                       </div>
                     )}
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm text-xs font-bold text-gray-700 flex items-center gap-1.5">
+                    <div className="absolute top-4 left-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm text-xs font-bold text-gray-700 dark:text-gray-200 flex items-center gap-1.5 transition-colors">
                       <svg
                         className="w-3.5 h-3.5 text-pink-500"
                         fill="currentColor"
@@ -332,28 +335,28 @@ function Home() {
                   </div>
 
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="inline-block self-start bg-blue-50 text-blue-600 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    <div className="inline-block self-start bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold px-3 py-1 rounded-full mb-3 transition-colors">
                       {file.subject.name}
                     </div>
 
-                    <h2 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                    <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 line-clamp-2 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {file.title}
                     </h2>
 
-                    <p className="text-gray-500 text-sm mb-4 line-clamp-2 flex-grow">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-4 line-clamp-2 flex-grow transition-colors">
                       {file.description || "Sem descrição."}
                     </p>
 
-                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 transition-colors">
                       <div 
                         onClick={(e) => {
                           e.stopPropagation(); 
                           navigate(`/profile/${file.user.id}`);
                         }}
-                        className="flex items-center gap-2 text-gray-500 text-sm font-medium hover:text-blue-600 cursor-pointer transition-colors group/user"
+                        className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer transition-colors group/user"
                         title={`Ver perfil de ${file.user.name}`}
                       >
-                        <div className="w-6 h-6 rounded-full bg-gray-200 group-hover/user:bg-blue-100 flex items-center justify-center text-xs overflow-hidden transition-colors">
+                        <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 group-hover/user:bg-blue-100 dark:group-hover/user:bg-blue-900/50 flex items-center justify-center text-xs overflow-hidden transition-colors">
                           👤
                         </div>
                         <span className="truncate max-w-[100px]">
@@ -369,8 +372,8 @@ function Home() {
                           }}
                           className={`p-2.5 rounded-xl cursor-pointer transition-all duration-200 ${
                             file.hasLiked
-                              ? "bg-pink-100 text-pink-600 shadow-inner"
-                              : "bg-gray-100 text-gray-600 hover:bg-pink-100 hover:text-pink-600"
+                              ? "bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 shadow-inner"
+                              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-pink-100 dark:hover:bg-pink-900/30 hover:text-pink-600 dark:hover:text-pink-400"
                           }`}
                           title={file.hasLiked ? "Descurtir" : "Curtir"}
                         >
@@ -396,8 +399,8 @@ function Home() {
                           }}
                           className={`p-2.5 rounded-xl cursor-pointer transition-all duration-200 ${
                             file.isFavorite
-                              ? "bg-yellow-100 text-yellow-600 shadow-inner"
-                              : "bg-gray-100 text-gray-600 hover:bg-yellow-100 hover:text-yellow-600"
+                              ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-500 shadow-inner"
+                              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-yellow-100 dark:hover:bg-yellow-900/30 hover:text-yellow-600 dark:hover:text-yellow-500"
                           }`}
                           title={
                             file.isFavorite ? "Remover favorito" : "Favoritar"
@@ -424,7 +427,7 @@ function Home() {
                               e.stopPropagation();
                               handleDelete(file.id);
                             }}
-                            className="bg-gray-100 text-gray-600 cursor-pointer hover:bg-red-100 hover:text-red-600 p-2.5 rounded-xl transition-all duration-200"
+                            className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 cursor-pointer hover:bg-red-100 dark:hover:bg-red-900/30 hover:text-red-600 dark:hover:text-red-400 p-2.5 rounded-xl transition-all duration-200"
                             title="Excluir"
                           >
                             <svg

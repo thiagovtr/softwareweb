@@ -11,6 +11,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function handleRegister() {
     if (!email.endsWith("@estudante.ufla.br")) {
@@ -28,6 +29,8 @@ function Register() {
         toast.error("As senhas não coincidem");
         return;
       }
+      
+      setLoading(true);
 
       const response = await api.post("/users", {
         name,
@@ -48,18 +51,20 @@ function Register() {
       } else {
         toast.error("Erro ao criar conta");
       }
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6 relative overflow-hidden">
-      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-      <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-      <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-[#121212] p-6 relative overflow-hidden transition-colors duration-300">
+      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-400 dark:bg-blue-900/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30 animate-blob transition-colors duration-300"></div>
+      <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-indigo-500 dark:bg-indigo-900/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000 transition-colors duration-300"></div>
+      <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-pink-300 dark:bg-pink-900/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000 transition-colors duration-300"></div>
 
-      <div className="bg-white/90 backdrop-blur-md p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-full max-w-md relative z-10 border border-white/20">
+      <div className="bg-white/90 dark:bg-[#1E1E1E]/90 backdrop-blur-md p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.5)] w-full max-w-md relative z-10 border border-white/20 dark:border-gray-800 transition-colors duration-300">
         <div className="flex justify-center mb-6">
-          <div className="bg-blue-100 p-4 rounded-full text-blue-600">
+          <div className="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-full text-blue-600 dark:text-blue-400 transition-colors duration-300">
             <svg
               className="w-10 h-10"
               fill="none"
@@ -89,14 +94,14 @@ function Register() {
           </div>
         </div>
 
-        <h1 className="text-3xl font-extrabold mb-2 text-center text-gray-800 tracking-tight">
+        <h1 className="text-3xl font-extrabold mb-2 text-center text-gray-800 dark:text-gray-100 tracking-tight transition-colors duration-300">
           Crie sua conta
         </h1>
 
-        <div className="relative mb-5">
+        <div className="relative mb-5 mt-8">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <svg
-              className="h-5 w-5 text-gray-400"
+              className="h-5 w-5 text-gray-400 dark:text-gray-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -112,7 +117,7 @@ function Register() {
           <input
             type="text"
             placeholder="Seu nome completo"
-            className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all"
+            className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 transition-all"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -121,7 +126,7 @@ function Register() {
         <div className="relative mb-5">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <svg
-              className="h-5 w-5 text-gray-400"
+              className="h-5 w-5 text-gray-400 dark:text-gray-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -136,8 +141,8 @@ function Register() {
           </div>
           <input
             type="email"
-            placeholder="E-mail institucional (@estudante.ufla.br)"
-            className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all"
+            placeholder="E-mail (@estudante.ufla.br)"
+            className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 transition-all"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -146,7 +151,7 @@ function Register() {
         <div className="relative mb-5">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <svg
-              className="h-5 w-5 text-gray-400"
+              className="h-5 w-5 text-gray-400 dark:text-gray-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -163,7 +168,7 @@ function Register() {
             type="password"
             placeholder="Crie uma senha"
             minLength={6} 
-            className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all"
+            className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 transition-all"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -172,7 +177,7 @@ function Register() {
         <div className="relative mb-8">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <svg
-              className="h-5 w-5 text-gray-400"
+              className="h-5 w-5 text-gray-400 dark:text-gray-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -189,7 +194,7 @@ function Register() {
             type="password"
             placeholder="Confirme sua senha"
             minLength={6} 
-            className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all"
+            className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 transition-all"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
@@ -197,30 +202,47 @@ function Register() {
 
         <button
           onClick={handleRegister}
-          className="w-full bg-blue-600 text-white p-4 rounded-xl font-bold cursor-pointer hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg active:scale-95 transition-all duration-200 flex justify-center items-center gap-2"
+          disabled={loading}
+          className={`w-full text-white p-4 rounded-xl font-bold flex justify-center items-center gap-2 transition-all duration-200 ${
+            loading
+              ? "bg-blue-400 dark:bg-blue-800 cursor-not-allowed"
+              : "bg-blue-600 cursor-pointer hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg active:scale-95"
+          }`}
         >
-          Finalizar Cadastro
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
-            ></path>
-          </svg>
+          {loading ? (
+            <>
+              <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Criando conta...
+            </>
+          ) : (
+            <>
+              Finalizar Cadastro
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                ></path>
+              </svg>
+            </>
+          )}
         </button>
 
-        <div className="mt-8 pt-6 border-t border-gray-100">
-          <p className="text-center text-gray-600">
+        <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+          <p className="text-center text-gray-600 dark:text-gray-400 transition-colors duration-300">
             Já possui conta?{" "}
             <Link
               to="/"
-              className="text-blue-600 font-bold hover:text-blue-700 hover:underline transition-colors cursor-pointer"
+              className="text-blue-600 dark:text-blue-400 font-bold hover:text-blue-700 dark:hover:text-blue-300 hover:underline transition-colors cursor-pointer"
             >
               Fazer login
             </Link>

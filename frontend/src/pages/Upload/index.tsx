@@ -13,7 +13,7 @@ function Upload() {
   const [description, setDescription] = useState("");
   const [subjectId, setSubjectId] = useState("");
   const [file, setFile] = useState<File | null>(null);
-  const [loading, setLoading] = useState(false); // Estado de loading adicionado
+  const [loading, setLoading] = useState(false);
 
   const [subjects, setSubjects] = useState<SubjectProps[]>([]);
 
@@ -57,18 +57,18 @@ function Upload() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden flex flex-col">
-      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob pointer-events-none"></div>
-      <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000 pointer-events-none"></div>
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] relative overflow-hidden flex flex-col transition-colors duration-300">
+      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-400 dark:bg-blue-900/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30 animate-blob pointer-events-none transition-colors duration-300"></div>
+      <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-indigo-500 dark:bg-indigo-900/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000 pointer-events-none transition-colors duration-300"></div>
 
       <div className="relative z-20">
         <Navbar />
       </div>
 
       <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-        <div className="bg-white/90 backdrop-blur-md p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-full max-w-lg border border-white/20">
+        <div className="bg-white/90 dark:bg-[#1E1E1E]/90 backdrop-blur-md p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.5)] w-full max-w-lg border border-white/20 dark:border-gray-800 transition-colors duration-300">
           <div className="flex justify-center mb-6">
-            <div className="bg-blue-100 p-4 rounded-full text-blue-600">
+            <div className="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-full text-blue-600 dark:text-blue-400 transition-colors duration-300">
               <svg
                 className="w-10 h-10"
                 fill="none"
@@ -85,11 +85,11 @@ function Upload() {
             </div>
           </div>
 
-          <h1 className="text-3xl font-extrabold mb-2 text-center text-gray-800 tracking-tight">
+          <h1 className="text-3xl font-extrabold mb-2 text-center text-gray-800 dark:text-gray-100 tracking-tight transition-colors duration-300">
             Compartilhe um material
           </h1>
 
-          <p className="text-center text-gray-500 mb-8 font-medium">
+          <p className="text-center text-gray-500 dark:text-gray-400 mb-8 font-medium transition-colors duration-300">
             Ajude outros alunos com seus resumos e exercícios
           </p>
 
@@ -97,7 +97,7 @@ function Upload() {
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <svg
-                  className="h-5 w-5 text-gray-400"
+                  className="h-5 w-5 text-gray-400 dark:text-gray-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -113,7 +113,7 @@ function Upload() {
               <input
                 type="text"
                 placeholder="Título do material"
-                className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+                className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 transition-all"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
@@ -122,7 +122,7 @@ function Upload() {
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <svg
-                  className="h-5 w-5 text-gray-400"
+                  className="h-5 w-5 text-gray-400 dark:text-gray-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -136,7 +136,7 @@ function Upload() {
                 </svg>
               </div>
               <select
-                className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all appearance-none cursor-pointer text-gray-700"
+                className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-700 dark:text-gray-200 transition-all appearance-none cursor-pointer"
                 value={subjectId}
                 onChange={(e) => setSubjectId(e.target.value)}
               >
@@ -147,7 +147,7 @@ function Upload() {
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-500">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-500 dark:text-gray-400">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -167,7 +167,7 @@ function Upload() {
             <div className="relative">
               <div className="absolute top-4 left-0 pl-4 pointer-events-none">
                 <svg
-                  className="h-5 w-5 text-gray-400"
+                  className="h-5 w-5 text-gray-400 dark:text-gray-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -183,7 +183,7 @@ function Upload() {
               <textarea
                 placeholder="Descrição ou detalhes sobre o conteúdo..."
                 rows={3}
-                className="w-full border border-gray-200 bg-gray-50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all resize-none"
+                className="w-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:bg-white dark:focus:bg-gray-800 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 transition-all resize-none"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
@@ -193,13 +193,13 @@ function Upload() {
           <label
             className={`w-full flex flex-col items-center justify-center border-2 border-dashed rounded-2xl p-8 cursor-pointer transition-all mb-8 ${
               file
-                ? "border-blue-500 bg-blue-50"
-                : "border-gray-300 bg-gray-50 hover:bg-gray-100 hover:border-blue-400"
+                ? "border-blue-500 bg-blue-50 dark:bg-blue-900/30"
+                : "border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-blue-400 dark:hover:border-blue-500"
             }`}
           >
             {file ? (
               <>
-                <div className="bg-blue-100 text-blue-600 p-3 rounded-full mb-3">
+                <div className="bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 p-3 rounded-full mb-3 transition-colors duration-300">
                   <svg
                     className="w-8 h-8"
                     fill="none"
@@ -214,17 +214,17 @@ function Upload() {
                     ></path>
                   </svg>
                 </div>
-                <span className="text-blue-700 font-bold text-center break-all">
+                <span className="text-blue-700 dark:text-blue-400 font-bold text-center break-all transition-colors duration-300">
                   {file.name}
                 </span>
-                <span className="text-blue-500 text-sm mt-1">
+                <span className="text-blue-500 dark:text-blue-300 text-sm mt-1 transition-colors duration-300">
                   Clique para trocar o arquivo
                 </span>
               </>
             ) : (
               <>
                 <svg
-                  className="w-10 h-10 text-gray-400 mb-3"
+                  className="w-10 h-10 text-gray-400 dark:text-gray-500 mb-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -236,10 +236,10 @@ function Upload() {
                     d="M12 4v16m8-8H4"
                   ></path>
                 </svg>
-                <span className="text-gray-600 font-medium text-center">
+                <span className="text-gray-600 dark:text-gray-300 font-medium text-center transition-colors duration-300">
                   Clique para selecionar seu arquivo
                 </span>
-                <span className="text-gray-400 text-sm mt-1">
+                <span className="text-gray-400 dark:text-gray-500 text-sm mt-1 transition-colors duration-300">
                   PDF, JPG, PNG, etc.
                 </span>
               </>
@@ -270,7 +270,7 @@ function Upload() {
             disabled={loading}
             className={`w-full text-white p-4 rounded-xl font-bold flex justify-center items-center gap-2 transition-all duration-200 ${
               loading
-                ? "bg-blue-400 cursor-not-allowed"
+                ? "bg-blue-400 dark:bg-blue-800 cursor-not-allowed"
                 : "bg-blue-600 cursor-pointer hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg active:scale-95"
             }`}
           >
