@@ -3,62 +3,48 @@
 **Disciplina:** Engenharia de Software
 **Professor:** Johnatan Oliveira
 **Projeto:** DisciplinasUFLA
-**Versão:** 1.0
-**Data:** 09/05/2026
-
-| Integrante                     | Papel no Scrum |
-| ------------------------------ | -------------- |
-| Thiago Vinícius Tristão Rojas  | Product Owner  |
-| Bruno Santos Vilas Boas        | Scrum Master   |
-| Christian Silva Mesquita       | Dev Team       |
-| Guilherme dos Santos Fernandes | Dev Team       |
-| Matheus Levi Tavares           | Dev Team       |
 
 ---
 
 # 1. Introdução
 
-Este documento apresenta as principais decisões de projeto tomadas durante o desenvolvimento do sistema DisciplinasUFLA.
+Este documento apresenta algumas decisões tomadas durante o desenvolvimento do sistema DisciplinasUFLA.
 
-O objetivo do projeto é criar uma plataforma web para compartilhamento de materiais acadêmicos entre estudantes da UFLA, permitindo upload, download, busca e organização de arquivos por disciplina.
+O objetivo do projeto é criar uma plataforma onde estudantes possam compartilhar materiais acadêmicos de forma organizada.
 
 ---
 
-# 2. Organização da Solução
+# 2. Organização do Sistema
 
-O sistema foi dividido em camadas, cada uma com uma responsabilidade específica.
+O projeto foi dividido em partes:
 
-| Camada              | Responsabilidade                           |
-| ------------------- | ------------------------------------------ |
-| Frontend            | Interface visual e interação com o usuário |
-| Controllers         | Receber requisições HTTP                   |
-| Services            | Regras de negócio                          |
-| Prisma + PostgreSQL | Persistência dos dados                     |
-| Docker              | Ambiente de execução                       |
+| Parte          | Função                |
+| -------------- | --------------------- |
+| Frontend       | Interface do usuário  |
+| Backend        | Regras de negócio     |
+| Banco de Dados | Armazenar informações |
+| Docker         | Executar os serviços  |
+
+Essa separação ajudou a deixar o projeto mais organizado.
 
 ---
 
 # 3. Decisões de Projeto
 
-## DP01 — Arquitetura em Camadas
+## DP01 — Separação entre Frontend e Backend
 
 ### Decisão
 
-Separar o sistema em frontend, controllers, services e banco de dados.
+Separar o sistema em frontend e backend usando API REST.
 
 ### Justificativa
 
-A separação das responsabilidades deixou o projeto mais organizado e facilitou o desenvolvimento em equipe. Alterações no frontend, por exemplo, não exigem mudanças diretas no banco de dados.
-
-### Princípio aplicado
-
-Separação de responsabilidades.
+Isso deixou o projeto mais organizado e facilitou o desenvolvimento.
 
 ### Requisitos atendidos
 
 * RNF02
 * RNF04
-* RNF05
 
 ---
 
@@ -66,15 +52,11 @@ Separação de responsabilidades.
 
 ### Decisão
 
-Utilizar Prisma ORM para comunicação com o PostgreSQL.
+Usar Prisma ORM para acessar o PostgreSQL.
 
 ### Justificativa
 
-O Prisma simplifica consultas ao banco de dados, reduz a quantidade de SQL manual e facilita a criação de migrations.
-
-### Princípio aplicado
-
-Abstração.
+O Prisma facilitou consultas ao banco e criação das tabelas.
 
 ### Requisitos atendidos
 
@@ -83,46 +65,36 @@ Abstração.
 
 ---
 
-## DP03 — Instância Única do Prisma Client
+## DP03 — Instância Única do Prisma
 
 ### Decisão
 
-Criar apenas uma instância do `PrismaClient` em `configs/prisma.ts`.
+Criar apenas uma instância do Prisma Client.
 
 ### Justificativa
 
-Evita múltiplas conexões desnecessárias com o banco de dados e melhora a estabilidade da aplicação.
-
-### Princípio aplicado
-
-Singleton.
+Evita conexões desnecessárias com o banco de dados.
 
 ### Requisitos atendidos
 
 * RNF04
-* RNF05
 
 ---
 
-## DP04 — Armazenamento de Arquivos no Servidor
+## DP04 — Arquivos salvos na pasta uploads
 
 ### Decisão
 
-Salvar arquivos enviados na pasta `uploads/` e armazenar apenas o nome/caminho no banco.
+Salvar arquivos enviados na pasta `uploads`.
 
 ### Justificativa
 
-Isso deixa o banco mais leve e facilita o gerenciamento dos arquivos.
-
-### Princípio aplicado
-
-Separação de responsabilidades.
+Deixa o banco mais leve e facilita o gerenciamento dos arquivos.
 
 ### Requisitos atendidos
 
 * RF02
 * RF04
-* RNF06
 
 ---
 
@@ -130,17 +102,11 @@ Separação de responsabilidades.
 
 ### Decisão
 
-Utilizar JWT para autenticação dos usuários.
+Usar JWT para autenticação.
 
 ### Justificativa
 
-JWT simplifica o controle de sessão e protege rotas privadas do sistema.
-
-Além disso, o sistema aceita apenas e-mails institucionais `@estudante.ufla.br`.
-
-### Princípio aplicado
-
-Segurança.
+Protege rotas privadas e mantém login do usuário.
 
 ### Requisitos atendidos
 
@@ -150,19 +116,15 @@ Segurança.
 
 ---
 
-## DP06 — Validação de Upload no Frontend e Backend
+## DP06 — Validação de Upload
 
 ### Decisão
 
-Validar tamanho dos arquivos tanto no frontend quanto no backend.
+Validar tamanho do arquivo no frontend e backend.
 
 ### Justificativa
 
-O frontend fornece resposta imediata ao usuário, enquanto o backend garante segurança caso alguém tente enviar arquivos inválidos diretamente pela API.
-
-### Princípio aplicado
-
-Validação em múltiplas camadas.
+Melhora a segurança e evita uploads inválidos.
 
 ### Requisitos atendidos
 
@@ -175,20 +137,15 @@ Validação em múltiplas camadas.
 
 ### Decisão
 
-Utilizar Docker e Docker Compose para executar frontend, backend e banco de dados.
+Usar Docker Compose para executar frontend, backend e banco.
 
 ### Justificativa
 
-Facilitou a configuração do ambiente e evitou problemas de compatibilidade entre computadores diferentes.
-
-### Princípio aplicado
-
-Modularidade.
+Facilitou a configuração do ambiente para todos do grupo.
 
 ### Requisitos atendidos
 
 * RNF02
-* RNF04
 
 ---
 
@@ -196,15 +153,11 @@ Modularidade.
 
 ### Decisão
 
-Armazenar configurações sensíveis em arquivos `.env`.
+Guardar credenciais no `.env`.
 
 ### Justificativa
 
-Evita exposição de credenciais no código-fonte e facilita mudanças entre ambiente local e produção.
-
-### Princípio aplicado
-
-Segurança.
+Evita exposição de dados sensíveis no código.
 
 ### Requisitos atendidos
 
@@ -212,32 +165,15 @@ Segurança.
 
 ---
 
-# 4. Resumo das Decisões
+# 4. Resumo
 
-| ID   | Decisão                   | Princípio                      |
-| ---- | ------------------------- | ------------------------------ |
-| DP01 | Arquitetura em camadas    | Separação de responsabilidades |
-| DP02 | Prisma ORM                | Abstração                      |
-| DP03 | Instância única do Prisma | Singleton                      |
-| DP04 | Arquivos em `uploads/`    | Separação de responsabilidades |
-| DP05 | JWT para autenticação     | Segurança                      |
-| DP06 | Validação dupla de upload | Validação em múltiplas camadas |
-| DP07 | Docker Compose            | Modularidade                   |
-| DP08 | Variáveis de ambiente     | Segurança                      |
-
----
-
-# 5. Rastreabilidade dos Requisitos
-
-| Requisito                              | Decisões relacionadas |
-| -------------------------------------- | --------------------- |
-| RF01 — Login institucional             | DP05                  |
-| RF02 — Upload de arquivos              | DP04, DP06            |
-| RF04 — Download de arquivos            | DP04                  |
-| RF06 — Cadastro de usuários            | DP05                  |
-| RF09 — Associação de arquivos ao autor | DP02                  |
-| RNF01 — Limite de upload               | DP06                  |
-| RNF02 — Plataforma web                 | DP01, DP07            |
-| RNF04 — Segurança                      | DP05, DP08            |
-| RNF05 — Estabilidade                   | DP01, DP03            |
-| RNF06 — Integridade de dados           | DP02, DP04            |
+| ID   | Decisão                            |
+| ---- | ---------------------------------- |
+| DP01 | Separação entre frontend e backend |
+| DP02 | Uso do Prisma ORM                  |
+| DP03 | Instância única do Prisma          |
+| DP04 | Arquivos na pasta uploads          |
+| DP05 | JWT para autenticação              |
+| DP06 | Validação de upload                |
+| DP07 | Docker Compose                     |
+| DP08 | Variáveis de ambiente              |
