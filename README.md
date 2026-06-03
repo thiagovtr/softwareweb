@@ -89,7 +89,10 @@ Sprint 2 - Levantemento e priorização de requisitos funcionais e não-funciona
 Sprint 3 – Modelagem do sistema  
 Sprint 4 – Princípios de Projeto  
 Sprint 5 - Aplicação da padronização do Projeto  
-Sprint 6 - Definição da Arquitetura de Software
+Sprint 6 - Definição da Arquitetura de Software  
+Sprint 7 - Planejamento e documentação de testes  
+Sprint 8 - Consolidação do projeto, revisão dos incrementos e evidências
+de validação  
 
 
 ## Tecnologias Utilizadas
