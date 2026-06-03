@@ -180,9 +180,13 @@
 
 **Resultado obtido:** Contador atualizado em +1 imediatamente após o clique, sem recarregamento da página. Ao clicar novamente, o contador decrementou corretamente (descurtir).
 
-**Evidência:**
+**Evidência 1:**
 
-> 📷 _Cole aqui a captura de tela mostrando o contador de curtidas antes e após o clique_
+> <img width="347" height="528" alt="{06BF0135-EB1A-4246-999E-380B9E95E686}" src="https://github.com/user-attachments/assets/ba5831b2-0be8-4d5e-a488-8d0b795ad09c" />
+
+**Evidência 2:**
+
+> <img width="323" height="499" alt="{6C913EEA-6CC4-4A5A-A989-816E12FA8067}" src="https://github.com/user-attachments/assets/8bc25f05-9907-459f-88d5-2a201e347e69" />
 
 ---
 
@@ -205,11 +209,11 @@
 
 **Evidência 1:**
 
-> <img width="347" height="528" alt="{06BF0135-EB1A-4246-999E-380B9E95E686}" src="https://github.com/user-attachments/assets/ba5831b2-0be8-4d5e-a488-8d0b795ad09c" />
+> <img width="491" height="582" alt="{A26EBD37-0F4D-4C9A-BEDE-815A7E2FB78C}" src="https://github.com/user-attachments/assets/07bedf36-22bf-4ab6-a2ce-c9a4516783e0" />
 
 **Evidência 2:**
 
-> <img width="323" height="499" alt="{6C913EEA-6CC4-4A5A-A989-816E12FA8067}" src="https://github.com/user-attachments/assets/8bc25f05-9907-459f-88d5-2a201e347e69" />
+> <img width="1920" height="946" alt="{EC56A75A-E8C2-48DC-94DA-D267B239FA25}" src="https://github.com/user-attachments/assets/454c33a8-b5af-4ec2-8592-2fdde2080087" />
 
 
 ---
