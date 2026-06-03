@@ -4,7 +4,14 @@
 O Product Backlog reúne as funcionalidades, necessidades e melhorias da solução proposta.
 
 ## 2. Estratégia de priorização
-A priorização focou na base essencial do sistema. Colocamos com prioridade "Alta" a criação da tela de login e a função básica de enviar arquivos. Funcionalidades como o download e os filtros para buscar resumos ficaram para as próximas etapas.
+A priorização foi definida considerando as funcionalidades essenciais para o funcionamento inicial da plataforma.
+
+## 2.1 Critério de Prioridade
+As prioridades foram classificadas da seguinte forma:
+
+- Alta: funcionalidades essenciais para o funcionamento do sistema;
+- Média: funcionalidades importantes para melhorar a experiência do usuário;
+- Baixa: funcionalidades complementares e melhorias visuais.
 
 ---
 
@@ -13,34 +20,36 @@ A priorização focou na base essencial do sistema. Colocamos com prioridade "Al
 |---|---|---|---|---|---|---|---|  
 | RF01 | Requisito Funcional | Tela e Lógica de Login | Sistema de autenticação de usuários | Alta | 100% dos logins devem aceitar apenas e-mails institucionais (@estudante.ufla.br) e autenticar em até 2s | 3 pts | Concluído |  
 | RF02 | Requisito Funcional | Tela de Envio de Material | Interface para upload de arquivos | Alta | Upload deve ser concluído com sucesso em até 5s para arquivos de até 100MB em 95% dos casos | 5 pts | Concluído |  
-| RF03 | Requisito Funcional | Tela de Busca | Interface para procurar materiais | Média | Busca deve retornar resultados em até 2s e filtrar corretamente em 100% dos testes | 3 pts | Concluído |  
+| RF03 | Requisito Funcional | Tela de Busca | Interface para procurar materiais | Média | Busca deve retornar resultados em até 2s e filtrar corretamente em testes realizados | 3 pts | Concluído |  
 | RF04 | Requisito Funcional | Função de Download | Lógica para baixar arquivos | Média | Download deve iniciar em até 2s após clique e completar sem erro em 95% dos casos | 4 pts | Concluído |  
-| RF05 | Requisito Funcional | Exclusão | Autor pode apagar seu envio | Média | Apenas o autor deve conseguir excluir e a ação deve ser concluída em até 2s em 100% dos testes | 2 pts | Concluído |  
+| RF05 | Requisito Funcional | Exclusão | Autor pode apagar seu envio | Média | Apenas o autor deve conseguir excluir e a ação deve ser concluída em até 2s em ambiente controlado | 2 pts | Concluído |  
 | RF06 | Requisito Funcional | Cadastro de Usuário | Criação de conta no sistema | Alta | Cadastro deve ser concluído em até 3s e armazenar corretamente os dados em 100% dos testes | 3 pts | Concluído |  
-| RF07 | Requisito Funcional | Logout | Encerramento de sessão do usuário | Baixa | Logout deve ser realizado em até 1s em 100% dos testes | 1 pt | Concluído |  
+| RF07 | Requisito Funcional | Logout | Encerramento de sessão do usuário | Baixa | Logout deve ser realizado em até 1s em em testes funcionais | 1 pt | Concluído |  
 | RF08 | Requisito Funcional | Visualização de Arquivos | Listagem de materiais disponíveis | Alta | Lista de arquivos deve carregar em até 2s em 95% dos acessos | 3 pts | Concluído |  
 | RF09 | Requisito Funcional | Associação de Arquivos | Vincular arquivo ao autor | Alta | 100% dos arquivos devem estar corretamente associados ao usuário que realizou o upload | 2 pts | Concluído |  
 | RF10 | Requisito Funcional | Filtro por Disciplina | Listar arquivos por disciplina | Média | Filtro deve retornar resultados corretos em até 2s em 95% dos testes | 3 pts | Concluído |  
 | RF11 | Requisito Funcional | Sistema de Likes | Permitir que usuários curtam arquivos | Média | Usuário autenticado deve conseguir curtir/descurtir um arquivo em até 1s e o sistema deve atualizar a contagem corretamente em 100% dos testes | 3 pts | Concluído |  
 | RF12 | Requisito Funcional | Sistema de Comentários | Permitir comentários em arquivos | Média | Usuários autenticados devem conseguir comentar arquivos e visualizar comentários em até 2s | 3 pts | Concluído |  
 | RF13 | Requisito Funcional | Usuário Administrador | Permitir gerenciamento do sistema | Média | Administradores devem conseguir remover conteúdos inadequados e gerenciar usuários | 4 pts | Concluído |  
-| RF14 | Requisito Funcional | Edição de Arquivos | Permitir a edição de arquivos | Baixa | Os autores podem editar arquivos ja enviados | 1 pts | Concluído |  
-| RF15 | Requisito Funcional | Preview de PDFs | Visualizar PDFs | Baixa | Os alunos poderão visualizar PDFs antes de fazer o download | 1 pts | Concluído |  
+| RF14 | Requisito Funcional | Edição de Arquivos | Permitir a edição de arquivos | Baixa | Os autores podem editar arquivos já enviados | 1 pt | Concluído |  
+| RF15 | Requisito Funcional | Preview de PDFs | Visualizar PDFs | Baixa | Os alunos poderão visualizar PDFs antes de fazer o download | 1 pt | Concluído |  
 | RF16 | Requisito Funcional | Perfil de Usuário | Cada usuário ter seu perfil | Média | Os alunos podem acessar o perfil deles ou de outras pessoas | 2 pts | Concluído |  
-| RF17 | Requisito Funcional | Sistema de Favoritos | Permitir favoritar materiais | Média | O usuário deve conseguir favoritar e desfavoritar ficheiros, persistindo os dados corretamente na base de dados em 100% dos testes | 2 pts | Concluído |  
+| RF17 | Requisito Funcional | Sistema de Favoritos | Permitir favoritar materiais | Média | O usuário deve conseguir favoritar e desfavoritar arquivos, persistindo os dados corretamente na base de dados em 100% dos testes | 2 pts | Concluído |  
 | RF18 | Requisito Funcional | Acessibilidade Noturna (Dark Mode) | Permitir mudar para o modo escuro | Média | O usuário deve conseguir mudar do modo claro para o escuro no navegador | 2 pts | Concluído |  
 | RNF01 | Requisito Não Funcional | Restrição de Tamanho | Limite de upload | Alta | 100% dos uploads acima de 100MB devem ser rejeitados automaticamente | 2 pts | Concluído |  
-| RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em 100% dos testes nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Concluído |  
+| RNF02 | Requisito Não Funcional | Plataforma Web | Execução no navegador | Alta | Sistema deve funcionar em condições normais nos navegadores Chrome, Firefox e Edge (últimas 2 versões) | 1 pt | Concluído |  
 | RNF03 | Requisito Não Funcional | Usabilidade | Facilidade de uso | Alta | Usuário deve realizar upload ou download em no máximo 5 cliques em 90% dos testes de uso | 5 pts | Concluído |  
 | RNF04 | Requisito Não Funcional | Segurança | Proteção de dados | Alta | 100% das senhas devem ser armazenadas com criptografia e acessos não autorizados devem ser bloqueados em testes | 4 pts | Concluído |  
 | RNF05 | Requisito Não Funcional | Tempo de Resposta | Desempenho geral | Alta | 95% das requisições devem ser respondidas em até 3s | 3 pts | Concluído |  
 | RNF06 | Requisito Não Funcional | Integridade de Dados | Consistência dos arquivos | Alta | 100% dos arquivos devem manter integridade após upload e download | 3 pts | Concluído |  
+| RNF07 | Requisito Não Funcional | Integridade de Dados | Garantir consistência dos arquivos e relacionamentos do sistema | Alta | 100% dos dados devem manter consistência após operações de upload, download e exclusão | 3 pts | Concluído |
 
 ---
 
 ## 4. Histórias de Usuário
 
 ### US01
+
 Como estudante, eu quero me cadastrar no sistema usando meu e-mail institucional, para que eu possa acessar a plataforma com segurança.
 
 **Critérios de aceitação:**
@@ -51,6 +60,7 @@ Como estudante, eu quero me cadastrar no sistema usando meu e-mail institucional
 ---
 
 ### US02
+
 Como usuário, eu quero fazer login no sistema, para que eu possa acessar minhas funcionalidades.
 
 **Critérios de aceitação:**
@@ -61,6 +71,7 @@ Como usuário, eu quero fazer login no sistema, para que eu possa acessar minhas
 ---
 
 ### US03
+
 Como usuário, eu quero fazer logout do sistema, para que eu possa encerrar minha sessão com segurança.
 
 **Critérios de aceitação:**
@@ -70,6 +81,7 @@ Como usuário, eu quero fazer logout do sistema, para que eu possa encerrar minh
 ---
 
 ### US04
+
 Como estudante, eu quero enviar arquivos acadêmicos, para que eu possa compartilhar materiais com outros alunos.
 
 **Critérios de aceitação:**
@@ -81,6 +93,7 @@ Como estudante, eu quero enviar arquivos acadêmicos, para que eu possa comparti
 ---
 
 ### US05
+
 Como usuário, eu quero visualizar os arquivos disponíveis, para que eu possa encontrar materiais de estudo.
 
 **Critérios de aceitação:**
@@ -90,6 +103,7 @@ Como usuário, eu quero visualizar os arquivos disponíveis, para que eu possa e
 ---
 
 ### US06
+
 Como usuário, eu quero buscar arquivos, para que eu possa encontrar conteúdos específicos.
 
 **Critérios de aceitação:**
@@ -100,6 +114,7 @@ Como usuário, eu quero buscar arquivos, para que eu possa encontrar conteúdos 
 ---
 
 ### US07
+
 Como usuário, eu quero filtrar arquivos por disciplina, para que eu possa facilitar minha busca por conteúdo.
 
 **Critérios de aceitação:**
@@ -109,6 +124,7 @@ Como usuário, eu quero filtrar arquivos por disciplina, para que eu possa facil
 ---
 
 ### US08
+
 Como usuário, eu quero baixar arquivos, para que eu possa acessar os materiais offline.
 
 **Critérios de aceitação:**
@@ -118,6 +134,7 @@ Como usuário, eu quero baixar arquivos, para que eu possa acessar os materiais 
 ---
 
 ### US09
+
 Como usuário, eu quero que cada arquivo mostre quem enviou, para que eu possa identificar a autoria do material.
 
 **Critérios de aceitação:**
@@ -127,6 +144,7 @@ Como usuário, eu quero que cada arquivo mostre quem enviou, para que eu possa i
 ---
 
 ### US10
+
 Como usuário, eu quero excluir meus arquivos enviados, para que eu possa gerenciar meus conteúdos.
 
 **Critérios de aceitação:**
@@ -137,6 +155,7 @@ Como usuário, eu quero excluir meus arquivos enviados, para que eu possa gerenc
 ---
 
 ### US11
+
 Como usuário, eu quero que o sistema seja rápido e estável, para que não atrapalhe meus estudos.
 
 **Critérios de aceitação:**

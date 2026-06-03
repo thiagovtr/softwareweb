@@ -8,17 +8,17 @@ Toda a infraestrutura da aplicação é conteinerizada via Docker, garantindo is
 
 ## 2. Padrões Arquiteturais Adotados
 
-### 2.1. Arquitetura de Repositório (Data-Centered / Repository)
+### 2.1. Arquitetura de Repositório 
 O núcleo do backend foi desenhado utilizando o padrão de Repositório. Isso significa que a aplicação possui um ponto central de persistência e estado (o banco de dados PostgreSQL) e o acesso a esses dados é intermediado e abstraído por uma camada específica de repositório.
-* **Isolamento:** As regras de negócio não conhecem a linguagem SQL. Elas solicitam dados à camada de repositório (abstraída pelo Prisma ORM).
+* **Isolamento:** As regras de negócio não conhecem a linguagem SQL. Elas solicitam dados à camada de repositório.
 * **Vantagem:** Se o banco de dados mudar no futuro, apenas a camada do repositório precisa ser alterada, mantendo o restante do sistema intacto.
 
-### 2.2. Cliente-Servidor (Client-Server)
+### 2.2. Cliente-Servidor 
 A aplicação desacopla totalmente a interface de usuário da lógica de processamento:
 * **Cliente (React):** Consome os dados, gerencia o estado da interface (UI) e lida com as interações do usuário de forma reativa.
 * **Servidor (Node.js/Express):** Fornece uma API RESTful, processa as requisições, valida a autenticação (JWT) e orquestra a comunicação com o Repositório de dados.
 
-### 2.3. Arquitetura em Camadas (Layered Backend)
+### 2.3. Arquitetura em Camadas
 Para suportar o padrão de repositório, o servidor foi subdividido em:
 1. **Routes (Roteamento):** Recebe e mapeia as requisições HTTP.
 2. **Controllers (Controladores):** Trata a entrada e saída (JSON), além de lidar com uploads (Multer).
@@ -37,11 +37,11 @@ Para suportar o padrão de repositório, o servidor foi subdividido em:
 ### 3.2. Backend (Lógica de Negócios e Repositório)
 * **Framework Web:** Node.js com Express.
 * **Segurança:** Autenticação stateless via JSON Web Tokens (JWT) e criptografia com Bcrypt.
-* **Gerenciamento de Arquivos:** Multer para processamento *multipart/form-data*.
+* **Gerenciamento de Arquivos:** Multer para processamento multipart/form-data.
 
 ### 3.3. Persistência de Dados (Repositório)
 * **Banco de Dados Relacional:** PostgreSQL.
-* **Mapeamento Objeto-Relacional (ORM):** Prisma. Ele atua como o motor do padrão de Repositório, fornecendo consultas tipadas (TypeScript) seguras e gerenciamento automatizado de migrações estruturais.
+* **Mapeamento Objeto-Relacional (ORM):** Prisma. Ele atua como o motor do padrão de Repositório, fornecendo consultas tipadas seguras e gerenciamento automatizado de migrações estruturais.
 
 ---
 
