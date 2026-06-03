@@ -1,7 +1,7 @@
 # Evidências de Testes
 
 **Projeto:** DisciplinasUFLA  
-**Data de Execução:** 30/05/2026  
+**Data de Execução:** 03/06/2026
 **Responsável pela execução:** Dev Team  
 **Versão testada:** Sprint 07 → Sprint 08  
 
@@ -28,7 +28,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Usuário cadastrado com e-mail @estudante.ufla.br |
 
@@ -56,7 +56,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Usuário na tela de Cadastro |
 
@@ -85,7 +85,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Usuário autenticado |
 
@@ -118,7 +118,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Usuário autenticado |
 
@@ -145,7 +145,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Usuário autenticado, arquivo disponível no feed |
 
@@ -168,7 +168,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Usuário autenticado, arquivo disponível no feed |
 
@@ -191,7 +191,7 @@
 | Campo | Detalhe |
 |---|---|
 | **Status** | ✅ Aprovado |
-| **Data de execução** | 30/05/2026 |
+| **Data de execução** | 03/06/2026 |
 | **Executado por** | Dev Team |
 | **Pré-condição** | Existência de arquivos cadastrados no banco |
 
