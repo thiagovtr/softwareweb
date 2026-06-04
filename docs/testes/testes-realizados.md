@@ -1,45 +1,33 @@
-# Evidências de Testes
+# Evidências de Testes — DisciplinasUFLA
 
 **Projeto:** DisciplinasUFLA  
-**Data de Execução:** 03/06/2026  
-**Responsável pela execução:** Dev Team  
-**Versão testada:** Sprint 07 → Sprint 08  
+**Data:** 03/06/2026  
+**Responsáveis:** Dev Team
 
 ---
 
 ## 1. Resultado Geral
 
-| ID | Cenário de Teste | Resultado | Status |
-|---|---|---|---|
-| CT01 | Validação de Login com E-mail Institucional | Aprovado | ✅ |
-| CT02 | Bloqueio de E-mail Não Institucional no Cadastro | Aprovado | ✅ |
-| CT03 | Upload de Material Válido | Aprovado | ✅ |
-| CT04 | Bloqueio de Arquivo Acima do Limite | Aprovado | ✅ |
-| CT05 | Download de Arquivo (Blob) | Aprovado | ✅ |
-| CT06 | Curtir Material em Tempo Real | Aprovado | ✅ |
-| CT07 | Busca e Filtro por Disciplina | Aprovado | ✅ |
+| ID   | Cenário                              | Status |
+| ---- | ------------------------------------ | ------ |
+| CT01 | Login institucional                  | ✅      |
+| CT02 | Bloqueio de e-mail não institucional | ✅      |
+| CT03 | Upload de material                   | ✅      |
+| CT04 | Bloqueio de arquivo > 100MB          | ✅      |
+| CT05 | Download de arquivo                  | ✅      |
+| CT06 | Curtidas                             | ✅      |
+| CT07 | Busca e filtro                       | ✅      |
+| CT08 | Cadastro de Usuário                  | ✅      |
 
 ---
 
 ## 2. Casos de Teste
 
-### CT01 — Login Institucional 
+### CT01 — Login Institucional
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Usuário cadastrado com e-mail @estudante.ufla.br |
+**Resultado esperado:** Login realizado com sucesso.
 
-**Passos executados:**
-1. Acessou-se a tela de login da aplicação
-2. Inserido e-mail `@estudante.ufla.br` e senha correta
-3. Clicado em "Entrar"
-
-**Resultado esperado:** Login bem-sucedido. Token JWT gerado e redirecionamento para a Home.
-
-**Resultado obtido:** Login realizado com sucesso. Token JWT gerado corretamente e usuário redirecionado para a página principal.
+**Resultado obtido:** Login funcionando corretamente.
 
 **Evidência 1:**
 
@@ -51,28 +39,15 @@
 
 ---
 
-### CT02 — Bloqueio de E-mail Não Institucional no Cadastro ✅
+### CT02 — Bloqueio de E-mail Não Institucional
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Usuário na tela de Cadastro |
+**Resultado esperado:** Cadastro bloqueado.
 
-**Passos executados:**
-1. Acessou-se a tela de cadastro
-2. Preenchidos os campos com e-mail genérico (ex.: `@gmail.com`)
-3. Submetido o formulário
-
-**Resultado esperado:** Sistema bloqueia o cadastro e exibe Toast de erro de validação.
-
-**Resultado obtido:** Cadastro bloqueado com sucesso. Toast de erro exibido informando que apenas e-mails `@estudante.ufla.br` são aceitos.
+**Resultado obtido:** Sistema bloqueou corretamente e exibiu mensagem de erro.
 
 **Evidência 1:**
 
 > <img width="1920" height="945" alt="{927DF9AC-E54B-4C57-8639-DE7F85CEB0D4}" src="https://github.com/user-attachments/assets/d292b820-4b22-4c06-84e7-2b85276a6e58" />
-
 
 **Evidência 2:**
 
@@ -80,24 +55,11 @@
 
 ---
 
-### CT03 — Upload de Material Válido ✅
+### CT03 — Upload de Material
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Usuário autenticado |
+**Resultado esperado:** Arquivo enviado e exibido no feed.
 
-**Passos executados:**
-1. Clicado em "Enviar Material"
-2. Selecionado arquivo PDF de até 100MB
-3. Preenchidos os dados obrigatórios (nome, disciplina)
-4. Clicado em "Enviar"
-
-**Resultado esperado:** Arquivo salvo com sucesso. Toast verde de confirmação exibido. Arquivo aparece no feed.
-
-**Resultado obtido:** Upload realizado com sucesso dentro do tempo esperado. Toast verde de confirmação exibido. Arquivo listado corretamente no feed com nome e autor.
+**Resultado obtido:** Upload realizado com sucesso.
 
 **Evidência 1:**
 
@@ -113,22 +75,11 @@
 
 ---
 
-### CT04 — Bloqueio de Arquivo Acima do Limite — RNF01 ✅
+### CT04 — Arquivo Acima de 100MB
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Usuário autenticado |
+**Resultado esperado:** Upload rejeitado.
 
-**Passos executados:**
-1. Tentou-se selecionar e enviar arquivo com tamanho superior a 100MB
-2. Clicado em "Enviar"
-
-**Resultado esperado:** O middleware Multer rejeita o upload e exibe mensagem de limite excedido ao usuário.
-
-**Resultado obtido:** O middleware Multer realmente rejeitou o upload e exibe mensagem de limite excedido ao usuário.
+**Resultado obtido:** Sistema bloqueou corretamente o envio.
 
 **Evidência 1:**
 
@@ -140,22 +91,11 @@
 
 ---
 
-### CT05 — Download de Arquivo (Blob) ✅
+### CT05 — Download de Arquivo
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Usuário autenticado, arquivo disponível no feed |
+**Resultado esperado:** Download iniciado corretamente.
 
-**Passos executados:**
-1. Localizado um arquivo no feed
-2. Clicado no botão "Baixar"
-
-**Resultado esperado:** Download do arquivo iniciado localmente com o nome original, sem abrir novas abas no navegador.
-
-**Resultado obtido:** Download iniciado corretamente com o nome original do arquivo. Nenhuma nova aba foi aberta. Arquivo baixado sem corrupção.
+**Resultado obtido:** Download realizado sem erros.
 
 **Evidência:**
 
@@ -163,22 +103,11 @@
 
 ---
 
-### CT06 — Curtir Material em Tempo Real ✅
+### CT06 — Curtidas
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Usuário autenticado, arquivo disponível no feed |
+**Resultado esperado:** Atualização imediata da curtida.
 
-**Passos executados:**
-1. Localizado um arquivo no feed
-2. Clicado no botão "Curtir"
-
-**Resultado esperado:** Contador de curtidas aumenta em +1 imediatamente, sem recarregar a página.
-
-**Resultado obtido:** Contador atualizado em +1 imediatamente após o clique, sem recarregamento da página. Ao clicar novamente, o contador decrementou corretamente (descurtir).
+**Resultado obtido:** Curtidas funcionando corretamente.
 
 **Evidência 1:**
 
@@ -190,22 +119,11 @@
 
 ---
 
-### CT07 — Busca e Filtro por Disciplina ✅
+### CT07 — Busca e Filtro
 
-| Campo | Detalhe |
-|---|---|
-| **Status** | ✅ Aprovado |
-| **Data de execução** | 03/06/2026 |
-| **Executado por** | Dev Team |
-| **Pré-condição** | Existência de arquivos cadastrados no banco |
+**Resultado esperado:** Exibir arquivos corretos.
 
-**Passos executados:**
-1. Digitado um termo na barra de busca
-2. Selecionada uma disciplina no filtro
-
-**Resultado esperado:** A grade de arquivos atualiza exibindo apenas os itens que coincidem com os critérios de busca e filtro.
-
-**Resultado obtido:** A grade filtrou corretamente os arquivos conforme o termo digitado e a disciplina selecionada. Arquivos não correspondentes foram ocultados. Resultados retornados dentro do tempo esperado (< 2s).
+**Resultado obtido:** Busca e filtros funcionando corretamente.
 
 **Evidência 1:**
 
@@ -217,7 +135,7 @@
 
 ---
 
-### CT08 — Cadastro de Usuário ✅
+### CT08 — Cadastro de Usuário 
 
 **Resultado esperado:** Usuário cadastrado com sucesso.
 
@@ -233,27 +151,12 @@
 
 ---
 
-## 3. Matriz de Resultados Consolidada
+## 3. Bugs Identificados
 
-| ID | Cenário | Requisito | Resultado | Observação |
-|---|---|---|---|---|
-| CT01 | Login com e-mail institucional | RF01 | ✅ Aprovado | — |
-| CT02 | Bloqueio de e-mail não institucional | RF06 | ✅ Aprovado | — |
-| CT03 | Upload de material válido | RF02 | ✅ Aprovado | — |
-| CT04 | Bloqueio de arquivo > 100MB | RNF01 | ✅ Aprovado | — |
-| CT05 | Download de arquivo (Blob) | RF04 / RNF07 | ✅ Aprovado | — |
-| CT06 | Curtir material em tempo real | RF11 | ✅ Aprovado | — |
-| CT07 | Busca e filtro por disciplina | RF03 / RF10 | ✅ Aprovado | — |
-| CT08 | Cadastro de usuário | RF06 | ✅ Aprovado | — |
+Nenhum bug crítico encontrado.
 
 ---
 
-## 4. Bugs Identificados
+## 4. Conclusão
 
----
-
-## 5. Conclusão
-
-Dos 7 casos de teste executados, **7 foram aprovados (≈ 100%)**.
-
-Os fluxos principais da aplicação — autenticação com e-mail institucional, upload de materiais válidos, download, curtidas e filtros — estão funcionando corretamente conforme os critérios de aceitação definidos na Sprint 2.
+Todos os testes executados foram aprovados. As principais funcionalidades do sistema estão funcionando corretamente.
