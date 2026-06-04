@@ -9,21 +9,21 @@
 
 ## 1. Resultado Geral
 
-| ID | Cenário de Teste | Resultado | Status |
-|---|---|---|---|
-| CT01 | Validação de Login com E-mail Institucional | Aprovado | ✅ |
-| CT02 | Bloqueio de E-mail Não Institucional no Cadastro | Aprovado | ✅ |
-| CT03 | Upload de Material Válido | Aprovado | ✅ |
-| CT04 | Bloqueio de Arquivo Acima do Limite | Aprovado | ✅ |
-| CT05 | Download de Arquivo (Blob) | Aprovado | ✅ |
-| CT06 | Curtir Material em Tempo Real | Aprovado | ✅ |
-| CT07 | Busca e Filtro por Disciplina | Aprovado | ✅ |
+| ID | Cenário de Teste | Status |
+|---|---|---|
+| CT01 | Login institucional | ✅ |
+| CT02 | Bloqueio de e-mail não institucional no cadastro | ✅ |
+| CT03 | Upload de material | Aprovado | ✅ |
+| CT04 | Bloqueio de arquivo > 100MB | ✅ |
+| CT05 | Download de arquivo | ✅ |
+| CT06 | Curtidas | ✅ |
+| CT07 | Busca e filtro | ✅ |
 
 ---
 
-## 2. Detalhamento dos Casos de Teste
+## 2. Casos de Teste
 
-### CT01 — Validação de Login com E-mail Institucional ✅
+### CT01 — Login Institucional 
 
 | Campo | Detalhe |
 |---|---|
@@ -215,6 +215,17 @@
 
 > <img width="1920" height="946" alt="{EC56A75A-E8C2-48DC-94DA-D267B239FA25}" src="https://github.com/user-attachments/assets/454c33a8-b5af-4ec2-8592-2fdde2080087" />
 
+---
+
+### CT08 — Cadastro de Usuário ✅
+
+**Resultado esperado:** Usuário cadastrado com sucesso.
+
+**Resultado obtido:** Cadastro realizado corretamente utilizando e-mail institucional.
+
+**Evidências:**
+
+lembrar de colocar a print aqui
 
 ---
 
