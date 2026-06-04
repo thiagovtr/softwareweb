@@ -1,196 +1,157 @@
-# Plano de Testes — DisciplinasUFLA
+# Evidências de Testes — DisciplinasUFLA
 
-**Projeto:** DisciplinasUFLA  
-**Disciplina:** Engenharia de Software  
-**Professor:** Johnatan Oliveira  
-**Data:** 30/05/2026  
-
-| Integrante | Papel no Scrum |
-|---|---|
-| Thiago Vinícius Tristão Rojas | Product Owner |
-| Bruno Santos Vilas Boas | Scrum Master |
-| Christian Silva Mesquita | Dev Team |
-| Guilherme dos Santos Fernandes | Dev Team |
-| Matheus Levi Tavares | Dev Team |
+**Projeto:** DisciplinasUFLA
+**Data:** 03/06/2026
+**Responsáveis:** Dev Team
 
 ---
 
-## 1. Objetivo
+## 1. Resultado Geral
 
-Validar os fluxos principais da aplicação DisciplinasUFLA, garantindo que os requisitos funcionais e não funcionais definidos no backlog sejam atendidos antes da entrega final.
-
----
-
-## 2. Tipos de Teste Aplicados
-
-| Tipo | Descrição |
-|---|---|
-| **Funcional (Caixa Preta)** | Validação das regras de negócio pela interface do usuário |
-| **Usabilidade** | Verificação de feedback visual e facilidade de uso |
-| **Integração** | Validação da comunicação entre frontend e backend |
+| ID   | Cenário                              | Status |
+| ---- | ------------------------------------ | ------ |
+| CT01 | Login institucional                  | ✅      |
+| CT02 | Bloqueio de e-mail não institucional | ✅      |
+| CT03 | Upload de material                   | ✅      |
+| CT04 | Bloqueio de arquivo > 100MB          | ✅      |
+| CT05 | Download de arquivo                  | ✅      |
+| CT06 | Curtidas                             | ✅      |
+| CT07 | Busca e filtro                       | ✅      |
 
 ---
 
-# 3. Casos de Teste
+## 2. Casos de Teste
 
-## CT01 — Login com E-mail Institucional
+### CT01 — Login Institucional
 
-| Campo                 | Detalhe                       |
-| --------------------- | ----------------------------- |
-| Requisito relacionado | RF01                          |
-| Pré-condição          | Usuário cadastrado no sistema |
+**Resultado esperado:** Login realizado com sucesso.
 
-### Passos
+**Resultado obtido:** Login funcionando corretamente.
 
-1. Acessar a tela de login;
-2. Inserir e-mail institucional válido;
-3. Inserir senha correta;
-4. Clicar em “Entrar”.
+**Evidência 1:**
 
-### Resultado esperado
+> <img width="1920" height="947" alt="{CB004C3B-BA1B-4AD2-833F-E98029BF4849}" src="https://github.com/user-attachments/assets/4e973d38-f98f-4bfb-9f23-a47d13e38038" />
 
-O sistema deve autenticar o usuário e redirecioná-lo para a Home.
+**Evidência 2:**
+
+> <img width="1920" height="947" alt="{FED44274-9DB3-42C7-8F58-D902C71B5525}" src="https://github.com/user-attachments/assets/2ec5c42f-e0b2-48e1-9dd9-c58b159c2ded" />
 
 ---
 
-## CT02 — Bloqueio de E-mail Não Institucional
+### CT02 — Bloqueio de E-mail Não Institucional
 
-| Campo                 | Detalhe                     |
-| --------------------- | --------------------------- |
-| Requisito relacionado | RF06                        |
-| Pré-condição          | Usuário na tela de cadastro |
+**Resultado esperado:** Cadastro bloqueado.
 
-### Passos
+**Resultado obtido:** Sistema bloqueou corretamente e exibiu mensagem de erro.
 
-1. Preencher os dados do formulário;
-2. Inserir e-mail não institucional;
-3. Enviar cadastro.
+**Evidência 1:**
 
-### Resultado esperado
+> <img width="1920" height="945" alt="{927DF9AC-E54B-4C57-8639-DE7F85CEB0D4}" src="https://github.com/user-attachments/assets/d292b820-4b22-4c06-84e7-2b85276a6e58" />
 
-O sistema deve impedir o cadastro e exibir mensagem de erro.
+**Evidência 2:**
+
+> <img width="1920" height="944" alt="{7C110716-751E-44C0-A4B8-AABA876143B9}" src="https://github.com/user-attachments/assets/74118bab-c9fc-4c6b-be80-249e084762d5" />
 
 ---
 
-## CT03 — Upload de Material
+### CT03 — Upload de Material
 
-| Campo                 | Detalhe             |
-| --------------------- | ------------------- |
-| Requisito relacionado | RF02                |
-| Pré-condição          | Usuário autenticado |
+**Resultado esperado:** Arquivo enviado e exibido no feed.
 
-### Passos
+**Resultado obtido:** Upload realizado com sucesso.
 
-1. Acessar a tela de upload;
-2. Selecionar arquivo válido;
-3. Preencher os campos obrigatórios;
-4. Enviar arquivo.
+**Evidência 1:**
 
-### Resultado esperado
+> <img width="1920" height="944" alt="{6725FED1-0C55-44D3-B2BD-17F264728F1B}" src="https://github.com/user-attachments/assets/341f9b15-61dc-432b-89aa-4db065cc6eab" />
 
-O sistema deve armazenar o arquivo e exibir confirmação de sucesso.
+**Evidência 2:**
 
----
+> <img width="1920" height="943" alt="{A252C8DD-DC3D-4628-B54C-C74DFC75E1B1}" src="https://github.com/user-attachments/assets/aa474225-a031-40b4-9951-8e658ea12280" />
 
-## CT04 — Bloqueio de Arquivo Acima de 100MB
+**Evidência 3:**
 
-| Campo                 | Detalhe             |
-| --------------------- | ------------------- |
-| Requisito relacionado | RNF01               |
-| Pré-condição          | Usuário autenticado |
-
-### Passos
-
-1. Selecionar arquivo acima de 100MB;
-2. Tentar realizar upload.
-
-### Resultado esperado
-
-O sistema deve bloquear o envio e exibir mensagem de erro.
+> <img width="1920" height="943" alt="{42E9249C-E86A-4F30-BB55-4927131A2ABB}" src="https://github.com/user-attachments/assets/73d122fd-c4b7-4207-8112-1313469c5002" />
 
 ---
 
-## CT05 — Download de Arquivo
+### CT04 — Arquivo Acima de 100MB
 
-| Campo                 | Detalhe                       |
-| --------------------- | ----------------------------- |
-| Requisito relacionado | RF04                          |
-| Pré-condição          | Arquivo disponível no sistema |
+**Resultado esperado:** Upload rejeitado.
 
-### Passos
+**Resultado obtido:** Sistema bloqueou corretamente o envio.
 
-1. Localizar um arquivo;
-2. Clicar em “Baixar”.
+**Evidência 1:**
 
-### Resultado esperado
+> <img width="673" height="29" alt="{30937F64-4B2C-4B47-B60C-8E852420F8A1}" src="https://github.com/user-attachments/assets/5bff74f5-953d-4932-ae9a-a804d20def0a" />
 
-O download deve iniciar corretamente sem corromper o arquivo.
+**Evidência 2:**
+
+> <img width="1920" height="943" alt="{53F38189-5D70-4058-A071-2C5B14D340E8}" src="https://github.com/user-attachments/assets/0b5d4362-75dd-4e11-9a3d-835216f94c88" />
 
 ---
 
-## CT06 — Sistema de Curtidas
+### CT05 — Download de Arquivo
 
-| Campo                 | Detalhe             |
-| --------------------- | ------------------- |
-| Requisito relacionado | RF11                |
-| Pré-condição          | Usuário autenticado |
+**Resultado esperado:** Download iniciado corretamente.
 
-### Passos
+**Resultado obtido:** Download realizado sem erros.
 
-1. Localizar um arquivo;
-2. Clicar em “Curtir”.
+**Evidência:**
 
-### Resultado esperado
-
-O sistema deve atualizar a quantidade de curtidas corretamente.
+> <img width="1920" height="945" alt="{A4FB3951-8F20-4584-BF6F-30538DD7769F}" src="https://github.com/user-attachments/assets/2b094c57-9547-435a-ba7c-54f5a7cd2e72" />
 
 ---
 
-## CT07 — Busca e Filtro por Disciplina
+### CT06 — Curtidas
 
-| Campo                 | Detalhe                            |
-| --------------------- | ---------------------------------- |
-| Requisito relacionado | RF03 / RF10                        |
-| Pré-condição          | Existência de arquivos cadastrados |
+**Resultado esperado:** Atualização imediata da curtida.
 
-### Passos
+**Resultado obtido:** Curtidas funcionando corretamente.
 
-1. Digitar termo na busca;
-2. Selecionar disciplina no filtro.
+**Evidência 1:**
 
-### Resultado esperado
+> <img width="347" height="528" alt="{06BF0135-EB1A-4246-999E-380B9E95E686}" src="https://github.com/user-attachments/assets/ba5831b2-0be8-4d5e-a488-8d0b795ad09c" />
 
-O sistema deve exibir apenas arquivos relacionados aos filtros aplicados.
+**Evidência 2:**
+
+> <img width="323" height="499" alt="{6C913EEA-6CC4-4A5A-A989-816E12FA8067}" src="https://github.com/user-attachments/assets/8bc25f05-9907-459f-88d5-2a201e347e69" />
 
 ---
 
-### CT08 — Cadastro de Usuário 
+### CT07 — Busca e Filtro
 
-| Campo                     | Detalhe                |
-| ------------------------- | ---------------------- |
-| **Requisito relacionado** | RF06                   |
-| **Pré-condição**          | Usuário não cadastrado |
+**Resultado esperado:** Exibir arquivos corretos.
 
-**Passos para execução:**
+**Resultado obtido:** Busca e filtros funcionando corretamente.
 
-1. Acessar a tela de cadastro
-2. Preencher nome, e-mail institucional e senha
-3. Clicar em "Cadastrar"
+**Evidência 1:**
 
-**Resultado esperado:** Usuário cadastrado com sucesso e redirecionado para login ou página inicial.
+> <img width="491" height="582" alt="{A26EBD37-0F4D-4C9A-BEDE-815A7E2FB78C}" src="https://github.com/user-attachments/assets/07bedf36-22bf-4ab6-a2ce-c9a4516783e0" />
+
+**Evidência 2:**
+
+> <img width="1920" height="946" alt="{EC56A75A-E8C2-48DC-94DA-D267B239FA25}" src="https://github.com/user-attachments/assets/454c33a8-b5af-4ec2-8592-2fdde2080087" />
 
 ---
 
-# 4. Matriz de Rastreabilidade
+### CT07 — Busca e Filtro
 
-| Requisito | Caso de Teste |
-| --------- | ------------- |
-| RF01      | CT01          |
-| RF02      | CT03          |
-| RF03      | CT07          |
-| RF04      | CT05          |
-| RF06      | CT02          |
-| RF10      | CT07          |
-| RF11      | CT06          |
-| RNF01     | CT04          |
-| RF06      | CT08          |
+**Resultado esperado:** Usuário cconseguir cadastar com o email institucional.
+
+**Resultado obtido:** Usuário cadastrado com sucesso e redirecionado para login ou página inicial.
+
+**Evidência 1:**
+
+
+
+**Evidência 2:**
+
+
+
+---
+
+## 4. Bugs Identificados
+
+Nenhum bug crítico encontrado.
+
+---
