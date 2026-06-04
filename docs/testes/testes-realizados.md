@@ -1,7 +1,7 @@
 # Evidências de Testes
 
 **Projeto:** DisciplinasUFLA  
-**Data de Execução:** 03/06/2026
+**Data de Execução:** 03/06/2026  
 **Responsável pela execução:** Dev Team  
 **Versão testada:** Sprint 07 → Sprint 08  
 
@@ -223,9 +223,13 @@
 
 **Resultado obtido:** Cadastro realizado corretamente utilizando e-mail institucional.
 
-**Evidências:**
+**Evidência 1:**
 
-lembrar de colocar a print aqui
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/a2f2920b-4609-4cf6-8b3d-41a94e11a810" />
+
+**Evidência 2: **
+
+<img width="1905" height="911" alt="image" src="https://github.com/user-attachments/assets/ddd4d3dd-c3c7-46e1-9982-2357dac083dd" />
 
 ---
 
@@ -240,6 +244,7 @@ lembrar de colocar a print aqui
 | CT05 | Download de arquivo (Blob) | RF04 / RNF07 | ✅ Aprovado | — |
 | CT06 | Curtir material em tempo real | RF11 | ✅ Aprovado | — |
 | CT07 | Busca e filtro por disciplina | RF03 / RF10 | ✅ Aprovado | — |
+| CT08 | Cadastro de usuário | RF06 | ✅ Aprovado | — |
 
 ---
 
