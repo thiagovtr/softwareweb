@@ -18,7 +18,7 @@
 
 ## 2. Objetivo da Sprint
 
-Consolidar toda a documentação do projeto DisciplinasUFLA, revisar os incrementos produzidos ao longo das sprints, executar os testes planejados na Sprint 7, registrar evidências de validação da aplicação e preparar a versão final para apresentação.
+Consolidar toda a documentação do projeto DisciplinasUFLA, revisar os incrementos produzidos ao longo das sprints, executar os testes planejados na Sprint 07, registrar evidências de validação da aplicação e preparar a versão final para apresentação.
 
 ---
 
@@ -26,7 +26,7 @@ Consolidar toda a documentação do projeto DisciplinasUFLA, revisar os incremen
 
 | ID    | Tipo         | Item do Backlog                | Descrição                                  | Prioridade | Status    |
 | ----- | ------------ | ------------------------------ | ------------------------------------------ | ---------- | --------- |
-| QA04  | Qualidade    | Execução dos Casos de Teste    | Executar CT01 a CT07                       | Alta       | Concluído |
+| QA04  | Qualidade    | Execução dos Casos de Teste    | Executar CT01 a CT08                       | Alta       | Concluído |
 | QA05  | Qualidade    | Registro das Evidências        | Documentar resultados dos testes           | Alta       | Concluído |
 | DOC03 | Documentação | Consolidação dos Artefatos     | Revisar e organizar documentação final     | Alta       | Concluído |
 | DOC04 | Documentação | Atualização do Product Backlog | Registrar situação final dos requisitos    | Média      | Concluído |
@@ -90,7 +90,7 @@ A solução evoluiu progressivamente durante as oito sprints, passando da defini
 
 ### O que foi concluído
 
-* Execução dos casos de teste definidos na Sprint 7.
+* Execução dos casos de teste definidos na Sprint 07.
 * Registro das evidências de validação.
 * Consolidação da documentação do projeto.
 * Atualização final do Product Backlog.
@@ -141,7 +141,7 @@ Execução dos testes, validação da solução e consolidação final do projet
 
 ## 10. Evidências de Validação
 
-Os testes definidos na Sprint 7 foram executados com sucesso.
+Os testes definidos na Sprint 07 foram executados com sucesso.
 
 | Caso de Teste                               | Resultado |
 | ------------------------------------------- | --------- |
@@ -152,6 +152,7 @@ Os testes definidos na Sprint 7 foram executados com sucesso.
 | CT05 - Download de Arquivos                 | Aprovado  |
 | CT06 - Sistema de Curtidas                  | Aprovado  |
 | CT07 - Busca e Filtro                       | Aprovado  |
+| CT08 - Cadastro de Usuário                  | Aprovado  |
 
 Nenhum bug crítico foi identificado durante os testes realizados.
 
@@ -162,7 +163,7 @@ Nenhum bug crítico foi identificado durante os testes realizados.
 Todos os requisitos funcionais e não funcionais previstos para a versão final foram concluídos.
 
 ### Requisitos Funcionais
-
+CT01
 RF01 ao RF18: Concluídos.
 
 ### Requisitos Não Funcionais
