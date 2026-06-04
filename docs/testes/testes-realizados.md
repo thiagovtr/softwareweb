@@ -9,15 +9,15 @@
 
 ## 1. Resultado Geral
 
-| ID | Cenário de Teste | Status |
-|---|---|---|
-| CT01 | Login institucional | ✅ |
-| CT02 | Bloqueio de e-mail não institucional no cadastro | ✅ |
-| CT03 | Upload de material | Aprovado | ✅ |
-| CT04 | Bloqueio de arquivo > 100MB | ✅ |
-| CT05 | Download de arquivo | ✅ |
-| CT06 | Curtidas | ✅ |
-| CT07 | Busca e filtro | ✅ |
+| ID | Cenário de Teste | Resultado | Status |
+|---|---|---|---|
+| CT01 | Validação de Login com E-mail Institucional | Aprovado | ✅ |
+| CT02 | Bloqueio de E-mail Não Institucional no Cadastro | Aprovado | ✅ |
+| CT03 | Upload de Material Válido | Aprovado | ✅ |
+| CT04 | Bloqueio de Arquivo Acima do Limite | Aprovado | ✅ |
+| CT05 | Download de Arquivo (Blob) | Aprovado | ✅ |
+| CT06 | Curtir Material em Tempo Real | Aprovado | ✅ |
+| CT07 | Busca e Filtro por Disciplina | Aprovado | ✅ |
 
 ---
 
