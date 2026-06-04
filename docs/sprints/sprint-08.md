@@ -2,12 +2,12 @@
 
 ## 1. Identificação
 
-* Número da sprint: 08
-* Período: 23/05/2026 a 03/06/2026
-* Data da entrega: 03/06/2026
+- **Número da sprint:** 8
+- **Período:** 23/05/2026 a 03/06/2026
+- **Data da entrega:** 03/06/2026
 
 | Integrante | Papel no Scrum |
-| ---------- | -------------- |
+|---|---|
 | Thiago Vinícius Tristão Rojas | Product Owner |
 | Bruno Santos Vilas Boas | Scrum Master |
 | Christian Silva Mesquita | Dev Team |
@@ -185,8 +185,7 @@ RNF01 ao RNF06: Concluídos.
 
 ## 13. Quadro Kanban Final
 
-<img width="1677" height="923" alt="SCR-20260603-ugzs" src="https://github.com/user-attachments/assets/5c51ffd5-8c97-4b71-a2e4-3f753c6392e7" />
-
+<img width="1677" height="923" alt="SCR-20260603-ugzs" src="print-kanban/Kanban-sprint-8.png" />
 
 ---
 

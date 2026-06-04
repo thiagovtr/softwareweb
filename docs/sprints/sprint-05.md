@@ -1,8 +1,10 @@
 # Sprint 05
 
-## 1. Identificação do Grupo
+## 1. Identificação
 
-Projeto: DisciplinasUFLA
+- **Número da sprint:** 5
+- **Período:** 09/05/2026 a 16/05/2026
+- **Data da entrega:** 16/05/2026
 
 | Integrante | Papel no Scrum |
 |---|---|
@@ -11,8 +13,6 @@ Projeto: DisciplinasUFLA
 | Christian Silva Mesquita | Dev Team |
 | Guilherme dos Santos Fernandes | Dev Team |
 | Matheus Levi Tavares | Dev Team |
-
-Data da Sprint: 09/05/2026 a 16/05/2026
 
 ---
 

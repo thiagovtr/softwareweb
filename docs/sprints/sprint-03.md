@@ -5,6 +5,7 @@
 - **Número da sprint:** 3
 - **Período:** 25/04/2026 a 02/05/2026
 - **Data da entrega:** 02/05/2026
+
 | Integrante | Papel no Scrum |
 |---|---|
 | Thiago Vinícius Tristão Rojas | Product Owner |
