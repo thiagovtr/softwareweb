@@ -184,7 +184,8 @@ RNF01 ao RNF06: Concluídos.
 
 ## 13. Quadro Kanban Final
 
-Inserir captura de tela do quadro Kanban final utilizado pelo grupo.
+<img width="1677" height="923" alt="SCR-20260603-ugzs" src="https://github.com/user-attachments/assets/5c51ffd5-8c97-4b71-a2e4-3f753c6392e7" />
+
 
 ---
 
