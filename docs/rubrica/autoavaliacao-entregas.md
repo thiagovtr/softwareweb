@@ -14,7 +14,7 @@ Apresentar a autoavaliação da equipe referente ao produto de software entregue
 | **Modelagem UML** | Concluído | Diagramas de Classes e de Sequência coerentes com o escopo. |
 | **Decisões e Padrões de Projeto** | Concluído | Padrões Singleton e Strategy justificados e aplicados no Node.js. |
 | **Arquitetura de Software** | Concluído | Camadas bem definidas  e containerização via Docker. |
-| **Qualidade e Testes** | Concluído | 8 casos de teste manuais funcionais criados, executados e aprovados (100%). |
+| **Qualidade e Testes** | Concluído | 8 casos de teste manuais funcionais criados, executados e aprovados. |
 | **Gerenciamento Scrum** | Concluído | Histórico documentado das Sprints 1 a 8 com rastreabilidade. |
 
 ## 3. Avaliação do Produto Final
